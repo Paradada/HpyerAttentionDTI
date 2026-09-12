@@ -9,8 +9,8 @@ class hyperparameter():
     def __init__(self):
         self.current_time = datetime.now().strftime('%b%d_%H-%M-%S')
         self.Learning_rate = 5e-5
-        self.Epoch = 200
-        self.Batch_size = 32
+        self.Epoch = 3 # 200
+        self.Batch_size = 4 # 32
         self.Resume = False
         self.Patience = 50
         self.FC_Dropout = 0.5

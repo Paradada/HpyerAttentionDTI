@@ -5,6 +5,7 @@
 """
 import random
 import os
+import sys
 from model import AttentionDTI
 from dataset import CustomDataSet, collate_fn
 from torch.utils.data import DataLoader
@@ -118,8 +119,29 @@ def shuffle_dataset(dataset, seed):
     np.random.shuffle(dataset)
     return dataset
 import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "6"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+
+
+class Tee:
+    """把 stdout 同时写到控制台和 run.log 日志文件。"""
+    def __init__(self, *streams):
+        self.streams = streams
+
+    def write(self, data):
+        for stream in self.streams:
+            stream.write(data)
+            stream.flush()
+
+    def flush(self):
+        for stream in self.streams:
+            stream.flush()
+
+
 if __name__ == "__main__":
+    """控制台输出同时写入 run.log"""
+    _log_file = open("run.log", "w", encoding="utf-8")
+    sys.stdout = Tee(sys.stdout, _log_file)
+
     """select seed"""
     SEED = 1234
     random.seed(SEED)

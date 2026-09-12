@@ -1,0 +1,19 @@
+# HyperAttentionDTI 依赖清单
+# 已验证环境：Windows 11 + Python 3.12 + NVIDIA RTX 3050（Ampere）
+# 目标运行环境：Linux 租卡 RTX 3080 Ti 12GB（Ampere，CUDA 13.0 驱动）+ 本机 Windows 验证（RTX 3050）
+# 安装方式：pip install -r requirements.txt
+#
+# 注意事项：
+# 1) 代码硬编码 .cuda()，必须使用 NVIDIA GPU。
+# 2) torch 的 CUDA 构建包不在 PyPI 上，通过下方 --extra-index-url 从 PyTorch 官方源安装。
+#    此处锁定 CUDA 13.0（cu130），适配 CUDA 13.0 的租卡；PyTorch 2.11.0 起 cu130 为官方默认构建。
+#    若本机 Windows 无 cu130 wheel，可改用 cu128 / cu126（Ampere RTX 3050 均支持）。
+
+--extra-index-url https://download.pytorch.org/whl/cu130
+
+torch==2.11.0+cu130
+numpy==2.2.6
+scikit-learn==1.9.0
+tqdm==4.67.1
+tensorboardX==2.6.5
+prefetch_generator==1.0.3
