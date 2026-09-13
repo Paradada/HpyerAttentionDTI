@@ -347,6 +347,15 @@ if __name__ == "__main__":
             # early_stopping needs the validation loss to check if it has decresed,
             # and if it has, it will make a checkpoint of the current model
             early_stopping(valid_loss_a_epoch, model, epoch)
+            if early_stopping.early_stop:
+                print("Early stopping")
+                break
+
+        # 训练结束后加载验证集最优 checkpoint，确保测试使用 validation loss 最低的模型
+        best_model_path = save_path + "/valid_best_checkpoint.pth"
+        model.load_state_dict(torch.load(best_model_path, map_location='cuda', weights_only=True))
+        model.eval()
+        print("load valid_best_checkpoint.pth")
 
         trainset_test_stable_results,_,_,_,_,_ = test_model(train_dataset_load, save_path, DATASET, Loss, dataset="Train", lable="stable")
         validset_test_stable_results,_,_,_,_,_ = test_model(valid_dataset_load, save_path, DATASET, Loss, dataset="Valid", lable="stable")

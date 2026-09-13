@@ -42,6 +42,8 @@ class EarlyStopping:
             self.save_checkpoint(val_loss, model,num_epoch)
             self.counter = 0
 
+        return self.early_stop
+
     def save_checkpoint(self, val_loss, model,num_epoch):
         '''Saves model when validation loss decrease.'''
         if self.verbose:

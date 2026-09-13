@@ -10,9 +10,9 @@ class hyperparameter():
         self.current_time = datetime.now().strftime('%b%d_%H-%M-%S')
         self.Learning_rate = 1e-4
         self.Epoch = 200
-        self.Batch_size = 32
+        self.Batch_size = 4 # 32
         self.Resume = False
-        self.Patience = 20
+        self.Patience = 2
         self.FC_Dropout = 0.5
         self.test_split = 0.2
         self.validation_split = 0.2
