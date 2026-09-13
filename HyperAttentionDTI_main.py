@@ -23,11 +23,18 @@ import torch.nn.functional as F
 from sklearn.metrics import accuracy_score, roc_auc_score, precision_score, recall_score,precision_recall_curve, auc
 
 def show_result(DATASET,lable,Accuracy_List,Precision_List,Recall_List,AUC_List,AUPR_List):
-    Accuracy_mean, Accuracy_var = np.mean(Accuracy_List), np.var(Accuracy_List)
-    Precision_mean, Precision_var = np.mean(Precision_List), np.var(Precision_List)
-    Recall_mean, Recall_var = np.mean(Recall_List), np.var(Recall_List)
-    AUC_mean, AUC_var = np.mean(AUC_List), np.var(AUC_List)
-    PRC_mean, PRC_var = np.mean(AUPR_List), np.var(AUPR_List)
+    # Accuracy_mean, Accuracy_var = np.mean(Accuracy_List), np.var(Accuracy_List)
+    # Precision_mean, Precision_var = np.mean(Precision_List), np.var(Precision_List)
+    # Recall_mean, Recall_var = np.mean(Recall_List), np.var(Recall_List)
+    # AUC_mean, AUC_var = np.mean(AUC_List), np.var(AUC_List)
+    # PRC_mean, PRC_var = np.mean(AUPR_List), np.var(AUPR_List)
+    
+    Accuracy_mean, Accuracy_var = np.mean(Accuracy_List), np.std(Accuracy_List)
+    Precision_mean, Precision_var = np.mean(Precision_List), np.std(Precision_List)
+    Recall_mean, Recall_var = np.mean(Recall_List), np.std(Recall_List)
+    AUC_mean, AUC_var = np.mean(AUC_List), np.std(AUC_List)
+    PRC_mean, PRC_var = np.mean(AUPR_List), np.std(AUPR_List)
+
     print("The {} model's results:".format(lable))
     with open("./{}/results.txt".format(DATASET), 'w') as f:
         f.write('Accuracy(std):{:.4f}({:.4f})'.format(Accuracy_mean, Accuracy_var) + '\n')
