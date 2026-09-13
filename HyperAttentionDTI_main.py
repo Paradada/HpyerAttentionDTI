@@ -182,6 +182,15 @@ if __name__ == "__main__":
     # random shuffle
     print("data shuffle")
     dataset = shuffle_dataset(train_data_list, SEED)
+
+    # ---- 小样本截取：用于快速测试运行 ----
+    # SAMPLE_SIZE 设为一个正整数时，只取前 N 条样本运行；
+    # 设为 None 则使用完整数据集。
+    SAMPLE_SIZE = None  # 例如：2000
+    if SAMPLE_SIZE is not None:
+        dataset = dataset[:SAMPLE_SIZE]
+        print("Subset dataset size: {}".format(len(dataset)))
+
     K_Fold = 5
 
     Accuracy_List_stable, AUC_List_stable, AUPR_List_stable, Recall_List_stable, Precision_List_stable = [], [], [], [], []

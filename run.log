@@ -1,0 +1,18 @@
+Train in KIBA
+load data
+load finished
+data shuffle
+Subset dataset size: 2000
+************************* No. 1 -fold *************************
+Training...
+[1/3] train_loss: 0.66668 valid_loss: 0.63856 valid_AUC: 0.53606 valid_PRC: 0.18955 valid_Accuracy: 0.81875 valid_Precision: 0.00000 valid_Reacll: 0.00000 
+Validation loss decreased (inf --> 0.638557).  Saving model ...
+[2/3] train_loss: 0.65601 valid_loss: 0.63844 valid_AUC: 0.53613 valid_PRC: 0.19879 valid_Accuracy: 0.81875 valid_Precision: 0.00000 valid_Reacll: 0.00000 
+Validation loss decreased (0.638557 --> 0.638435).  Saving model ...
+[3/3] train_loss: 0.64133 valid_loss: 0.64479 valid_AUC: 0.61042 valid_PRC: 0.25582 valid_Accuracy: 0.81250 valid_Precision: 0.00000 valid_Reacll: 0.00000 
+EarlyStopping counter: 1 out of 50
+stable_set--Loss:0.62681;Accuracy:0.81719;Precision:0.62069;Recall:0.07469;AUC:0.80478;PRC:0.47237.
+stable_set--Loss:0.64479;Accuracy:0.81250;Precision:0.00000;Recall:0.00000;AUC:0.61042;PRC:0.25582.
+stable_set--Loss:0.62848;Accuracy:0.84250;Precision:0.33333;Recall:0.01613;AUC:0.71707;PRC:0.36926.
+************************* No. 2 -fold *************************
+Training...
