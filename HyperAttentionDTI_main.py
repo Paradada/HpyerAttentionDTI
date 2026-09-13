@@ -12,7 +12,7 @@ from torch.utils.data import DataLoader
 from prefetch_generator import BackgroundGenerator
 from tqdm import tqdm
 from hyperparameter import hyperparameter
-from pytorchtools import EarlyStopping  
+from pytorchtools import EarlyStopping
 import timeit
 from tensorboardX import SummaryWriter
 import numpy as np
@@ -75,7 +75,7 @@ def test_precess(model,pbar,LOSS):
     tpr, fpr, _ = precision_recall_curve(Y, S)
     PRC = auc(fpr, tpr)
     Accuracy = accuracy_score(Y, P)
-    test_loss = np.average(test_losses)  
+    test_loss = np.average(test_losses)
     return Y, P, test_loss, Accuracy, Precision, Reacll, AUC, PRC
 
 def test_model(dataset_load,save_path,DATASET, LOSS, dataset = "Train",lable = "best",save = True):
@@ -96,8 +96,8 @@ def test_model(dataset_load,save_path,DATASET, LOSS, dataset = "Train",lable = "
 
 
 def get_kfold_data(i, datasets, k=5):
-    
-    fold_size = len(datasets) // k  
+
+    fold_size = len(datasets) // k
 
     val_start = i * fold_size
     if i != k - 1 and i != 0:
@@ -109,7 +109,7 @@ def get_kfold_data(i, datasets, k=5):
         validset = datasets[val_start:val_end]
         trainset = datasets[val_end:]
     else:
-        validset = datasets[val_start:] 
+        validset = datasets[val_start:]
         trainset = datasets[0:val_start]
 
     return trainset, validset
@@ -137,25 +137,15 @@ class Tee:
             stream.flush()
 
 
-if __name__ == "__main__":
-    """控制台输出同时写入 run.log"""
-    _log_file = open("run.log", "w", encoding="utf-8")
-    sys.stdout = Tee(sys.stdout, _log_file)
+def run_dataset(DATASET, hp):
+    """运行单个数据集的完整 5-fold 训练 + 汇总流程。"""
+    global model
 
-    """select seed"""
-    SEED = 1234
-    random.seed(SEED)
-    torch.manual_seed(SEED)
-    torch.cuda.manual_seed_all(SEED)
-    # torch.backends.cudnn.deterministic = True
-
-    """init hyperparameters"""
-    hp = hyperparameter()
+    print("=" * 50)
+    print("Start Dataset: {}".format(DATASET))
+    print("=" * 50)
 
     """Load preprocessed data."""
-    # DATASET = "KIBA"
-    # DATASET = "DrugBank"
-    DATASET = "Davis"
     print("Train in " + DATASET)
     if DATASET == "DrugBank":
         weight_CE = None
@@ -197,7 +187,7 @@ if __name__ == "__main__":
 
     for i_fold in range(K_Fold):
         print('*' * 25, 'No.', i_fold + 1, '-fold', '*' * 25)
-      
+
         train_dataset, test_dataset = get_kfold_data(i_fold, dataset)
         TVdataset = CustomDataSet(train_dataset)
         test_dataset = CustomDataSet(test_dataset)
@@ -230,12 +220,12 @@ if __name__ == "__main__":
         # self.optimizer = torch.optim.Adam(model.parameters(), lr=lr)
         optimizer = optim.AdamW(
             [{'params': weight_p, 'weight_decay': hp.weight_decay}, {'params': bias_p, 'weight_decay': 0}], lr=hp.Learning_rate)
-        
+
         scheduler = optim.lr_scheduler.CyclicLR(optimizer, base_lr=hp.Learning_rate, max_lr=hp.Learning_rate*10, cycle_momentum=False,
                                                 step_size_up=train_size // hp.Batch_size)
         Loss = nn.CrossEntropyLoss(weight=weight_CE)
         # print(model)
-        
+
         save_path = "./" + DATASET + "/{}".format(i_fold)
         note = ''
         writer = SummaryWriter(log_dir=save_path, comment=note)
@@ -249,7 +239,7 @@ if __name__ == "__main__":
             hp_attr = '\n'.join(['%s:%s' % item for item in hp.__dict__.items()])
             f.write(hp_attr + '\n')
 
-        
+
         early_stopping = EarlyStopping(savepath = save_path,patience=hp.Patience, verbose=True, delta=0)
         # print("Before train,test the model:")
         # _,_,_,_,_,_ = test_model(test_dataset_load, save_path, DATASET, Loss, dataset="Test",lable="untrain",save=False)
@@ -271,9 +261,9 @@ if __name__ == "__main__":
                 trian_compounds = trian_compounds.cuda()
                 trian_proteins = trian_proteins.cuda()
                 trian_labels = trian_labels.cuda()
-               
+
                 optimizer.zero_grad()
-               
+
                 predicted_interaction = model(trian_compounds, trian_proteins)
                 train_loss = Loss(predicted_interaction, trian_labels)
                 train_losses_in_epoch.append(train_loss.item())
@@ -320,7 +310,7 @@ if __name__ == "__main__":
             AUC_dev = roc_auc_score(Y, S)
             tpr, fpr, _ = precision_recall_curve(Y, S)
             PRC_dev = auc(fpr, tpr)
-            valid_loss_a_epoch = np.average(valid_losses_in_epoch)  
+            valid_loss_a_epoch = np.average(valid_losses_in_epoch)
             # avg_valid_loss.append(valid_loss)
 
             epoch_len = len(str(hp.Epoch))
@@ -376,5 +366,27 @@ if __name__ == "__main__":
                 Accuracy_List_stable, Precision_List_stable, Recall_List_stable,
                 AUC_List_stable, AUPR_List_stable)
 
+    print("=" * 50)
+    print("Finished Dataset: {}".format(DATASET))
+    print("=" * 50)
 
 
+if __name__ == "__main__":
+    """控制台输出同时写入 run.log"""
+    _log_file = open("run.log", "w", encoding="utf-8")
+    sys.stdout = Tee(sys.stdout, _log_file)
+
+    """select seed"""
+    SEED = 1234
+    random.seed(SEED)
+    torch.manual_seed(SEED)
+    torch.cuda.manual_seed_all(SEED)
+    # torch.backends.cudnn.deterministic = True
+
+    """init hyperparameters"""
+    hp = hyperparameter()
+
+    """按 Davis -> KIBA -> DrugBank 顺序依次完整运行三个数据集"""
+    DATASETS = ["Davis", "KIBA", "DrugBank"]
+    for DATASET in DATASETS:
+        run_dataset(DATASET, hp)
