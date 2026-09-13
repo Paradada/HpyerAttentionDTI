@@ -153,9 +153,9 @@ if __name__ == "__main__":
     hp = hyperparameter()
 
     """Load preprocessed data."""
-    DATASET = "KIBA"
+    # DATASET = "KIBA"
     # DATASET = "DrugBank"
-    # DATASET = "Davis"
+    DATASET = "Davis"
     print("Train in " + DATASET)
     if DATASET == "DrugBank":
         weight_CE = None
@@ -186,7 +186,7 @@ if __name__ == "__main__":
     # ---- 小样本截取：用于快速测试运行 ----
     # SAMPLE_SIZE 设为一个正整数时，只取前 N 条样本运行；
     # 设为 None 则使用完整数据集。
-    SAMPLE_SIZE = None  # 例如：200
+    SAMPLE_SIZE = None # 例如：200
     if SAMPLE_SIZE is not None:
         dataset = dataset[:SAMPLE_SIZE]
         print("Subset dataset size: {}".format(len(dataset)))
@@ -205,11 +205,11 @@ if __name__ == "__main__":
         valid_size = int(0.2 * TVdataset_len)
         train_size = TVdataset_len - valid_size
         train_dataset, valid_dataset = torch.utils.data.random_split(TVdataset, [train_size, valid_size])
-        train_dataset_load = DataLoader(train_dataset, batch_size=hp.Batch_size, shuffle=True, num_workers=0,
+        train_dataset_load = DataLoader(train_dataset, batch_size=hp.Batch_size, shuffle=True, num_workers=8,
                                         collate_fn=collate_fn)
-        valid_dataset_load = DataLoader(valid_dataset, batch_size=hp.Batch_size, shuffle=False, num_workers=0,
+        valid_dataset_load = DataLoader(valid_dataset, batch_size=hp.Batch_size, shuffle=False, num_workers=8,
                                         collate_fn=collate_fn)
-        test_dataset_load = DataLoader(test_dataset, batch_size=hp.Batch_size, shuffle=False, num_workers=0,
+        test_dataset_load = DataLoader(test_dataset, batch_size=hp.Batch_size, shuffle=False, num_workers=8,
                                        collate_fn=collate_fn)
 
         """ create model"""
