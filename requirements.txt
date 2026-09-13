@@ -6,12 +6,16 @@
 # 注意事项：
 # 1) 代码硬编码 .cuda()，必须使用 NVIDIA GPU。
 # 2) torch 的 CUDA 构建包不在 PyPI 上，通过下方 --extra-index-url 从 PyTorch 官方源安装。
-#    此处锁定 CUDA 13.0（cu130），适配 CUDA 13.0 的租卡；PyTorch 2.11.0 起 cu130 为官方默认构建。
+#    租卡平台可选的 torch 只有 2.8.0 与 2.12.1，CUDA 13.0。两者取舍：
+#      - 2.12.1+cu130：官方有 cu130 构建（cu130 从 2.9.0 起提供），与 CUDA 13.0 原生匹配，推荐。
+#      - 2.8.0：官方最高只到 cu129，没有 cu130 构建；若平台强制 2.8.0，需把下方索引改为
+#        https://download.pytorch.org/whl/cu129 并写 torch==2.8.0+cu129。cu129 仍可在 CUDA 13.0
+#        驱动上运行（驱动向下兼容），只是少了 cu130 的原生优化。
 #    若本机 Windows 无 cu130 wheel，可改用 cu128 / cu126（Ampere RTX 3050 均支持）。
-
+# scikit-learn==1.9.0 如果 pip install 时在这一行报「找不到版本」，把 scikit-learn 降成 1.6.1 或平台源里有的最新版即可，
 --extra-index-url https://download.pytorch.org/whl/cu130
 
-torch==2.11.0+cu130
+torch==2.12.1+cu130
 numpy==2.2.6
 scikit-learn==1.9.0
 tqdm==4.67.1

@@ -11,7 +11,7 @@
 | Miniconda | 已安装（或见第 1 节安装） | 用于创建和管理虚拟环境 |
 | Python | 3.10 – 3.12 | README 里的 3.6 已停止维护；下面用 conda 指定 3.12 |
 | GPU | NVIDIA RTX 3080 Ti（12GB，Ampere `sm_86`） | **必须**。代码硬编码 `.cuda()`，无 GPU 无法运行 |
-| NVIDIA 驱动 | 支持 CUDA 13.0 | `requirements.txt` 锁定 `torch 2.11.0+cu130`；租卡平台 `nvidia-smi` 显示 CUDA 13.0 即满足 |
+| NVIDIA 驱动 | 支持 CUDA 13.0 | `requirements.txt` 锁定 `torch 2.12.1+cu130`；租卡平台 `nvidia-smi` 显示 CUDA 13.0 即满足 |
 | 显存 | 12GB | 可用 README 默认的 `Batch_size=32`（约 3.9GB 峰值显存，见 §6 说明） |
 
 检查 GPU 和 CUDA 版本：
@@ -65,7 +65,7 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-`requirements.txt` 中已通过 `--extra-index-url` 指定 PyTorch 官方源，会自动安装 CUDA 版 `torch`（`2.11.0+cu130`）。
+`requirements.txt` 中已通过 `--extra-index-url` 指定 PyTorch 官方源，会自动安装 CUDA 版 `torch`（`2.12.1+cu130`）。
 
 ## 5. 验证
 
@@ -73,7 +73,7 @@ pip install -r requirements.txt
 python -c "import torch; print(torch.__version__, torch.cuda.is_available())"
 ```
 
-预期输出类似 `2.11.0+cu130 True`。**`cuda.is_available()` 必须为 `True`**，否则训练会在第一处 `.cuda()` 报错。
+预期输出类似 `2.12.1+cu130 True`。**`cuda.is_available()` 必须为 `True`**，否则训练会在第一处 `.cuda()` 报错。
 
 ## 6. 运行
 
@@ -103,11 +103,12 @@ python HyperAttentionDTI_main.py
 
 ## 8. 若 CUDA / GPU 与默认不符
 
-`requirements.txt` 默认锁定 `torch 2.11.0+cu130`，适配 **RTX 3080 Ti（Ampere）+ CUDA 13.0 驱动**。如果你的租卡属于以下情况，需要调整：
+`requirements.txt` 默认锁定 `torch 2.12.1+cu130`，适配 **RTX 3080 Ti（Ampere）+ CUDA 13.0 驱动**。如果你的租卡属于以下情况，需要调整：
 
 - **更老的卡（Pascal / Maxwell / Volta，如 GTX 10 系、V100）**：CUDA 13.0 已不再支持这些架构（最低 Turing `sm_75`），需改用 `cu126` 及对应的旧版 torch。
 - **更新的卡（RTX 50 系 Blackwell `sm_120`）**：`cu130` 本身支持，一般无需改；若报错再升级 torch 小版本。
 - **驱动较老（不支持 CUDA 13.0）**：改回 `cu128` 或 `cu126` 对应的 torch 版本。
+- **平台只提供 torch 2.8.0（没有 2.12.1）**：torch 2.8.0 没有 cu130 构建，需把索引改成 `https://download.pytorch.org/whl/cu129` 并写 `torch==2.8.0+cu129`；cu129 仍可在 CUDA 13.0 驱动上运行（驱动向下兼容）。
 
 修改时需同时改两处：
 
