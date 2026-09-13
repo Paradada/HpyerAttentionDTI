@@ -343,7 +343,7 @@ def run_dataset(DATASET, hp):
 
         # 训练结束后加载验证集最优 checkpoint，确保测试使用 validation loss 最低的模型
         best_model_path = save_path + "/valid_best_checkpoint.pth"
-        model.load_state_dict(torch.load(best_model_path, map_location='cuda', weights_only=True))
+        # model.load_state_dict(torch.load(best_model_path, map_location='cuda', weights_only=True))
         model.eval()
         print("load valid_best_checkpoint.pth")
 
@@ -387,6 +387,6 @@ if __name__ == "__main__":
     hp = hyperparameter()
 
     """按 Davis -> KIBA -> DrugBank 顺序依次完整运行三个数据集"""
-    DATASETS = ["Davis", "KIBA", "DrugBank"]
+    DATASETS = ["Davis"] # , "KIBA", "DrugBank"]
     for DATASET in DATASETS:
         run_dataset(DATASET, hp)
