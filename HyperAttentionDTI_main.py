@@ -186,7 +186,7 @@ if __name__ == "__main__":
     # ---- 小样本截取：用于快速测试运行 ----
     # SAMPLE_SIZE 设为一个正整数时，只取前 N 条样本运行；
     # 设为 None 则使用完整数据集。
-    SAMPLE_SIZE = None  # 例如：2000
+    SAMPLE_SIZE = None  # 例如：200
     if SAMPLE_SIZE is not None:
         dataset = dataset[:SAMPLE_SIZE]
         print("Subset dataset size: {}".format(len(dataset)))

@@ -2,17 +2,65 @@ Train in KIBA
 load data
 load finished
 data shuffle
-Subset dataset size: 2000
+Subset dataset size: 200
 ************************* No. 1 -fold *************************
 Training...
-[1/3] train_loss: 0.66668 valid_loss: 0.63856 valid_AUC: 0.53606 valid_PRC: 0.18955 valid_Accuracy: 0.81875 valid_Precision: 0.00000 valid_Reacll: 0.00000 
-Validation loss decreased (inf --> 0.638557).  Saving model ...
-[2/3] train_loss: 0.65601 valid_loss: 0.63844 valid_AUC: 0.53613 valid_PRC: 0.19879 valid_Accuracy: 0.81875 valid_Precision: 0.00000 valid_Reacll: 0.00000 
-Validation loss decreased (0.638557 --> 0.638435).  Saving model ...
-[3/3] train_loss: 0.64133 valid_loss: 0.64479 valid_AUC: 0.61042 valid_PRC: 0.25582 valid_Accuracy: 0.81250 valid_Precision: 0.00000 valid_Reacll: 0.00000 
+[1/3] train_loss: 0.69763 valid_loss: 0.70421 valid_AUC: 0.50286 valid_PRC: 0.20582 valid_Accuracy: 0.78125 valid_Precision: 0.00000 valid_Reacll: 0.00000 
+Validation loss decreased (inf --> 0.704210).  Saving model ...
+[2/3] train_loss: 0.62322 valid_loss: 0.73125 valid_AUC: 0.54286 valid_PRC: 0.24076 valid_Accuracy: 0.78125 valid_Precision: 0.00000 valid_Reacll: 0.00000 
 EarlyStopping counter: 1 out of 50
-stable_set--Loss:0.62681;Accuracy:0.81719;Precision:0.62069;Recall:0.07469;AUC:0.80478;PRC:0.47237.
-stable_set--Loss:0.64479;Accuracy:0.81250;Precision:0.00000;Recall:0.00000;AUC:0.61042;PRC:0.25582.
-stable_set--Loss:0.62848;Accuracy:0.84250;Precision:0.33333;Recall:0.01613;AUC:0.71707;PRC:0.36926.
+[3/3] train_loss: 0.63228 valid_loss: 0.70146 valid_AUC: 0.50857 valid_PRC: 0.32428 valid_Accuracy: 0.78125 valid_Precision: 0.00000 valid_Reacll: 0.00000 
+Validation loss decreased (0.704210 --> 0.701461).  Saving model ...
+stable_set--Loss:0.61527;Accuracy:0.83594;Precision:0.00000;Recall:0.00000;AUC:0.98531;PRC:0.90927.
+stable_set--Loss:0.70146;Accuracy:0.78125;Precision:0.00000;Recall:0.00000;AUC:0.50857;PRC:0.32428.
+stable_set--Loss:0.53156;Accuracy:0.95000;Precision:0.00000;Recall:0.00000;AUC:0.42105;PRC:0.04257.
 ************************* No. 2 -fold *************************
 Training...
+[1/3] train_loss: 0.64763 valid_loss: 0.53992 valid_AUC: 0.45977 valid_PRC: 0.10891 valid_Accuracy: 0.90625 valid_Precision: 0.00000 valid_Reacll: 0.00000 
+Validation loss decreased (inf --> 0.539916).  Saving model ...
+[2/3] train_loss: 0.62322 valid_loss: 0.56125 valid_AUC: 0.37931 valid_PRC: 0.08171 valid_Accuracy: 0.90625 valid_Precision: 0.00000 valid_Reacll: 0.00000 
+EarlyStopping counter: 1 out of 50
+[3/3] train_loss: 0.61921 valid_loss: 0.59256 valid_AUC: 0.34483 valid_PRC: 0.06921 valid_Accuracy: 0.90625 valid_Precision: 0.00000 valid_Reacll: 0.00000 
+EarlyStopping counter: 2 out of 50
+stable_set--Loss:0.60032;Accuracy:0.85938;Precision:0.00000;Recall:0.00000;AUC:0.99192;PRC:0.94214.
+stable_set--Loss:0.59256;Accuracy:0.90625;Precision:0.00000;Recall:0.00000;AUC:0.34483;PRC:0.06921.
+stable_set--Loss:0.69437;Accuracy:0.77500;Precision:0.00000;Recall:0.00000;AUC:0.53763;PRC:0.23275.
+************************* No. 3 -fold *************************
+Training...
+[1/3] train_loss: 0.68434 valid_loss: 0.68015 valid_AUC: 0.33714 valid_PRC: 0.15654 valid_Accuracy: 0.78125 valid_Precision: 0.00000 valid_Reacll: 0.00000 
+Validation loss decreased (inf --> 0.680155).  Saving model ...
+[2/3] train_loss: 0.67666 valid_loss: 0.70127 valid_AUC: 0.37714 valid_PRC: 0.16433 valid_Accuracy: 0.78125 valid_Precision: 0.00000 valid_Reacll: 0.00000 
+EarlyStopping counter: 1 out of 50
+[3/3] train_loss: 0.61726 valid_loss: 0.71354 valid_AUC: 0.40571 valid_PRC: 0.17238 valid_Accuracy: 0.78125 valid_Precision: 0.00000 valid_Reacll: 0.00000 
+EarlyStopping counter: 2 out of 50
+stable_set--Loss:0.59605;Accuracy:0.84375;Precision:0.00000;Recall:0.00000;AUC:0.99352;PRC:0.96732.
+stable_set--Loss:0.71354;Accuracy:0.78125;Precision:0.00000;Recall:0.00000;AUC:0.40571;PRC:0.17238.
+stable_set--Loss:0.47135;Accuracy:0.92500;Precision:0.00000;Recall:0.00000;AUC:0.45045;PRC:0.06906.
+************************* No. 4 -fold *************************
+Training...
+[1/3] train_loss: 0.66494 valid_loss: 0.60905 valid_AUC: 0.51786 valid_PRC: 0.12338 valid_Accuracy: 0.87500 valid_Precision: 0.00000 valid_Reacll: 0.00000 
+Validation loss decreased (inf --> 0.609048).  Saving model ...
+[2/3] train_loss: 0.62642 valid_loss: 0.59811 valid_AUC: 0.71429 valid_PRC: 0.23309 valid_Accuracy: 0.87500 valid_Precision: 0.00000 valid_Reacll: 0.00000 
+Validation loss decreased (0.609048 --> 0.598110).  Saving model ...
+[3/3] train_loss: 0.58126 valid_loss: 0.63258 valid_AUC: 0.65179 valid_PRC: 0.37150 valid_Accuracy: 0.87500 valid_Precision: 0.00000 valid_Reacll: 0.00000 
+EarlyStopping counter: 1 out of 50
+stable_set--Loss:0.61461;Accuracy:0.86719;Precision:0.00000;Recall:0.00000;AUC:0.98887;PRC:0.90913.
+stable_set--Loss:0.63258;Accuracy:0.87500;Precision:0.00000;Recall:0.00000;AUC:0.65179;PRC:0.37150.
+stable_set--Loss:0.93030;Accuracy:0.77500;Precision:0.00000;Recall:0.00000;AUC:0.69892;PRC:0.29544.
+************************* No. 5 -fold *************************
+Training...
+[1/3] train_loss: 0.68216 valid_loss: 0.69733 valid_AUC: 0.33333 valid_PRC: 0.06550 valid_Accuracy: 0.12500 valid_Precision: 0.06897 valid_Reacll: 0.66667 
+Validation loss decreased (inf --> 0.697325).  Saving model ...
+[2/3] train_loss: 0.65746 valid_loss: 0.55953 valid_AUC: 0.66667 valid_PRC: 0.42509 valid_Accuracy: 0.90625 valid_Precision: 0.00000 valid_Reacll: 0.00000 
+Validation loss decreased (0.697325 --> 0.559532).  Saving model ...
+[3/3] train_loss: 0.60796 valid_loss: 0.52585 valid_AUC: 0.70115 valid_PRC: 0.18134 valid_Accuracy: 0.90625 valid_Precision: 0.00000 valid_Reacll: 0.00000 
+Validation loss decreased (0.559532 --> 0.525850).  Saving model ...
+stable_set--Loss:0.61088;Accuracy:0.84375;Precision:0.00000;Recall:0.00000;AUC:0.98472;PRC:0.92630.
+stable_set--Loss:0.52585;Accuracy:0.90625;Precision:0.00000;Recall:0.00000;AUC:0.70115;PRC:0.18134.
+stable_set--Loss:0.63579;Accuracy:0.82500;Precision:0.00000;Recall:0.00000;AUC:0.44589;PRC:0.15930.
+The stable model's results:
+Accuracy(std):0.8500(0.0055)
+Precision(std):0.0000(0.0000)
+Recall(std):0.0000(0.0000)
+AUC(std):0.5108(0.0104)
+PRC(std):0.1598(0.0091)
