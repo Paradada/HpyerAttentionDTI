@@ -23,25 +23,22 @@ import torch.nn.functional as F
 from sklearn.metrics import accuracy_score, roc_auc_score, precision_score, recall_score,precision_recall_curve, auc
 
 def show_result(DATASET,lable,Accuracy_List,Precision_List,Recall_List,AUC_List,AUPR_List):
-    # Accuracy_mean, Accuracy_var = np.mean(Accuracy_List), np.var(Accuracy_List)
-    # Precision_mean, Precision_var = np.mean(Precision_List), np.var(Precision_List)
-    # Recall_mean, Recall_var = np.mean(Recall_List), np.var(Recall_List)
-    # AUC_mean, AUC_var = np.mean(AUC_List), np.var(AUC_List)
-    # PRC_mean, PRC_var = np.mean(AUPR_List), np.var(AUPR_List)
-    
     Accuracy_mean, Accuracy_var = np.mean(Accuracy_List), np.std(Accuracy_List)
     Precision_mean, Precision_var = np.mean(Precision_List), np.std(Precision_List)
     Recall_mean, Recall_var = np.mean(Recall_List), np.std(Recall_List)
     AUC_mean, AUC_var = np.mean(AUC_List), np.std(AUC_List)
     PRC_mean, PRC_var = np.mean(AUPR_List), np.std(AUPR_List)
 
-    print("The {} model's results:".format(lable))
-    with open("./{}/results.txt".format(DATASET), 'w') as f:
+    header = "The {} model's results:".format(lable)
+    print(header)
+    with open("./{}/results.txt".format(DATASET), 'a') as f:
+        f.write(header + '\n')
         f.write('Accuracy(std):{:.4f}({:.4f})'.format(Accuracy_mean, Accuracy_var) + '\n')
         f.write('Precision(std):{:.4f}({:.4f})'.format(Precision_mean, Precision_var) + '\n')
         f.write('Recall(std):{:.4f}({:.4f})'.format(Recall_mean, Recall_var) + '\n')
         f.write('AUC(std):{:.4f}({:.4f})'.format(AUC_mean, AUC_var) + '\n')
         f.write('PRC(std):{:.4f}({:.4f})'.format(PRC_mean, PRC_var) + '\n')
+        f.write('\n')
 
     print('Accuracy(std):{:.4f}({:.4f})'.format(Accuracy_mean, Accuracy_var))
     print('Precision(std):{:.4f}({:.4f})'.format(Precision_mean, Precision_var))
@@ -190,7 +187,8 @@ def run_dataset(DATASET, hp):
 
     K_Fold = 5
 
-    Accuracy_List_stable, AUC_List_stable, AUPR_List_stable, Recall_List_stable, Precision_List_stable = [], [], [], [], []
+    Accuracy_List_best, AUC_List_best, AUPR_List_best, Recall_List_best, Precision_List_best = [], [], [], [], []
+    Accuracy_List_last, AUC_List_last, AUPR_List_last, Recall_List_last, Precision_List_last = [], [], [], [], []
 
     for i_fold in range(K_Fold):
         print('*' * 25, 'No.', i_fold + 1, '-fold', '*' * 25)
@@ -348,30 +346,63 @@ def run_dataset(DATASET, hp):
                 print("Early stopping")
                 break
 
-        # 训练结束后加载验证集最优 checkpoint，确保测试使用 validation loss 最低的模型
+        # 训练结束后保存最后一轮（last epoch）的 checkpoint，用于与 best checkpoint 一并评估
+        last_model_path = save_path + "/last_checkpoint.pth"
+        torch.save(model.state_dict(), last_model_path)
+        print("save last_checkpoint.pth")
+
         best_model_path = save_path + "/valid_best_checkpoint.pth"
-        # model.load_state_dict(torch.load(best_model_path, map_location='cuda', weights_only=True))
+
+        # ---- 使用验证集最优 checkpoint（best）进行评估 ----
+        model.load_state_dict(torch.load(best_model_path, map_location='cuda', weights_only=True))
         model.eval()
         print("load valid_best_checkpoint.pth")
 
-        trainset_test_stable_results,_,_,_,_,_ = test_model(train_dataset_load, save_path, DATASET, Loss, dataset="Train", lable="stable")
-        validset_test_stable_results,_,_,_,_,_ = test_model(valid_dataset_load, save_path, DATASET, Loss, dataset="Valid", lable="stable")
-        testset_test_stable_results,Accuracy_test, Precision_test, Recall_test, AUC_test, PRC_test = \
-            test_model(test_dataset_load, save_path, DATASET, Loss, dataset="Test", lable="stable")
-        AUC_List_stable.append(AUC_test)
-        Accuracy_List_stable.append(Accuracy_test)
-        AUPR_List_stable.append(PRC_test)
-        Recall_List_stable.append(Recall_test)
-        Precision_List_stable.append(Precision_test)
-        with open(save_path + "The_results_of_whole_dataset.txt", 'a') as f:
-            f.write("Test the stable model" + '\n')
-            f.write(trainset_test_stable_results + '\n')
-            f.write(validset_test_stable_results + '\n')
-            f.write(testset_test_stable_results + '\n')
+        trainset_test_best_results,_,_,_,_,_ = test_model(train_dataset_load, save_path, DATASET, Loss, dataset="Train", lable="best")
+        validset_test_best_results,_,_,_,_,_ = test_model(valid_dataset_load, save_path, DATASET, Loss, dataset="Valid", lable="best")
+        testset_test_best_results,Accuracy_test_best, Precision_test_best, Recall_test_best, AUC_test_best, PRC_test_best = \
+            test_model(test_dataset_load, save_path, DATASET, Loss, dataset="Test", lable="best")
+        AUC_List_best.append(AUC_test_best)
+        Accuracy_List_best.append(Accuracy_test_best)
+        AUPR_List_best.append(PRC_test_best)
+        Recall_List_best.append(Recall_test_best)
+        Precision_List_best.append(Precision_test_best)
 
-    show_result(DATASET, "stable",
-                Accuracy_List_stable, Precision_List_stable, Recall_List_stable,
-                AUC_List_stable, AUPR_List_stable)
+        # ---- 使用最后一轮 checkpoint（last）进行评估 ----
+        model.load_state_dict(torch.load(last_model_path, map_location='cuda', weights_only=True))
+        model.eval()
+        print("load last_checkpoint.pth")
+
+        trainset_test_last_results,_,_,_,_,_ = test_model(train_dataset_load, save_path, DATASET, Loss, dataset="Train", lable="last")
+        validset_test_last_results,_,_,_,_,_ = test_model(valid_dataset_load, save_path, DATASET, Loss, dataset="Valid", lable="last")
+        testset_test_last_results,Accuracy_test_last, Precision_test_last, Recall_test_last, AUC_test_last, PRC_test_last = \
+            test_model(test_dataset_load, save_path, DATASET, Loss, dataset="Test", lable="last")
+        AUC_List_last.append(AUC_test_last)
+        Accuracy_List_last.append(Accuracy_test_last)
+        AUPR_List_last.append(PRC_test_last)
+        Recall_List_last.append(Recall_test_last)
+        Precision_List_last.append(Precision_test_last)
+
+        with open(save_path + "The_results_of_whole_dataset.txt", 'a') as f:
+            f.write("Test the best checkpoint model (validation loss lowest)" + '\n')
+            f.write(trainset_test_best_results + '\n')
+            f.write(validset_test_best_results + '\n')
+            f.write(testset_test_best_results + '\n')
+            f.write("Test the last checkpoint model (last epoch)" + '\n')
+            f.write(trainset_test_last_results + '\n')
+            f.write(validset_test_last_results + '\n')
+            f.write(testset_test_last_results + '\n')
+
+    # 汇总结果写入 ./{DATASET}/results.txt（先清空，再依次写入 best 与 last 两套结果）
+    with open("./{}/results.txt".format(DATASET), 'w') as f:
+        f.write("Summary of {} dataset (5-fold, mean over folds)\n\n".format(DATASET))
+
+    show_result(DATASET, "best",
+                Accuracy_List_best, Precision_List_best, Recall_List_best,
+                AUC_List_best, AUPR_List_best)
+    show_result(DATASET, "last",
+                Accuracy_List_last, Precision_List_last, Recall_List_last,
+                AUC_List_last, AUPR_List_last)
 
     print("=" * 50)
     print("Finished Dataset: {}".format(DATASET))
@@ -394,6 +425,6 @@ if __name__ == "__main__":
     hp = hyperparameter()
 
     """按 Davis -> KIBA -> DrugBank 顺序依次完整运行三个数据集"""
-    DATASETS = ["Davis" , "KIBA", "DrugBank"]
+    DATASETS = ["Davis" ,  "DrugBank" , "KIBA"]
     for DATASET in DATASETS:
         run_dataset(DATASET, hp)
