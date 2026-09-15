@@ -394,6 +394,6 @@ if __name__ == "__main__":
     hp = hyperparameter()
 
     """按 Davis -> KIBA -> DrugBank 顺序依次完整运行三个数据集"""
-    DATASETS = ["Davis", "KIBA", "DrugBank"]
+    DATASETS = ["Davis" , "KIBA", "DrugBank"]
     for DATASET in DATASETS:
         run_dataset(DATASET, hp)
