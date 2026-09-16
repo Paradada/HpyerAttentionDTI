@@ -1,4 +1,814 @@
 ==================================================
+Start Dataset: DrugBank
+==================================================
+Train in DrugBank
+load data
+load finished
+data shuffle
+************************* No. 1 -fold *************************
+Training...
+[  1/200] train_loss: 0.62814 valid_loss: 0.55564 valid_AUC: 0.78528 valid_PRC: 0.79821 valid_Accuracy: 0.71355 valid_Precision: 0.71981 valid_Reacll: 0.67083 
+Validation loss decreased (inf --> 0.555643).  Saving model ...
+[  2/200] train_loss: 0.52982 valid_loss: 0.49861 valid_AUC: 0.83616 valid_PRC: 0.83892 valid_Accuracy: 0.75799 valid_Precision: 0.76884 valid_Reacll: 0.71681 
+Validation loss decreased (0.555643 --> 0.498614).  Saving model ...
+[  3/200] train_loss: 0.48430 valid_loss: 0.51409 valid_AUC: 0.82967 valid_PRC: 0.83509 valid_Accuracy: 0.75067 valid_Precision: 0.77046 valid_Reacll: 0.69253 
+EarlyStopping counter: 1 out of 20
+[  4/200] train_loss: 0.47111 valid_loss: 0.47156 valid_AUC: 0.85867 valid_PRC: 0.85852 valid_Accuracy: 0.77601 valid_Precision: 0.77939 valid_Reacll: 0.75101 
+Validation loss decreased (0.498614 --> 0.471555).  Saving model ...
+[  5/200] train_loss: 0.43175 valid_loss: 0.51009 valid_AUC: 0.84121 valid_PRC: 0.84570 valid_Accuracy: 0.74139 valid_Precision: 0.69931 valid_Reacll: 0.81942 
+EarlyStopping counter: 1 out of 20
+[  6/200] train_loss: 0.43139 valid_loss: 0.46504 valid_AUC: 0.86581 valid_PRC: 0.86564 valid_Accuracy: 0.78190 valid_Precision: 0.77408 valid_Reacll: 0.77749 
+Validation loss decreased (0.471555 --> 0.465041).  Saving model ...
+[  7/200] train_loss: 0.38882 valid_loss: 0.48011 valid_AUC: 0.85541 valid_PRC: 0.85785 valid_Accuracy: 0.76959 valid_Precision: 0.75159 valid_Reacll: 0.78448 
+EarlyStopping counter: 1 out of 20
+[  8/200] train_loss: 0.39375 valid_loss: 0.46321 valid_AUC: 0.87326 valid_PRC: 0.87666 valid_Accuracy: 0.78404 valid_Precision: 0.75795 valid_Reacll: 0.81537 
+Validation loss decreased (0.465041 --> 0.463207).  Saving model ...
+[  9/200] train_loss: 0.34873 valid_loss: 0.48208 valid_AUC: 0.85760 valid_PRC: 0.86331 valid_Accuracy: 0.76923 valid_Precision: 0.73783 valid_Reacll: 0.81353 
+EarlyStopping counter: 1 out of 20
+[ 10/200] train_loss: 0.36117 valid_loss: 0.46755 valid_AUC: 0.87769 valid_PRC: 0.88192 valid_Accuracy: 0.79814 valid_Precision: 0.80099 valid_Reacll: 0.77712 
+EarlyStopping counter: 2 out of 20
+[ 11/200] train_loss: 0.31751 valid_loss: 0.46763 valid_AUC: 0.86677 valid_PRC: 0.87223 valid_Accuracy: 0.78761 valid_Precision: 0.80063 valid_Reacll: 0.74880 
+EarlyStopping counter: 3 out of 20
+[ 12/200] train_loss: 0.32848 valid_loss: 0.48004 valid_AUC: 0.87523 valid_PRC: 0.88092 valid_Accuracy: 0.78868 valid_Precision: 0.76958 valid_Reacll: 0.80581 
+EarlyStopping counter: 4 out of 20
+[ 13/200] train_loss: 0.28467 valid_loss: 0.50899 valid_AUC: 0.86406 valid_PRC: 0.86900 valid_Accuracy: 0.77798 valid_Precision: 0.76051 valid_Reacll: 0.79184 
+EarlyStopping counter: 5 out of 20
+[ 14/200] train_loss: 0.30135 valid_loss: 0.49983 valid_AUC: 0.87933 valid_PRC: 0.88552 valid_Accuracy: 0.79850 valid_Precision: 0.78659 valid_Reacll: 0.80250 
+EarlyStopping counter: 6 out of 20
+[ 15/200] train_loss: 0.25916 valid_loss: 0.52361 valid_AUC: 0.86449 valid_PRC: 0.87099 valid_Accuracy: 0.77833 valid_Precision: 0.75145 valid_Reacll: 0.81170 
+EarlyStopping counter: 7 out of 20
+[ 16/200] train_loss: 0.27615 valid_loss: 0.53639 valid_AUC: 0.87942 valid_PRC: 0.88469 valid_Accuracy: 0.80653 valid_Precision: 0.80402 valid_Reacll: 0.79515 
+EarlyStopping counter: 8 out of 20
+[ 17/200] train_loss: 0.23275 valid_loss: 0.55234 valid_AUC: 0.86820 valid_PRC: 0.87190 valid_Accuracy: 0.78226 valid_Precision: 0.77977 valid_Reacll: 0.76830 
+EarlyStopping counter: 9 out of 20
+[ 18/200] train_loss: 0.25007 valid_loss: 0.56317 valid_AUC: 0.88041 valid_PRC: 0.88600 valid_Accuracy: 0.80421 valid_Precision: 0.79599 valid_Reacll: 0.80213 
+EarlyStopping counter: 10 out of 20
+[ 19/200] train_loss: 0.20717 valid_loss: 0.52371 valid_AUC: 0.86441 valid_PRC: 0.86655 valid_Accuracy: 0.78993 valid_Precision: 0.77225 valid_Reacll: 0.80434 
+EarlyStopping counter: 11 out of 20
+[ 20/200] train_loss: 0.23005 valid_loss: 0.62239 valid_AUC: 0.87860 valid_PRC: 0.88380 valid_Accuracy: 0.80046 valid_Precision: 0.78930 valid_Reacll: 0.80324 
+EarlyStopping counter: 12 out of 20
+[ 21/200] train_loss: 0.18519 valid_loss: 0.60974 valid_AUC: 0.86824 valid_PRC: 0.87285 valid_Accuracy: 0.79440 valid_Precision: 0.78858 valid_Reacll: 0.78742 
+EarlyStopping counter: 13 out of 20
+[ 22/200] train_loss: 0.20934 valid_loss: 0.61800 valid_AUC: 0.88036 valid_PRC: 0.88529 valid_Accuracy: 0.79886 valid_Precision: 0.78449 valid_Reacll: 0.80728 
+EarlyStopping counter: 14 out of 20
+[ 23/200] train_loss: 0.16584 valid_loss: 0.67252 valid_AUC: 0.87225 valid_PRC: 0.87238 valid_Accuracy: 0.78351 valid_Precision: 0.75134 valid_Reacll: 0.82788 
+EarlyStopping counter: 15 out of 20
+[ 24/200] train_loss: 0.19363 valid_loss: 0.66183 valid_AUC: 0.88012 valid_PRC: 0.88391 valid_Accuracy: 0.80118 valid_Precision: 0.77398 valid_Reacll: 0.83376 
+EarlyStopping counter: 16 out of 20
+[ 25/200] train_loss: 0.15366 valid_loss: 0.57938 valid_AUC: 0.86496 valid_PRC: 0.87244 valid_Accuracy: 0.78529 valid_Precision: 0.78241 valid_Reacll: 0.77234 
+EarlyStopping counter: 17 out of 20
+[ 26/200] train_loss: 0.17725 valid_loss: 0.64303 valid_AUC: 0.88096 valid_PRC: 0.88619 valid_Accuracy: 0.79921 valid_Precision: 0.78587 valid_Reacll: 0.80581 
+EarlyStopping counter: 18 out of 20
+[ 27/200] train_loss: 0.13797 valid_loss: 0.71626 valid_AUC: 0.87484 valid_PRC: 0.87932 valid_Accuracy: 0.79065 valid_Precision: 0.76637 valid_Reacll: 0.81795 
+EarlyStopping counter: 19 out of 20
+[ 28/200] train_loss: 0.16889 valid_loss: 0.68648 valid_AUC: 0.87977 valid_PRC: 0.88470 valid_Accuracy: 0.80046 valid_Precision: 0.77960 valid_Reacll: 0.82089 
+EarlyStopping counter: 20 out of 20
+Early stopping
+save last_checkpoint.pth
+load valid_best_checkpoint.pth
+best_set--Loss:0.29008;Accuracy:0.87789;Precision:0.86223;Recall:0.90210;AUC:0.95410;PRC:0.95425.
+best_set--Loss:0.46321;Accuracy:0.78404;Precision:0.75795;Recall:0.81537;AUC:0.87326;PRC:0.87666.
+best_set--Loss:0.45524;Accuracy:0.78427;Precision:0.76698;Recall:0.81343;AUC:0.87310;PRC:0.87989.
+load last_checkpoint.pth
+last_set--Loss:0.05486;Accuracy:0.98626;Precision:0.98407;Recall:0.98877;AUC:0.99909;PRC:0.99911.
+last_set--Loss:0.68648;Accuracy:0.80046;Precision:0.77960;Recall:0.82089;AUC:0.87977;PRC:0.88470.
+last_set--Loss:0.66867;Accuracy:0.80211;Precision:0.78898;Recall:0.82204;AUC:0.88066;PRC:0.88843.
+************************* No. 2 -fold *************************
+Training...
+[  1/200] train_loss: 0.62941 valid_loss: 0.57410 valid_AUC: 0.79492 valid_PRC: 0.82015 valid_Accuracy: 0.68802 valid_Precision: 0.64795 valid_Reacll: 0.82370 
+Validation loss decreased (inf --> 0.574095).  Saving model ...
+[  2/200] train_loss: 0.53938 valid_loss: 0.50168 valid_AUC: 0.83101 valid_PRC: 0.84807 valid_Accuracy: 0.75263 valid_Precision: 0.79475 valid_Reacll: 0.68130 
+Validation loss decreased (0.574095 --> 0.501678).  Saving model ...
+[  3/200] train_loss: 0.49966 valid_loss: 0.51467 valid_AUC: 0.82189 valid_PRC: 0.83687 valid_Accuracy: 0.73835 valid_Precision: 0.74796 valid_Reacll: 0.71913 
+EarlyStopping counter: 1 out of 20
+[  4/200] train_loss: 0.48557 valid_loss: 0.47227 valid_AUC: 0.85496 valid_PRC: 0.86587 valid_Accuracy: 0.77334 valid_Precision: 0.79059 valid_Reacll: 0.74375 
+Validation loss decreased (0.501678 --> 0.472265).  Saving model ...
+[  5/200] train_loss: 0.45167 valid_loss: 0.52189 valid_AUC: 0.83794 valid_PRC: 0.85165 valid_Accuracy: 0.74264 valid_Precision: 0.84378 valid_Reacll: 0.59565 
+EarlyStopping counter: 1 out of 20
+[  6/200] train_loss: 0.44644 valid_loss: 0.45932 valid_AUC: 0.86444 valid_PRC: 0.87550 valid_Accuracy: 0.78172 valid_Precision: 0.78972 valid_Reacll: 0.76802 
+Validation loss decreased (0.472265 --> 0.459318).  Saving model ...
+[  7/200] train_loss: 0.40932 valid_loss: 0.47086 valid_AUC: 0.85778 valid_PRC: 0.86651 valid_Accuracy: 0.77351 valid_Precision: 0.76513 valid_Reacll: 0.78944 
+EarlyStopping counter: 1 out of 20
+[  8/200] train_loss: 0.40970 valid_loss: 0.45331 valid_AUC: 0.86726 valid_PRC: 0.87787 valid_Accuracy: 0.78190 valid_Precision: 0.77876 valid_Reacll: 0.78765 
+Validation loss decreased (0.459318 --> 0.453307).  Saving model ...
+[  9/200] train_loss: 0.36949 valid_loss: 0.47721 valid_AUC: 0.85257 valid_PRC: 0.86407 valid_Accuracy: 0.76994 valid_Precision: 0.79130 valid_Reacll: 0.73340 
+EarlyStopping counter: 1 out of 20
+[ 10/200] train_loss: 0.37747 valid_loss: 0.46810 valid_AUC: 0.87434 valid_PRC: 0.88350 valid_Accuracy: 0.79333 valid_Precision: 0.80000 valid_Reacll: 0.78230 
+EarlyStopping counter: 2 out of 20
+[ 11/200] train_loss: 0.32631 valid_loss: 0.47195 valid_AUC: 0.85486 valid_PRC: 0.86751 valid_Accuracy: 0.77280 valid_Precision: 0.76966 valid_Reacll: 0.77873 
+EarlyStopping counter: 3 out of 20
+[ 12/200] train_loss: 0.34270 valid_loss: 0.46255 valid_AUC: 0.87953 valid_PRC: 0.88829 valid_Accuracy: 0.79511 valid_Precision: 0.78755 valid_Reacll: 0.80835 
+EarlyStopping counter: 4 out of 20
+[ 13/200] train_loss: 0.29385 valid_loss: 0.48403 valid_AUC: 0.86061 valid_PRC: 0.86986 valid_Accuracy: 0.76959 valid_Precision: 0.83955 valid_Reacll: 0.66667 
+EarlyStopping counter: 5 out of 20
+[ 14/200] train_loss: 0.31322 valid_loss: 0.47030 valid_AUC: 0.87740 valid_PRC: 0.88562 valid_Accuracy: 0.79208 valid_Precision: 0.78079 valid_Reacll: 0.81228 
+EarlyStopping counter: 6 out of 20
+[ 15/200] train_loss: 0.26605 valid_loss: 0.48689 valid_AUC: 0.87016 valid_PRC: 0.87651 valid_Accuracy: 0.79083 valid_Precision: 0.79149 valid_Reacll: 0.78979 
+EarlyStopping counter: 7 out of 20
+[ 16/200] train_loss: 0.28146 valid_loss: 0.50657 valid_AUC: 0.87676 valid_PRC: 0.88431 valid_Accuracy: 0.78922 valid_Precision: 0.77596 valid_Reacll: 0.81335 
+EarlyStopping counter: 8 out of 20
+[ 17/200] train_loss: 0.23583 valid_loss: 0.50345 valid_AUC: 0.86290 valid_PRC: 0.87011 valid_Accuracy: 0.77512 valid_Precision: 0.76808 valid_Reacll: 0.78837 
+EarlyStopping counter: 9 out of 20
+[ 18/200] train_loss: 0.25420 valid_loss: 0.53976 valid_AUC: 0.88094 valid_PRC: 0.88786 valid_Accuracy: 0.80332 valid_Precision: 0.79866 valid_Reacll: 0.81121 
+EarlyStopping counter: 10 out of 20
+[ 19/200] train_loss: 0.20809 valid_loss: 0.51926 valid_AUC: 0.87082 valid_PRC: 0.88060 valid_Accuracy: 0.78137 valid_Precision: 0.75980 valid_Reacll: 0.82298 
+EarlyStopping counter: 11 out of 20
+[ 20/200] train_loss: 0.22932 valid_loss: 0.59279 valid_AUC: 0.87953 valid_PRC: 0.88654 valid_Accuracy: 0.79654 valid_Precision: 0.79892 valid_Reacll: 0.79265 
+EarlyStopping counter: 12 out of 20
+[ 21/200] train_loss: 0.18904 valid_loss: 0.58205 valid_AUC: 0.86819 valid_PRC: 0.87600 valid_Accuracy: 0.78993 valid_Precision: 0.79535 valid_Reacll: 0.78087 
+EarlyStopping counter: 13 out of 20
+[ 22/200] train_loss: 0.21109 valid_loss: 0.60197 valid_AUC: 0.87711 valid_PRC: 0.88300 valid_Accuracy: 0.79725 valid_Precision: 0.79686 valid_Reacll: 0.79800 
+EarlyStopping counter: 14 out of 20
+[ 23/200] train_loss: 0.16978 valid_loss: 0.68019 valid_AUC: 0.86695 valid_PRC: 0.87270 valid_Accuracy: 0.78529 valid_Precision: 0.77674 valid_Reacll: 0.80086 
+EarlyStopping counter: 15 out of 20
+[ 24/200] train_loss: 0.19675 valid_loss: 0.59779 valid_AUC: 0.88093 valid_PRC: 0.88461 valid_Accuracy: 0.80403 valid_Precision: 0.80342 valid_Reacll: 0.80514 
+EarlyStopping counter: 16 out of 20
+[ 25/200] train_loss: 0.14975 valid_loss: 0.56988 valid_AUC: 0.87152 valid_PRC: 0.87449 valid_Accuracy: 0.78083 valid_Precision: 0.75257 valid_Reacll: 0.83690 
+EarlyStopping counter: 17 out of 20
+[ 26/200] train_loss: 0.17843 valid_loss: 0.66109 valid_AUC: 0.87937 valid_PRC: 0.88640 valid_Accuracy: 0.79850 valid_Precision: 0.79382 valid_Reacll: 0.80657 
+EarlyStopping counter: 18 out of 20
+[ 27/200] train_loss: 0.14196 valid_loss: 0.60192 valid_AUC: 0.87516 valid_PRC: 0.88375 valid_Accuracy: 0.79654 valid_Precision: 0.79531 valid_Reacll: 0.79872 
+EarlyStopping counter: 19 out of 20
+[ 28/200] train_loss: 0.16545 valid_loss: 0.66361 valid_AUC: 0.87936 valid_PRC: 0.88749 valid_Accuracy: 0.79904 valid_Precision: 0.79674 valid_Reacll: 0.80300 
+EarlyStopping counter: 20 out of 20
+Early stopping
+save last_checkpoint.pth
+load valid_best_checkpoint.pth
+best_set--Loss:0.31860;Accuracy:0.86808;Precision:0.86191;Recall:0.87631;AUC:0.94559;PRC:0.94404.
+best_set--Loss:0.45331;Accuracy:0.78190;Precision:0.77876;Recall:0.78765;AUC:0.86726;PRC:0.87787.
+best_set--Loss:0.45374;Accuracy:0.78441;Precision:0.77440;Recall:0.80438;AUC:0.87049;PRC:0.87762.
+load last_checkpoint.pth
+last_set--Loss:0.05273;Accuracy:0.98666;Precision:0.98730;Recall:0.98598;AUC:0.99920;PRC:0.99916.
+last_set--Loss:0.66361;Accuracy:0.79904;Precision:0.79674;Recall:0.80300;AUC:0.87936;PRC:0.88749.
+last_set--Loss:0.66740;Accuracy:0.80297;Precision:0.80215;Recall:0.80581;AUC:0.88223;PRC:0.89027.
+************************* No. 3 -fold *************************
+Training...
+[  1/200] train_loss: 0.62882 valid_loss: 0.55114 valid_AUC: 0.79090 valid_PRC: 0.82153 valid_Accuracy: 0.72425 valid_Precision: 0.78924 valid_Reacll: 0.62081 
+Validation loss decreased (inf --> 0.551141).  Saving model ...
+[  2/200] train_loss: 0.53751 valid_loss: 0.49681 valid_AUC: 0.83828 valid_PRC: 0.85717 valid_Accuracy: 0.75210 valid_Precision: 0.74525 valid_Reacll: 0.77496 
+Validation loss decreased (0.551141 --> 0.496812).  Saving model ...
+[  3/200] train_loss: 0.49201 valid_loss: 0.51660 valid_AUC: 0.82759 valid_PRC: 0.84802 valid_Accuracy: 0.74924 valid_Precision: 0.78418 valid_Reacll: 0.69594 
+EarlyStopping counter: 1 out of 20
+[  4/200] train_loss: 0.48256 valid_loss: 0.46077 valid_AUC: 0.86282 valid_PRC: 0.87652 valid_Accuracy: 0.78119 valid_Precision: 0.81122 valid_Reacll: 0.73968 
+Validation loss decreased (0.496812 --> 0.460769).  Saving model ...
+[  5/200] train_loss: 0.44521 valid_loss: 0.48076 valid_AUC: 0.85138 valid_PRC: 0.86514 valid_Accuracy: 0.75941 valid_Precision: 0.84153 valid_Reacll: 0.64621 
+EarlyStopping counter: 1 out of 20
+[  6/200] train_loss: 0.44131 valid_loss: 0.45041 valid_AUC: 0.86995 valid_PRC: 0.88109 valid_Accuracy: 0.78440 valid_Precision: 0.79941 valid_Reacll: 0.76614 
+Validation loss decreased (0.460769 --> 0.450413).  Saving model ...
+[  7/200] train_loss: 0.40439 valid_loss: 0.46298 valid_AUC: 0.86236 valid_PRC: 0.87375 valid_Accuracy: 0.77494 valid_Precision: 0.82819 valid_Reacll: 0.70053 
+EarlyStopping counter: 1 out of 20
+[  8/200] train_loss: 0.40577 valid_loss: 0.44078 valid_AUC: 0.87887 valid_PRC: 0.88898 valid_Accuracy: 0.79404 valid_Precision: 0.79073 valid_Reacll: 0.80635 
+Validation loss decreased (0.450413 --> 0.440779).  Saving model ...
+[  9/200] train_loss: 0.36804 valid_loss: 0.46379 valid_AUC: 0.86236 valid_PRC: 0.87158 valid_Accuracy: 0.77209 valid_Precision: 0.78788 valid_Reacll: 0.75203 
+EarlyStopping counter: 1 out of 20
+[ 10/200] train_loss: 0.37669 valid_loss: 0.44829 valid_AUC: 0.87933 valid_PRC: 0.88904 valid_Accuracy: 0.79333 valid_Precision: 0.79681 valid_Reacll: 0.79400 
+EarlyStopping counter: 2 out of 20
+[ 11/200] train_loss: 0.33503 valid_loss: 0.47652 valid_AUC: 0.86699 valid_PRC: 0.87614 valid_Accuracy: 0.77851 valid_Precision: 0.75627 valid_Reacll: 0.82963 
+EarlyStopping counter: 3 out of 20
+[ 12/200] train_loss: 0.34742 valid_loss: 0.44591 valid_AUC: 0.88653 valid_PRC: 0.89539 valid_Accuracy: 0.80278 valid_Precision: 0.79563 valid_Reacll: 0.82116 
+EarlyStopping counter: 4 out of 20
+[ 13/200] train_loss: 0.30025 valid_loss: 0.47234 valid_AUC: 0.86620 valid_PRC: 0.87679 valid_Accuracy: 0.77869 valid_Precision: 0.76610 valid_Reacll: 0.80988 
+EarlyStopping counter: 5 out of 20
+[ 14/200] train_loss: 0.31453 valid_loss: 0.46733 valid_AUC: 0.88553 valid_PRC: 0.89366 valid_Accuracy: 0.80278 valid_Precision: 0.79243 valid_Reacll: 0.82681 
+EarlyStopping counter: 6 out of 20
+[ 15/200] train_loss: 0.27365 valid_loss: 0.48182 valid_AUC: 0.87481 valid_PRC: 0.88413 valid_Accuracy: 0.79011 valid_Precision: 0.80552 valid_Reacll: 0.77143 
+EarlyStopping counter: 7 out of 20
+[ 16/200] train_loss: 0.29124 valid_loss: 0.46899 valid_AUC: 0.88941 valid_PRC: 0.89720 valid_Accuracy: 0.80903 valid_Precision: 0.79865 valid_Reacll: 0.83245 
+EarlyStopping counter: 8 out of 20
+[ 17/200] train_loss: 0.24505 valid_loss: 0.50530 valid_AUC: 0.87281 valid_PRC: 0.88475 valid_Accuracy: 0.78440 valid_Precision: 0.84869 valid_Reacll: 0.69841 
+EarlyStopping counter: 9 out of 20
+[ 18/200] train_loss: 0.26606 valid_loss: 0.48674 valid_AUC: 0.88906 valid_PRC: 0.89722 valid_Accuracy: 0.81028 valid_Precision: 0.80828 valid_Reacll: 0.81940 
+EarlyStopping counter: 10 out of 20
+[ 19/200] train_loss: 0.22082 valid_loss: 0.46961 valid_AUC: 0.88113 valid_PRC: 0.88710 valid_Accuracy: 0.80136 valid_Precision: 0.80750 valid_Reacll: 0.79753 
+EarlyStopping counter: 11 out of 20
+[ 20/200] train_loss: 0.23944 valid_loss: 0.51576 valid_AUC: 0.89029 valid_PRC: 0.89844 valid_Accuracy: 0.80885 valid_Precision: 0.80775 valid_Reacll: 0.81658 
+EarlyStopping counter: 12 out of 20
+[ 21/200] train_loss: 0.19898 valid_loss: 0.50369 valid_AUC: 0.87225 valid_PRC: 0.88147 valid_Accuracy: 0.78512 valid_Precision: 0.76434 valid_Reacll: 0.83175 
+EarlyStopping counter: 13 out of 20
+[ 22/200] train_loss: 0.21713 valid_loss: 0.52593 valid_AUC: 0.89033 valid_PRC: 0.89799 valid_Accuracy: 0.80778 valid_Precision: 0.80227 valid_Reacll: 0.82293 
+EarlyStopping counter: 14 out of 20
+[ 23/200] train_loss: 0.18209 valid_loss: 0.49172 valid_AUC: 0.87844 valid_PRC: 0.88581 valid_Accuracy: 0.79814 valid_Precision: 0.79749 valid_Reacll: 0.80564 
+EarlyStopping counter: 15 out of 20
+[ 24/200] train_loss: 0.19613 valid_loss: 0.59043 valid_AUC: 0.88742 valid_PRC: 0.89419 valid_Accuracy: 0.80564 valid_Precision: 0.80083 valid_Reacll: 0.81975 
+EarlyStopping counter: 16 out of 20
+[ 25/200] train_loss: 0.16286 valid_loss: 0.53894 valid_AUC: 0.87203 valid_PRC: 0.88336 valid_Accuracy: 0.79011 valid_Precision: 0.77752 valid_Reacll: 0.81975 
+EarlyStopping counter: 17 out of 20
+[ 26/200] train_loss: 0.18388 valid_loss: 0.60830 valid_AUC: 0.88859 valid_PRC: 0.89556 valid_Accuracy: 0.80618 valid_Precision: 0.79918 valid_Reacll: 0.82399 
+EarlyStopping counter: 18 out of 20
+[ 27/200] train_loss: 0.14561 valid_loss: 0.53258 valid_AUC: 0.87539 valid_PRC: 0.88417 valid_Accuracy: 0.79172 valid_Precision: 0.78719 valid_Reacll: 0.80635 
+EarlyStopping counter: 19 out of 20
+[ 28/200] train_loss: 0.17054 valid_loss: 0.63326 valid_AUC: 0.88918 valid_PRC: 0.89250 valid_Accuracy: 0.80689 valid_Precision: 0.79722 valid_Reacll: 0.82928 
+EarlyStopping counter: 20 out of 20
+Early stopping
+save last_checkpoint.pth
+load valid_best_checkpoint.pth
+best_set--Loss:0.30887;Accuracy:0.87009;Precision:0.86482;Recall:0.87568;AUC:0.94626;PRC:0.94615.
+best_set--Loss:0.44078;Accuracy:0.79404;Precision:0.79073;Recall:0.80635;AUC:0.87887;PRC:0.88898.
+best_set--Loss:0.44897;Accuracy:0.79312;Precision:0.79350;Recall:0.79643;AUC:0.87463;PRC:0.88295.
+load last_checkpoint.pth
+last_set--Loss:0.05627;Accuracy:0.98648;Precision:0.98376;Recall:0.98915;AUC:0.99900;PRC:0.99897.
+last_set--Loss:0.63326;Accuracy:0.80689;Precision:0.79722;Recall:0.82928;AUC:0.88918;PRC:0.89250.
+last_set--Loss:0.66024;Accuracy:0.81054;Precision:0.80471;Recall:0.82365;AUC:0.88588;PRC:0.89190.
+************************* No. 4 -fold *************************
+Training...
+[  1/200] train_loss: 0.62716 valid_loss: 0.57859 valid_AUC: 0.77973 valid_PRC: 0.80417 valid_Accuracy: 0.68767 valid_Precision: 0.65685 valid_Reacll: 0.79724 
+Validation loss decreased (inf --> 0.578594).  Saving model ...
+[  2/200] train_loss: 0.52727 valid_loss: 0.52116 valid_AUC: 0.82496 valid_PRC: 0.84069 valid_Accuracy: 0.73800 valid_Precision: 0.81464 valid_Reacll: 0.62208 
+Validation loss decreased (0.578594 --> 0.521161).  Saving model ...
+[  3/200] train_loss: 0.48452 valid_loss: 0.51937 valid_AUC: 0.81921 valid_PRC: 0.83406 valid_Accuracy: 0.73318 valid_Precision: 0.78599 valid_Reacll: 0.64720 
+Validation loss decreased (0.521161 --> 0.519368).  Saving model ...
+[  4/200] train_loss: 0.47012 valid_loss: 0.48158 valid_AUC: 0.84912 valid_PRC: 0.85740 valid_Accuracy: 0.76727 valid_Precision: 0.78206 valid_Reacll: 0.74664 
+Validation loss decreased (0.519368 --> 0.481584).  Saving model ...
+[  5/200] train_loss: 0.43264 valid_loss: 0.52703 valid_AUC: 0.82798 valid_PRC: 0.84008 valid_Accuracy: 0.73889 valid_Precision: 0.71560 valid_Reacll: 0.80042 
+EarlyStopping counter: 1 out of 20
+[  6/200] train_loss: 0.43497 valid_loss: 0.47830 valid_AUC: 0.85891 valid_PRC: 0.86861 valid_Accuracy: 0.77833 valid_Precision: 0.81529 valid_Reacll: 0.72470 
+Validation loss decreased (0.481584 --> 0.478300).  Saving model ...
+[  7/200] train_loss: 0.39359 valid_loss: 0.49958 valid_AUC: 0.84130 valid_PRC: 0.85223 valid_Accuracy: 0.76263 valid_Precision: 0.78078 valid_Reacll: 0.73602 
+EarlyStopping counter: 1 out of 20
+[  8/200] train_loss: 0.40021 valid_loss: 0.47564 valid_AUC: 0.86195 valid_PRC: 0.87260 valid_Accuracy: 0.77780 valid_Precision: 0.78425 valid_Reacll: 0.77176 
+Validation loss decreased (0.478300 --> 0.475637).  Saving model ...
+[  9/200] train_loss: 0.35950 valid_loss: 0.54888 valid_AUC: 0.83332 valid_PRC: 0.84544 valid_Accuracy: 0.74335 valid_Precision: 0.72402 valid_Reacll: 0.79370 
+EarlyStopping counter: 1 out of 20
+[ 10/200] train_loss: 0.36867 valid_loss: 0.47692 valid_AUC: 0.86680 valid_PRC: 0.87786 valid_Accuracy: 0.78244 valid_Precision: 0.79144 valid_Reacll: 0.77212 
+EarlyStopping counter: 2 out of 20
+[ 11/200] train_loss: 0.32776 valid_loss: 0.53657 valid_AUC: 0.84055 valid_PRC: 0.85222 valid_Accuracy: 0.75156 valid_Precision: 0.80151 valid_Reacll: 0.67445 
+EarlyStopping counter: 3 out of 20
+[ 12/200] train_loss: 0.34057 valid_loss: 0.48565 valid_AUC: 0.87065 valid_PRC: 0.87877 valid_Accuracy: 0.78976 valid_Precision: 0.79324 valid_Reacll: 0.78875 
+EarlyStopping counter: 4 out of 20
+[ 13/200] train_loss: 0.29971 valid_loss: 0.46266 valid_AUC: 0.86194 valid_PRC: 0.87239 valid_Accuracy: 0.78208 valid_Precision: 0.80665 valid_Reacll: 0.74699 
+Validation loss decreased (0.475637 --> 0.462662).  Saving model ...
+[ 14/200] train_loss: 0.30726 valid_loss: 0.49465 valid_AUC: 0.87146 valid_PRC: 0.87934 valid_Accuracy: 0.78761 valid_Precision: 0.79876 valid_Reacll: 0.77389 
+EarlyStopping counter: 1 out of 20
+[ 15/200] train_loss: 0.26765 valid_loss: 0.57562 valid_AUC: 0.85740 valid_PRC: 0.86645 valid_Accuracy: 0.77530 valid_Precision: 0.83073 valid_Reacll: 0.69639 
+EarlyStopping counter: 2 out of 20
+[ 16/200] train_loss: 0.28574 valid_loss: 0.52760 valid_AUC: 0.87348 valid_PRC: 0.88142 valid_Accuracy: 0.78494 valid_Precision: 0.77447 valid_Reacll: 0.80927 
+EarlyStopping counter: 3 out of 20
+[ 17/200] train_loss: 0.24226 valid_loss: 0.54297 valid_AUC: 0.86783 valid_PRC: 0.87536 valid_Accuracy: 0.78208 valid_Precision: 0.78307 valid_Reacll: 0.78556 
+EarlyStopping counter: 4 out of 20
+[ 18/200] train_loss: 0.26245 valid_loss: 0.54614 valid_AUC: 0.87649 valid_PRC: 0.88355 valid_Accuracy: 0.79368 valid_Precision: 0.80232 valid_Reacll: 0.78415 
+EarlyStopping counter: 5 out of 20
+[ 19/200] train_loss: 0.22206 valid_loss: 0.54961 valid_AUC: 0.86485 valid_PRC: 0.87513 valid_Accuracy: 0.77833 valid_Precision: 0.76087 valid_Reacll: 0.81741 
+EarlyStopping counter: 6 out of 20
+[ 20/200] train_loss: 0.24174 valid_loss: 0.56298 valid_AUC: 0.87612 valid_PRC: 0.88233 valid_Accuracy: 0.79011 valid_Precision: 0.78968 valid_Reacll: 0.79582 
+EarlyStopping counter: 7 out of 20
+[ 21/200] train_loss: 0.19598 valid_loss: 0.55301 valid_AUC: 0.86262 valid_PRC: 0.87151 valid_Accuracy: 0.78172 valid_Precision: 0.78113 valid_Reacll: 0.78804 
+EarlyStopping counter: 8 out of 20
+[ 22/200] train_loss: 0.22281 valid_loss: 0.62197 valid_AUC: 0.87455 valid_PRC: 0.88260 valid_Accuracy: 0.78779 valid_Precision: 0.79474 valid_Reacll: 0.78096 
+EarlyStopping counter: 9 out of 20
+[ 23/200] train_loss: 0.17905 valid_loss: 0.58512 valid_AUC: 0.85389 valid_PRC: 0.86060 valid_Accuracy: 0.76745 valid_Precision: 0.75528 valid_Reacll: 0.79724 
+EarlyStopping counter: 10 out of 20
+[ 24/200] train_loss: 0.20286 valid_loss: 0.66351 valid_AUC: 0.87547 valid_PRC: 0.88223 valid_Accuracy: 0.79208 valid_Precision: 0.79608 valid_Reacll: 0.79016 
+EarlyStopping counter: 11 out of 20
+[ 25/200] train_loss: 0.15861 valid_loss: 0.62960 valid_AUC: 0.86784 valid_PRC: 0.87664 valid_Accuracy: 0.78744 valid_Precision: 0.79144 valid_Reacll: 0.78556 
+EarlyStopping counter: 12 out of 20
+[ 26/200] train_loss: 0.18278 valid_loss: 0.67949 valid_AUC: 0.87604 valid_PRC: 0.88284 valid_Accuracy: 0.79689 valid_Precision: 0.79124 valid_Reacll: 0.81139 
+EarlyStopping counter: 13 out of 20
+[ 27/200] train_loss: 0.14456 valid_loss: 0.58740 valid_AUC: 0.86876 valid_PRC: 0.87831 valid_Accuracy: 0.78476 valid_Precision: 0.78421 valid_Reacll: 0.79087 
+EarlyStopping counter: 14 out of 20
+[ 28/200] train_loss: 0.16944 valid_loss: 0.66639 valid_AUC: 0.87511 valid_PRC: 0.87991 valid_Accuracy: 0.79921 valid_Precision: 0.79979 valid_Reacll: 0.80290 
+EarlyStopping counter: 15 out of 20
+[ 29/200] train_loss: 0.13508 valid_loss: 0.60081 valid_AUC: 0.86130 valid_PRC: 0.87163 valid_Accuracy: 0.78208 valid_Precision: 0.77511 valid_Reacll: 0.80007 
+EarlyStopping counter: 16 out of 20
+[ 30/200] train_loss: 0.15335 valid_loss: 0.75274 valid_AUC: 0.87502 valid_PRC: 0.88267 valid_Accuracy: 0.79333 valid_Precision: 0.78367 valid_Reacll: 0.81529 
+EarlyStopping counter: 17 out of 20
+[ 31/200] train_loss: 0.12021 valid_loss: 0.77767 valid_AUC: 0.86561 valid_PRC: 0.86937 valid_Accuracy: 0.78976 valid_Precision: 0.81094 valid_Reacll: 0.76044 
+EarlyStopping counter: 18 out of 20
+[ 32/200] train_loss: 0.14755 valid_loss: 0.74500 valid_AUC: 0.87603 valid_PRC: 0.87899 valid_Accuracy: 0.79457 valid_Precision: 0.79151 valid_Reacll: 0.80467 
+EarlyStopping counter: 19 out of 20
+[ 33/200] train_loss: 0.11200 valid_loss: 0.65261 valid_AUC: 0.86670 valid_PRC: 0.87117 valid_Accuracy: 0.79047 valid_Precision: 0.78881 valid_Reacll: 0.79830 
+EarlyStopping counter: 20 out of 20
+Early stopping
+save last_checkpoint.pth
+load valid_best_checkpoint.pth
+best_set--Loss:0.29620;Accuracy:0.88588;Precision:0.90592;Recall:0.86014;AUC:0.95825;PRC:0.95823.
+best_set--Loss:0.46266;Accuracy:0.78208;Precision:0.80665;Recall:0.74699;AUC:0.86194;PRC:0.87239.
+best_set--Loss:0.45632;Accuracy:0.78983;Precision:0.81725;Recall:0.75000;AUC:0.86755;PRC:0.87830.
+load last_checkpoint.pth
+last_set--Loss:0.11310;Accuracy:0.95882;Precision:0.95373;Recall:0.96407;AUC:0.99326;PRC:0.99317.
+last_set--Loss:0.65261;Accuracy:0.79047;Precision:0.78881;Recall:0.79830;AUC:0.86670;PRC:0.87117.
+last_set--Loss:0.63905;Accuracy:0.78812;Precision:0.78652;Recall:0.79455;AUC:0.87067;PRC:0.87432.
+************************* No. 5 -fold *************************
+Training...
+[  1/200] train_loss: 0.62548 valid_loss: 0.58858 valid_AUC: 0.78794 valid_PRC: 0.81473 valid_Accuracy: 0.63894 valid_Precision: 0.59111 valid_Reacll: 0.88421 
+Validation loss decreased (inf --> 0.588576).  Saving model ...
+[  2/200] train_loss: 0.53360 valid_loss: 0.48559 valid_AUC: 0.84053 valid_PRC: 0.85801 valid_Accuracy: 0.76459 valid_Precision: 0.81186 valid_Reacll: 0.68429 
+Validation loss decreased (0.588576 --> 0.485593).  Saving model ...
+[  3/200] train_loss: 0.49025 valid_loss: 0.50410 valid_AUC: 0.82930 valid_PRC: 0.84384 valid_Accuracy: 0.75138 valid_Precision: 0.75723 valid_Reacll: 0.73463 
+EarlyStopping counter: 1 out of 20
+[  4/200] train_loss: 0.47888 valid_loss: 0.45736 valid_AUC: 0.86340 valid_PRC: 0.87360 valid_Accuracy: 0.78172 valid_Precision: 0.80406 valid_Reacll: 0.74074 
+Validation loss decreased (0.485593 --> 0.457365).  Saving model ...
+[  5/200] train_loss: 0.44451 valid_loss: 0.48552 valid_AUC: 0.84804 valid_PRC: 0.86157 valid_Accuracy: 0.75727 valid_Precision: 0.85614 valid_Reacll: 0.61417 
+EarlyStopping counter: 1 out of 20
+[  6/200] train_loss: 0.44050 valid_loss: 0.45236 valid_AUC: 0.87077 valid_PRC: 0.88104 valid_Accuracy: 0.78993 valid_Precision: 0.80333 valid_Reacll: 0.76375 
+Validation loss decreased (0.457365 --> 0.452356).  Saving model ...
+[  7/200] train_loss: 0.40147 valid_loss: 0.54224 valid_AUC: 0.85292 valid_PRC: 0.86380 valid_Accuracy: 0.75585 valid_Precision: 0.87165 valid_Reacll: 0.59583 
+EarlyStopping counter: 1 out of 20
+[  8/200] train_loss: 0.40556 valid_loss: 0.44312 valid_AUC: 0.87795 valid_PRC: 0.88668 valid_Accuracy: 0.79797 valid_Precision: 0.80892 valid_Reacll: 0.77634 
+Validation loss decreased (0.452356 --> 0.443122).  Saving model ...
+[  9/200] train_loss: 0.36446 valid_loss: 0.48906 valid_AUC: 0.86173 valid_PRC: 0.87129 valid_Accuracy: 0.76798 valid_Precision: 0.84554 valid_Reacll: 0.65156 
+EarlyStopping counter: 1 out of 20
+[ 10/200] train_loss: 0.37058 valid_loss: 0.44601 valid_AUC: 0.88093 valid_PRC: 0.89020 valid_Accuracy: 0.80350 valid_Precision: 0.81555 valid_Reacll: 0.78065 
+EarlyStopping counter: 2 out of 20
+[ 11/200] train_loss: 0.32906 valid_loss: 0.47486 valid_AUC: 0.86269 valid_PRC: 0.87264 valid_Accuracy: 0.78351 valid_Precision: 0.82558 valid_Reacll: 0.71485 
+EarlyStopping counter: 3 out of 20
+[ 12/200] train_loss: 0.33761 valid_loss: 0.45156 valid_AUC: 0.88352 valid_PRC: 0.88993 valid_Accuracy: 0.80564 valid_Precision: 0.80000 valid_Reacll: 0.81122 
+EarlyStopping counter: 4 out of 20
+[ 13/200] train_loss: 0.29315 valid_loss: 0.49027 valid_AUC: 0.86949 valid_PRC: 0.87654 valid_Accuracy: 0.78226 valid_Precision: 0.76593 valid_Reacll: 0.80834 
+EarlyStopping counter: 5 out of 20
+[ 14/200] train_loss: 0.30723 valid_loss: 0.48150 valid_AUC: 0.88490 valid_PRC: 0.89242 valid_Accuracy: 0.80296 valid_Precision: 0.79535 valid_Reacll: 0.81194 
+EarlyStopping counter: 6 out of 20
+[ 15/200] train_loss: 0.25805 valid_loss: 0.49700 valid_AUC: 0.85972 valid_PRC: 0.86653 valid_Accuracy: 0.77209 valid_Precision: 0.73722 valid_Reacll: 0.84035 
+EarlyStopping counter: 7 out of 20
+[ 16/200] train_loss: 0.27992 valid_loss: 0.50344 valid_AUC: 0.88475 valid_PRC: 0.89435 valid_Accuracy: 0.80314 valid_Precision: 0.80072 valid_Reacll: 0.80331 
+EarlyStopping counter: 8 out of 20
+[ 17/200] train_loss: 0.23607 valid_loss: 0.49912 valid_AUC: 0.86514 valid_PRC: 0.87459 valid_Accuracy: 0.78619 valid_Precision: 0.82911 valid_Reacll: 0.71701 
+EarlyStopping counter: 9 out of 20
+[ 18/200] train_loss: 0.25902 valid_loss: 0.53029 valid_AUC: 0.88416 valid_PRC: 0.89272 valid_Accuracy: 0.80635 valid_Precision: 0.80526 valid_Reacll: 0.80439 
+EarlyStopping counter: 10 out of 20
+[ 19/200] train_loss: 0.20832 valid_loss: 0.52636 valid_AUC: 0.87296 valid_PRC: 0.88248 valid_Accuracy: 0.78761 valid_Precision: 0.76596 valid_Reacll: 0.82380 
+EarlyStopping counter: 11 out of 20
+[ 20/200] train_loss: 0.23032 valid_loss: 0.53179 valid_AUC: 0.88918 valid_PRC: 0.89626 valid_Accuracy: 0.80171 valid_Precision: 0.78557 valid_Reacll: 0.82596 
+EarlyStopping counter: 12 out of 20
+[ 21/200] train_loss: 0.18909 valid_loss: 0.51924 valid_AUC: 0.87583 valid_PRC: 0.88585 valid_Accuracy: 0.79136 valid_Precision: 0.78765 valid_Reacll: 0.79360 
+EarlyStopping counter: 13 out of 20
+[ 22/200] train_loss: 0.21342 valid_loss: 0.56376 valid_AUC: 0.88727 valid_PRC: 0.89517 valid_Accuracy: 0.80386 valid_Precision: 0.79406 valid_Reacll: 0.81661 
+EarlyStopping counter: 14 out of 20
+[ 23/200] train_loss: 0.16945 valid_loss: 0.59462 valid_AUC: 0.87403 valid_PRC: 0.87713 valid_Accuracy: 0.79565 valid_Precision: 0.80500 valid_Reacll: 0.77634 
+EarlyStopping counter: 15 out of 20
+[ 24/200] train_loss: 0.19044 valid_loss: 0.59960 valid_AUC: 0.88860 valid_PRC: 0.89665 valid_Accuracy: 0.81260 valid_Precision: 0.80551 valid_Reacll: 0.82057 
+EarlyStopping counter: 16 out of 20
+[ 25/200] train_loss: 0.15460 valid_loss: 0.50730 valid_AUC: 0.87827 valid_PRC: 0.88806 valid_Accuracy: 0.80225 valid_Precision: 0.83716 valid_Reacll: 0.74685 
+EarlyStopping counter: 17 out of 20
+[ 26/200] train_loss: 0.17971 valid_loss: 0.63397 valid_AUC: 0.88942 valid_PRC: 0.89792 valid_Accuracy: 0.81099 valid_Precision: 0.80510 valid_Reacll: 0.81697 
+EarlyStopping counter: 18 out of 20
+[ 27/200] train_loss: 0.13707 valid_loss: 0.56563 valid_AUC: 0.87604 valid_PRC: 0.88470 valid_Accuracy: 0.79600 valid_Precision: 0.80929 valid_Reacll: 0.77059 
+EarlyStopping counter: 19 out of 20
+[ 28/200] train_loss: 0.16278 valid_loss: 0.69252 valid_AUC: 0.88759 valid_PRC: 0.89237 valid_Accuracy: 0.80957 valid_Precision: 0.80717 valid_Reacll: 0.80978 
+EarlyStopping counter: 20 out of 20
+Early stopping
+save last_checkpoint.pth
+load valid_best_checkpoint.pth
+best_set--Loss:0.31009;Accuracy:0.87048;Precision:0.87729;Recall:0.86304;AUC:0.94816;PRC:0.94918.
+best_set--Loss:0.44312;Accuracy:0.79797;Precision:0.80892;Recall:0.77634;AUC:0.87795;PRC:0.88668.
+best_set--Loss:0.46523;Accuracy:0.78319;Precision:0.78411;Recall:0.77483;AUC:0.86589;PRC:0.87028.
+load last_checkpoint.pth
+last_set--Loss:0.05035;Accuracy:0.98751;Precision:0.98783;Recall:0.98731;AUC:0.99923;PRC:0.99925.
+last_set--Loss:0.69252;Accuracy:0.80957;Precision:0.80717;Recall:0.80978;AUC:0.88759;PRC:0.89237.
+last_set--Loss:0.76574;Accuracy:0.79218;Precision:0.78045;Recall:0.80658;AUC:0.87242;PRC:0.87605.
+The best model's results:
+Accuracy(std):0.7870(0.0039)
+Precision(std):0.7872(0.0175)
+Recall(std):0.7878(0.0228)
+AUC(std):0.8703(0.0033)
+PRC(std):0.8778(0.0042)
+The last model's results:
+Accuracy(std):0.7992(0.0080)
+Precision(std):0.7926(0.0093)
+Recall(std):0.8105(0.0109)
+AUC(std):0.8784(0.0059)
+PRC(std):0.8842(0.0075)
+==================================================
+Finished Dataset: DrugBank
+==================================================
+==================================================
+Start Dataset: Davis
+==================================================
+Train in Davis
+load data
+load finished
+data shuffle
+************************* No. 1 -fold *************************
+Training...
+[  1/200] train_loss: 0.59124 valid_loss: 0.52165 valid_AUC: 0.81813 valid_PRC: 0.65238 valid_Accuracy: 0.71526 valid_Precision: 0.49642 valid_Reacll: 0.77606 
+Validation loss decreased (inf --> 0.521645).  Saving model ...
+[  2/200] train_loss: 0.50312 valid_loss: 0.46508 valid_AUC: 0.85999 valid_PRC: 0.72926 valid_Accuracy: 0.76813 valid_Precision: 0.56550 valid_Reacll: 0.76227 
+Validation loss decreased (0.521645 --> 0.465078).  Saving model ...
+[  3/200] train_loss: 0.47786 valid_loss: 0.48167 valid_AUC: 0.85128 valid_PRC: 0.71269 valid_Accuracy: 0.75746 valid_Precision: 0.55016 valid_Reacll: 0.76055 
+EarlyStopping counter: 1 out of 20
+[  4/200] train_loss: 0.46597 valid_loss: 0.43691 valid_AUC: 0.87792 valid_PRC: 0.75780 valid_Accuracy: 0.78171 valid_Precision: 0.58371 valid_Reacll: 0.78381 
+Validation loss decreased (0.465078 --> 0.436905).  Saving model ...
+[  5/200] train_loss: 0.43870 valid_loss: 0.51710 valid_AUC: 0.82534 valid_PRC: 0.70728 valid_Accuracy: 0.79408 valid_Precision: 0.63243 valid_Reacll: 0.64169 
+EarlyStopping counter: 1 out of 20
+[  6/200] train_loss: 0.42928 valid_loss: 0.40842 valid_AUC: 0.89291 valid_PRC: 0.78450 valid_Accuracy: 0.80718 valid_Precision: 0.62762 valid_Reacll: 0.77519 
+Validation loss decreased (0.436905 --> 0.408420).  Saving model ...
+[  7/200] train_loss: 0.40614 valid_loss: 0.44876 valid_AUC: 0.87363 valid_PRC: 0.75485 valid_Accuracy: 0.81688 valid_Precision: 0.67321 valid_Reacll: 0.67959 
+EarlyStopping counter: 1 out of 20
+[  8/200] train_loss: 0.40210 valid_loss: 0.40227 valid_AUC: 0.89846 valid_PRC: 0.79727 valid_Accuracy: 0.83022 valid_Precision: 0.66911 valid_Reacll: 0.78553 
+Validation loss decreased (0.408420 --> 0.402271).  Saving model ...
+[  9/200] train_loss: 0.37649 valid_loss: 0.44551 valid_AUC: 0.87688 valid_PRC: 0.76578 valid_Accuracy: 0.79020 valid_Precision: 0.59439 valid_Reacll: 0.80276 
+EarlyStopping counter: 1 out of 20
+[ 10/200] train_loss: 0.38187 valid_loss: 0.38945 valid_AUC: 0.90412 valid_PRC: 0.80609 valid_Accuracy: 0.82149 valid_Precision: 0.64665 valid_Reacll: 0.80706 
+Validation loss decreased (0.402271 --> 0.389451).  Saving model ...
+[ 11/200] train_loss: 0.35972 valid_loss: 0.42358 valid_AUC: 0.89126 valid_PRC: 0.78818 valid_Accuracy: 0.76789 valid_Precision: 0.55711 valid_Reacll: 0.85702 
+EarlyStopping counter: 1 out of 20
+[ 12/200] train_loss: 0.36313 valid_loss: 0.38879 valid_AUC: 0.90620 valid_PRC: 0.81338 valid_Accuracy: 0.82731 valid_Precision: 0.65777 valid_Reacll: 0.80620 
+Validation loss decreased (0.389451 --> 0.388786).  Saving model ...
+[ 13/200] train_loss: 0.33551 valid_loss: 0.42150 valid_AUC: 0.89308 valid_PRC: 0.79532 valid_Accuracy: 0.83046 valid_Precision: 0.68246 valid_Reacll: 0.74419 
+EarlyStopping counter: 1 out of 20
+[ 14/200] train_loss: 0.34372 valid_loss: 0.38165 valid_AUC: 0.91051 valid_PRC: 0.82090 valid_Accuracy: 0.83580 valid_Precision: 0.67716 valid_Reacll: 0.79673 
+Validation loss decreased (0.388786 --> 0.381651).  Saving model ...
+[ 15/200] train_loss: 0.31429 valid_loss: 0.42099 valid_AUC: 0.90046 valid_PRC: 0.80693 valid_Accuracy: 0.82901 valid_Precision: 0.66403 valid_Reacll: 0.79500 
+EarlyStopping counter: 1 out of 20
+[ 16/200] train_loss: 0.32146 valid_loss: 0.38499 valid_AUC: 0.91290 valid_PRC: 0.82995 valid_Accuracy: 0.84041 valid_Precision: 0.68561 valid_Reacll: 0.80017 
+EarlyStopping counter: 2 out of 20
+[ 17/200] train_loss: 0.29273 valid_loss: 0.42265 valid_AUC: 0.90092 valid_PRC: 0.80361 valid_Accuracy: 0.78487 valid_Precision: 0.57705 valid_Reacll: 0.88372 
+EarlyStopping counter: 3 out of 20
+[ 18/200] train_loss: 0.30431 valid_loss: 0.40188 valid_AUC: 0.91244 valid_PRC: 0.83214 valid_Accuracy: 0.83725 valid_Precision: 0.68068 valid_Reacll: 0.79500 
+EarlyStopping counter: 4 out of 20
+[ 19/200] train_loss: 0.27271 valid_loss: 0.41437 valid_AUC: 0.90093 valid_PRC: 0.80830 valid_Accuracy: 0.82537 valid_Precision: 0.65627 valid_Reacll: 0.79759 
+EarlyStopping counter: 5 out of 20
+[ 20/200] train_loss: 0.27461 valid_loss: 0.40983 valid_AUC: 0.91355 valid_PRC: 0.83369 valid_Accuracy: 0.83701 valid_Precision: 0.67328 valid_Reacll: 0.81826 
+EarlyStopping counter: 6 out of 20
+[ 21/200] train_loss: 0.25304 valid_loss: 0.39279 valid_AUC: 0.90808 valid_PRC: 0.81502 valid_Accuracy: 0.83216 valid_Precision: 0.67030 valid_Reacll: 0.79500 
+EarlyStopping counter: 7 out of 20
+[ 22/200] train_loss: 0.25958 valid_loss: 0.41074 valid_AUC: 0.91603 valid_PRC: 0.83535 valid_Accuracy: 0.84356 valid_Precision: 0.69225 valid_Reacll: 0.80017 
+EarlyStopping counter: 8 out of 20
+[ 23/200] train_loss: 0.23414 valid_loss: 0.43447 valid_AUC: 0.90320 valid_PRC: 0.80223 valid_Accuracy: 0.82149 valid_Precision: 0.64686 valid_Reacll: 0.80620 
+EarlyStopping counter: 9 out of 20
+[ 24/200] train_loss: 0.24888 valid_loss: 0.42420 valid_AUC: 0.91562 valid_PRC: 0.83503 valid_Accuracy: 0.84089 valid_Precision: 0.68205 valid_Reacll: 0.81481 
+EarlyStopping counter: 10 out of 20
+[ 25/200] train_loss: 0.21594 valid_loss: 0.40993 valid_AUC: 0.91043 valid_PRC: 0.82041 valid_Accuracy: 0.83531 valid_Precision: 0.67338 valid_Reacll: 0.80620 
+EarlyStopping counter: 11 out of 20
+[ 26/200] train_loss: 0.22302 valid_loss: 0.47623 valid_AUC: 0.91371 valid_PRC: 0.83501 valid_Accuracy: 0.84599 valid_Precision: 0.69395 valid_Reacll: 0.81051 
+EarlyStopping counter: 12 out of 20
+[ 27/200] train_loss: 0.20509 valid_loss: 0.43866 valid_AUC: 0.90758 valid_PRC: 0.81466 valid_Accuracy: 0.83434 valid_Precision: 0.67836 valid_Reacll: 0.78295 
+EarlyStopping counter: 13 out of 20
+[ 28/200] train_loss: 0.20487 valid_loss: 0.47536 valid_AUC: 0.91415 valid_PRC: 0.83266 valid_Accuracy: 0.84477 valid_Precision: 0.69339 valid_Reacll: 0.80448 
+EarlyStopping counter: 14 out of 20
+[ 29/200] train_loss: 0.18426 valid_loss: 0.44061 valid_AUC: 0.90437 valid_PRC: 0.79672 valid_Accuracy: 0.83507 valid_Precision: 0.67854 valid_Reacll: 0.78725 
+EarlyStopping counter: 15 out of 20
+[ 30/200] train_loss: 0.19200 valid_loss: 0.50946 valid_AUC: 0.91256 valid_PRC: 0.82470 valid_Accuracy: 0.84235 valid_Precision: 0.68474 valid_Reacll: 0.81568 
+EarlyStopping counter: 16 out of 20
+[ 31/200] train_loss: 0.16997 valid_loss: 0.49808 valid_AUC: 0.90290 valid_PRC: 0.80668 valid_Accuracy: 0.83968 valid_Precision: 0.69778 valid_Reacll: 0.75969 
+EarlyStopping counter: 17 out of 20
+[ 32/200] train_loss: 0.17818 valid_loss: 0.49974 valid_AUC: 0.91413 valid_PRC: 0.82766 valid_Accuracy: 0.84841 valid_Precision: 0.69764 valid_Reacll: 0.81481 
+EarlyStopping counter: 18 out of 20
+[ 33/200] train_loss: 0.15292 valid_loss: 0.47905 valid_AUC: 0.90173 valid_PRC: 0.80480 valid_Accuracy: 0.81615 valid_Precision: 0.63424 valid_Reacll: 0.81998 
+EarlyStopping counter: 19 out of 20
+[ 34/200] train_loss: 0.17233 valid_loss: 0.49867 valid_AUC: 0.91659 valid_PRC: 0.83306 valid_Accuracy: 0.84477 valid_Precision: 0.69311 valid_Reacll: 0.80534 
+EarlyStopping counter: 20 out of 20
+Early stopping
+save last_checkpoint.pth
+load valid_best_checkpoint.pth
+best_set--Loss:0.26719;Accuracy:0.88318;Precision:0.74382;Recall:0.89567;AUC:0.95907;PRC:0.90973.
+best_set--Loss:0.38165;Accuracy:0.83580;Precision:0.67716;Recall:0.79673;AUC:0.91051;PRC:0.82090.
+best_set--Loss:0.34789;Accuracy:0.84245;Precision:0.68872;Recall:0.83099;AUC:0.92450;PRC:0.84334.
+load last_checkpoint.pth
+last_set--Loss:0.07751;Accuracy:0.96666;Precision:0.89841;Recall:0.99464;AUC:0.99803;PRC:0.99491.
+last_set--Loss:0.49867;Accuracy:0.84477;Precision:0.69311;Recall:0.80534;AUC:0.91659;PRC:0.83306.
+last_set--Loss:0.42319;Accuracy:0.86341;Precision:0.72918;Recall:0.83970;AUC:0.93201;PRC:0.86116.
+************************* No. 2 -fold *************************
+Training...
+[  1/200] train_loss: 0.58262 valid_loss: 0.54290 valid_AUC: 0.82027 valid_PRC: 0.67911 valid_Accuracy: 0.75867 valid_Precision: 0.59081 valid_Reacll: 0.64274 
+Validation loss decreased (inf --> 0.542904).  Saving model ...
+[  2/200] train_loss: 0.49538 valid_loss: 0.48219 valid_AUC: 0.84970 valid_PRC: 0.72613 valid_Accuracy: 0.77419 valid_Precision: 0.60225 valid_Reacll: 0.73387 
+Validation loss decreased (0.542904 --> 0.482189).  Saving model ...
+[  3/200] train_loss: 0.46673 valid_loss: 0.50498 valid_AUC: 0.83722 valid_PRC: 0.70588 valid_Accuracy: 0.78462 valid_Precision: 0.64545 valid_Reacll: 0.62984 
+EarlyStopping counter: 1 out of 20
+[  4/200] train_loss: 0.45655 valid_loss: 0.45211 valid_AUC: 0.87188 valid_PRC: 0.75911 valid_Accuracy: 0.79772 valid_Precision: 0.64438 valid_Reacll: 0.73065 
+Validation loss decreased (0.482189 --> 0.452107).  Saving model ...
+[  5/200] train_loss: 0.42769 valid_loss: 0.50475 valid_AUC: 0.86564 valid_PRC: 0.74768 valid_Accuracy: 0.78414 valid_Precision: 0.60992 valid_Reacll: 0.78306 
+EarlyStopping counter: 1 out of 20
+[  6/200] train_loss: 0.42287 valid_loss: 0.43103 valid_AUC: 0.88735 valid_PRC: 0.79108 valid_Accuracy: 0.81446 valid_Precision: 0.67099 valid_Reacll: 0.75161 
+Validation loss decreased (0.452107 --> 0.431029).  Saving model ...
+[  7/200] train_loss: 0.39593 valid_loss: 0.45227 valid_AUC: 0.87516 valid_PRC: 0.76446 valid_Accuracy: 0.81179 valid_Precision: 0.67984 valid_Reacll: 0.70726 
+EarlyStopping counter: 1 out of 20
+[  8/200] train_loss: 0.39516 valid_loss: 0.40197 valid_AUC: 0.89867 valid_PRC: 0.81073 valid_Accuracy: 0.81276 valid_Precision: 0.64643 valid_Reacll: 0.83306 
+Validation loss decreased (0.431029 --> 0.401967).  Saving model ...
+[  9/200] train_loss: 0.37173 valid_loss: 0.42946 valid_AUC: 0.88893 valid_PRC: 0.79045 valid_Accuracy: 0.79966 valid_Precision: 0.62778 valid_Reacll: 0.82016 
+EarlyStopping counter: 1 out of 20
+[ 10/200] train_loss: 0.37545 valid_loss: 0.39427 valid_AUC: 0.90334 valid_PRC: 0.81997 valid_Accuracy: 0.81979 valid_Precision: 0.66381 valid_Reacll: 0.81210 
+Validation loss decreased (0.401967 --> 0.394267).  Saving model ...
+[ 11/200] train_loss: 0.35183 valid_loss: 0.43753 valid_AUC: 0.88719 valid_PRC: 0.79440 valid_Accuracy: 0.80936 valid_Precision: 0.66031 valid_Reacll: 0.75403 
+EarlyStopping counter: 1 out of 20
+[ 12/200] train_loss: 0.35224 valid_loss: 0.38854 valid_AUC: 0.90873 valid_PRC: 0.82633 valid_Accuracy: 0.82634 valid_Precision: 0.67305 valid_Reacll: 0.82177 
+Validation loss decreased (0.394267 --> 0.388543).  Saving model ...
+[ 13/200] train_loss: 0.33124 valid_loss: 0.41636 valid_AUC: 0.89555 valid_PRC: 0.79490 valid_Accuracy: 0.79044 valid_Precision: 0.60780 valid_Reacll: 0.85484 
+EarlyStopping counter: 1 out of 20
+[ 14/200] train_loss: 0.33007 valid_loss: 0.38174 valid_AUC: 0.91373 valid_PRC: 0.83647 valid_Accuracy: 0.83362 valid_Precision: 0.68844 valid_Reacll: 0.81613 
+Validation loss decreased (0.388543 --> 0.381739).  Saving model ...
+[ 15/200] train_loss: 0.31089 valid_loss: 0.39304 valid_AUC: 0.90744 valid_PRC: 0.82590 valid_Accuracy: 0.82076 valid_Precision: 0.65925 valid_Reacll: 0.83629 
+EarlyStopping counter: 1 out of 20
+[ 16/200] train_loss: 0.31608 valid_loss: 0.37095 valid_AUC: 0.91851 valid_PRC: 0.84558 valid_Accuracy: 0.83677 valid_Precision: 0.68963 valid_Reacll: 0.83145 
+Validation loss decreased (0.381739 --> 0.370946).  Saving model ...
+[ 17/200] train_loss: 0.28851 valid_loss: 0.40265 valid_AUC: 0.90242 valid_PRC: 0.82128 valid_Accuracy: 0.80403 valid_Precision: 0.62842 valid_Reacll: 0.85242 
+EarlyStopping counter: 1 out of 20
+[ 18/200] train_loss: 0.29830 valid_loss: 0.37439 valid_AUC: 0.92181 valid_PRC: 0.85287 valid_Accuracy: 0.84938 valid_Precision: 0.72186 valid_Reacll: 0.81210 
+EarlyStopping counter: 2 out of 20
+[ 19/200] train_loss: 0.26824 valid_loss: 0.41825 valid_AUC: 0.90265 valid_PRC: 0.81627 valid_Accuracy: 0.83410 valid_Precision: 0.70871 valid_Reacll: 0.76129 
+EarlyStopping counter: 3 out of 20
+[ 20/200] train_loss: 0.27695 valid_loss: 0.37554 valid_AUC: 0.92387 valid_PRC: 0.85721 valid_Accuracy: 0.84211 valid_Precision: 0.69939 valid_Reacll: 0.83306 
+EarlyStopping counter: 4 out of 20
+[ 21/200] train_loss: 0.24950 valid_loss: 0.47511 valid_AUC: 0.91182 valid_PRC: 0.83780 valid_Accuracy: 0.83556 valid_Precision: 0.69705 valid_Reacll: 0.80161 
+EarlyStopping counter: 5 out of 20
+[ 22/200] train_loss: 0.25683 valid_loss: 0.38283 valid_AUC: 0.92432 valid_PRC: 0.85845 valid_Accuracy: 0.84768 valid_Precision: 0.71191 valid_Reacll: 0.82903 
+EarlyStopping counter: 6 out of 20
+[ 23/200] train_loss: 0.23358 valid_loss: 0.41040 valid_AUC: 0.91704 valid_PRC: 0.84592 valid_Accuracy: 0.84235 valid_Precision: 0.71041 valid_Reacll: 0.80323 
+EarlyStopping counter: 7 out of 20
+[ 24/200] train_loss: 0.24715 valid_loss: 0.39441 valid_AUC: 0.92242 valid_PRC: 0.85647 valid_Accuracy: 0.84308 valid_Precision: 0.70102 valid_Reacll: 0.83387 
+EarlyStopping counter: 8 out of 20
+[ 25/200] train_loss: 0.21437 valid_loss: 0.39680 valid_AUC: 0.91339 valid_PRC: 0.82977 valid_Accuracy: 0.83507 valid_Precision: 0.69284 valid_Reacll: 0.81129 
+EarlyStopping counter: 9 out of 20
+[ 26/200] train_loss: 0.22548 valid_loss: 0.41161 valid_AUC: 0.92471 valid_PRC: 0.85774 valid_Accuracy: 0.85035 valid_Precision: 0.72077 valid_Reacll: 0.82016 
+EarlyStopping counter: 10 out of 20
+[ 27/200] train_loss: 0.20085 valid_loss: 0.40910 valid_AUC: 0.91216 valid_PRC: 0.83380 valid_Accuracy: 0.82440 valid_Precision: 0.66517 valid_Reacll: 0.83790 
+EarlyStopping counter: 11 out of 20
+[ 28/200] train_loss: 0.20888 valid_loss: 0.41325 valid_AUC: 0.92414 valid_PRC: 0.85767 valid_Accuracy: 0.84599 valid_Precision: 0.71051 valid_Reacll: 0.82339 
+EarlyStopping counter: 12 out of 20
+[ 29/200] train_loss: 0.18100 valid_loss: 0.42768 valid_AUC: 0.91178 valid_PRC: 0.83258 valid_Accuracy: 0.83143 valid_Precision: 0.68301 valid_Reacll: 0.82016 
+EarlyStopping counter: 13 out of 20
+[ 30/200] train_loss: 0.19320 valid_loss: 0.46813 valid_AUC: 0.92239 valid_PRC: 0.85201 valid_Accuracy: 0.84574 valid_Precision: 0.72076 valid_Reacll: 0.79516 
+EarlyStopping counter: 14 out of 20
+[ 31/200] train_loss: 0.17322 valid_loss: 0.39045 valid_AUC: 0.91505 valid_PRC: 0.83995 valid_Accuracy: 0.82974 valid_Precision: 0.67536 valid_Reacll: 0.83548 
+EarlyStopping counter: 15 out of 20
+[ 32/200] train_loss: 0.17829 valid_loss: 0.46837 valid_AUC: 0.92332 valid_PRC: 0.85305 valid_Accuracy: 0.85496 valid_Precision: 0.74135 valid_Reacll: 0.79516 
+EarlyStopping counter: 16 out of 20
+[ 33/200] train_loss: 0.15534 valid_loss: 0.50469 valid_AUC: 0.91714 valid_PRC: 0.83772 valid_Accuracy: 0.84962 valid_Precision: 0.74257 valid_Reacll: 0.76532 
+EarlyStopping counter: 17 out of 20
+[ 34/200] train_loss: 0.17237 valid_loss: 0.49702 valid_AUC: 0.92226 valid_PRC: 0.85373 valid_Accuracy: 0.84356 valid_Precision: 0.71326 valid_Reacll: 0.80242 
+EarlyStopping counter: 18 out of 20
+[ 35/200] train_loss: 0.14980 valid_loss: 0.46962 valid_AUC: 0.91809 valid_PRC: 0.84455 valid_Accuracy: 0.82804 valid_Precision: 0.67342 valid_Reacll: 0.83145 
+EarlyStopping counter: 19 out of 20
+[ 36/200] train_loss: 0.15384 valid_loss: 0.49383 valid_AUC: 0.92345 valid_PRC: 0.85235 valid_Accuracy: 0.85108 valid_Precision: 0.72947 valid_Reacll: 0.80242 
+EarlyStopping counter: 20 out of 20
+Early stopping
+save last_checkpoint.pth
+load valid_best_checkpoint.pth
+best_set--Loss:0.23920;Accuracy:0.89057;Precision:0.74860;Recall:0.92106;AUC:0.96851;PRC:0.92821.
+best_set--Loss:0.37095;Accuracy:0.83677;Precision:0.68963;Recall:0.83145;AUC:0.91851;PRC:0.84558.
+best_set--Loss:0.36091;Accuracy:0.83547;Precision:0.66167;Recall:0.83368;AUC:0.92042;PRC:0.83040.
+load last_checkpoint.pth
+last_set--Loss:0.06670;Accuracy:0.97411;Precision:0.91968;Recall:0.99505;AUC:0.99860;PRC:0.99637.
+last_set--Loss:0.49383;Accuracy:0.85108;Precision:0.72947;Recall:0.80242;AUC:0.92345;PRC:0.85235.
+last_set--Loss:0.49879;Accuracy:0.85041;Precision:0.70471;Recall:0.79385;AUC:0.91871;PRC:0.82752.
+************************* No. 3 -fold *************************
+Training...
+[  1/200] train_loss: 0.58333 valid_loss: 0.52002 valid_AUC: 0.83269 valid_PRC: 0.68416 valid_Accuracy: 0.78293 valid_Precision: 0.63066 valid_Reacll: 0.64869 
+Validation loss decreased (inf --> 0.520020).  Saving model ...
+[  2/200] train_loss: 0.50133 valid_loss: 0.45811 valid_AUC: 0.86737 valid_PRC: 0.76475 valid_Accuracy: 0.80500 valid_Precision: 0.65602 valid_Reacll: 0.72141 
+Validation loss decreased (0.520020 --> 0.458106).  Saving model ...
+[  3/200] train_loss: 0.46980 valid_loss: 0.47176 valid_AUC: 0.86958 valid_PRC: 0.76601 valid_Accuracy: 0.80718 valid_Precision: 0.66092 valid_Reacll: 0.71977 
+EarlyStopping counter: 1 out of 20
+[  4/200] train_loss: 0.45212 valid_loss: 0.42713 valid_AUC: 0.88466 valid_PRC: 0.79357 valid_Accuracy: 0.80839 valid_Precision: 0.64505 valid_Reacll: 0.78840 
+Validation loss decreased (0.458106 --> 0.427129).  Saving model ...
+[  5/200] train_loss: 0.42862 valid_loss: 0.47363 valid_AUC: 0.87026 valid_PRC: 0.76943 valid_Accuracy: 0.81931 valid_Precision: 0.72616 valid_Reacll: 0.62827 
+EarlyStopping counter: 1 out of 20
+[  6/200] train_loss: 0.41967 valid_loss: 0.40447 valid_AUC: 0.89647 valid_PRC: 0.81544 valid_Accuracy: 0.81761 valid_Precision: 0.66298 valid_Reacll: 0.78431 
+Validation loss decreased (0.427129 --> 0.404467).  Saving model ...
+[  7/200] train_loss: 0.39666 valid_loss: 0.44077 valid_AUC: 0.88825 valid_PRC: 0.78985 valid_Accuracy: 0.82076 valid_Precision: 0.70603 valid_Reacll: 0.67892 
+EarlyStopping counter: 1 out of 20
+[  8/200] train_loss: 0.39353 valid_loss: 0.38596 valid_AUC: 0.90721 valid_PRC: 0.83045 valid_Accuracy: 0.81809 valid_Precision: 0.65531 valid_Reacll: 0.81699 
+Validation loss decreased (0.404467 --> 0.385964).  Saving model ...
+[  9/200] train_loss: 0.37186 valid_loss: 0.41721 valid_AUC: 0.89373 valid_PRC: 0.79886 valid_Accuracy: 0.79990 valid_Precision: 0.62384 valid_Reacll: 0.82108 
+EarlyStopping counter: 1 out of 20
+[ 10/200] train_loss: 0.37175 valid_loss: 0.38366 valid_AUC: 0.90925 valid_PRC: 0.83193 valid_Accuracy: 0.83192 valid_Precision: 0.68658 valid_Reacll: 0.79820 
+Validation loss decreased (0.385964 --> 0.383656).  Saving model ...
+[ 11/200] train_loss: 0.34789 valid_loss: 0.42241 valid_AUC: 0.89187 valid_PRC: 0.80379 valid_Accuracy: 0.78123 valid_Precision: 0.59221 valid_Reacll: 0.84477 
+EarlyStopping counter: 1 out of 20
+[ 12/200] train_loss: 0.35409 valid_loss: 0.37829 valid_AUC: 0.91432 valid_PRC: 0.83841 valid_Accuracy: 0.84405 valid_Precision: 0.71728 valid_Reacll: 0.78350 
+Validation loss decreased (0.383656 --> 0.378294).  Saving model ...
+[ 13/200] train_loss: 0.33186 valid_loss: 0.39296 valid_AUC: 0.90551 valid_PRC: 0.82950 valid_Accuracy: 0.83216 valid_Precision: 0.69137 valid_Reacll: 0.78513 
+EarlyStopping counter: 1 out of 20
+[ 14/200] train_loss: 0.33690 valid_loss: 0.36691 valid_AUC: 0.91931 valid_PRC: 0.84563 valid_Accuracy: 0.84744 valid_Precision: 0.71387 valid_Reacll: 0.81127 
+Validation loss decreased (0.378294 --> 0.366911).  Saving model ...
+[ 15/200] train_loss: 0.31112 valid_loss: 0.38083 valid_AUC: 0.90964 valid_PRC: 0.83544 valid_Accuracy: 0.82100 valid_Precision: 0.65698 valid_Reacll: 0.83088 
+EarlyStopping counter: 1 out of 20
+[ 16/200] train_loss: 0.31717 valid_loss: 0.36693 valid_AUC: 0.91965 valid_PRC: 0.84944 valid_Accuracy: 0.84332 valid_Precision: 0.70438 valid_Reacll: 0.81373 
+EarlyStopping counter: 2 out of 20
+[ 17/200] train_loss: 0.29087 valid_loss: 0.38842 valid_AUC: 0.90993 valid_PRC: 0.83865 valid_Accuracy: 0.82149 valid_Precision: 0.65561 valid_Reacll: 0.83987 
+EarlyStopping counter: 3 out of 20
+[ 18/200] train_loss: 0.29539 valid_loss: 0.37812 valid_AUC: 0.92093 valid_PRC: 0.85170 valid_Accuracy: 0.84089 valid_Precision: 0.69505 valid_Reacll: 0.82680 
+EarlyStopping counter: 4 out of 20
+[ 19/200] train_loss: 0.26547 valid_loss: 0.38779 valid_AUC: 0.91200 valid_PRC: 0.83219 valid_Accuracy: 0.82780 valid_Precision: 0.66667 valid_Reacll: 0.83987 
+EarlyStopping counter: 5 out of 20
+[ 20/200] train_loss: 0.27625 valid_loss: 0.37419 valid_AUC: 0.92416 valid_PRC: 0.85639 valid_Accuracy: 0.85714 valid_Precision: 0.73125 valid_Reacll: 0.82026 
+EarlyStopping counter: 6 out of 20
+[ 21/200] train_loss: 0.25069 valid_loss: 0.39915 valid_AUC: 0.91020 valid_PRC: 0.83033 valid_Accuracy: 0.83968 valid_Precision: 0.70150 valid_Reacll: 0.80065 
+EarlyStopping counter: 7 out of 20
+[ 22/200] train_loss: 0.25479 valid_loss: 0.39017 valid_AUC: 0.92259 valid_PRC: 0.85404 valid_Accuracy: 0.84841 valid_Precision: 0.71256 valid_Reacll: 0.82026 
+EarlyStopping counter: 8 out of 20
+[ 23/200] train_loss: 0.22848 valid_loss: 0.38338 valid_AUC: 0.91787 valid_PRC: 0.84890 valid_Accuracy: 0.84041 valid_Precision: 0.69571 valid_Reacll: 0.82190 
+EarlyStopping counter: 9 out of 20
+[ 24/200] train_loss: 0.23497 valid_loss: 0.40401 valid_AUC: 0.92440 valid_PRC: 0.85286 valid_Accuracy: 0.85520 valid_Precision: 0.72538 valid_Reacll: 0.82435 
+EarlyStopping counter: 10 out of 20
+[ 25/200] train_loss: 0.20605 valid_loss: 0.41889 valid_AUC: 0.91655 valid_PRC: 0.84072 valid_Accuracy: 0.81737 valid_Precision: 0.63976 valid_Reacll: 0.88072 
+EarlyStopping counter: 11 out of 20
+[ 26/200] train_loss: 0.21251 valid_loss: 0.42436 valid_AUC: 0.92539 valid_PRC: 0.85795 valid_Accuracy: 0.85108 valid_Precision: 0.70833 valid_Reacll: 0.84722 
+EarlyStopping counter: 12 out of 20
+[ 27/200] train_loss: 0.18908 valid_loss: 0.46641 valid_AUC: 0.91495 valid_PRC: 0.84282 valid_Accuracy: 0.84574 valid_Precision: 0.71681 valid_Reacll: 0.79412 
+EarlyStopping counter: 13 out of 20
+[ 28/200] train_loss: 0.20092 valid_loss: 0.43344 valid_AUC: 0.92565 valid_PRC: 0.85830 valid_Accuracy: 0.85326 valid_Precision: 0.71904 valid_Reacll: 0.83007 
+EarlyStopping counter: 14 out of 20
+[ 29/200] train_loss: 0.17394 valid_loss: 0.43633 valid_AUC: 0.91160 valid_PRC: 0.82159 valid_Accuracy: 0.83871 valid_Precision: 0.68949 valid_Reacll: 0.83088 
+EarlyStopping counter: 15 out of 20
+[ 30/200] train_loss: 0.19116 valid_loss: 0.45228 valid_AUC: 0.92172 valid_PRC: 0.85236 valid_Accuracy: 0.85084 valid_Precision: 0.71766 valid_Reacll: 0.82026 
+EarlyStopping counter: 16 out of 20
+[ 31/200] train_loss: 0.16354 valid_loss: 0.44396 valid_AUC: 0.91739 valid_PRC: 0.83942 valid_Accuracy: 0.84962 valid_Precision: 0.71980 valid_Reacll: 0.80801 
+EarlyStopping counter: 17 out of 20
+[ 32/200] train_loss: 0.17006 valid_loss: 0.46439 valid_AUC: 0.92362 valid_PRC: 0.84589 valid_Accuracy: 0.85714 valid_Precision: 0.72957 valid_Reacll: 0.82435 
+EarlyStopping counter: 18 out of 20
+[ 33/200] train_loss: 0.14718 valid_loss: 0.43034 valid_AUC: 0.91377 valid_PRC: 0.83162 valid_Accuracy: 0.83919 valid_Precision: 0.70430 valid_Reacll: 0.79003 
+EarlyStopping counter: 19 out of 20
+[ 34/200] train_loss: 0.15915 valid_loss: 0.53437 valid_AUC: 0.92465 valid_PRC: 0.85162 valid_Accuracy: 0.86296 valid_Precision: 0.74104 valid_Reacll: 0.82761 
+EarlyStopping counter: 20 out of 20
+Early stopping
+save last_checkpoint.pth
+load valid_best_checkpoint.pth
+best_set--Loss:0.26074;Accuracy:0.88851;Precision:0.75475;Recall:0.89574;AUC:0.96125;PRC:0.91279.
+best_set--Loss:0.36691;Accuracy:0.84744;Precision:0.71387;Recall:0.81127;AUC:0.91931;PRC:0.84563.
+best_set--Loss:0.40126;Accuracy:0.83566;Precision:0.67067;Recall:0.81233;AUC:0.90647;PRC:0.80709.
+load last_checkpoint.pth
+last_set--Loss:0.06864;Accuracy:0.96999;Precision:0.90891;Recall:0.99312;AUC:0.99799;PRC:0.99478.
+last_set--Loss:0.53437;Accuracy:0.86296;Precision:0.74104;Recall:0.82761;AUC:0.92465;PRC:0.85162.
+last_set--Loss:0.56674;Accuracy:0.84071;Precision:0.68378;Recall:0.80263;AUC:0.91516;PRC:0.82934.
+************************* No. 4 -fold *************************
+Training...
+[  1/200] train_loss: 0.58781 valid_loss: 0.53777 valid_AUC: 0.82222 valid_PRC: 0.66316 valid_Accuracy: 0.72932 valid_Precision: 0.51124 valid_Reacll: 0.76797 
+Validation loss decreased (inf --> 0.537772).  Saving model ...
+[  2/200] train_loss: 0.49789 valid_loss: 0.46851 valid_AUC: 0.85465 valid_PRC: 0.73577 valid_Accuracy: 0.79481 valid_Precision: 0.61967 valid_Reacll: 0.69264 
+Validation loss decreased (0.537772 --> 0.468511).  Saving model ...
+[  3/200] train_loss: 0.47193 valid_loss: 0.47698 valid_AUC: 0.85579 valid_PRC: 0.72359 valid_Accuracy: 0.75867 valid_Precision: 0.54890 valid_Reacll: 0.77749 
+EarlyStopping counter: 1 out of 20
+[  4/200] train_loss: 0.44799 valid_loss: 0.42612 valid_AUC: 0.88487 valid_PRC: 0.78010 valid_Accuracy: 0.80330 valid_Precision: 0.62096 valid_Reacll: 0.76450 
+Validation loss decreased (0.468511 --> 0.426118).  Saving model ...
+[  5/200] train_loss: 0.42339 valid_loss: 0.45216 valid_AUC: 0.86951 valid_PRC: 0.74388 valid_Accuracy: 0.79335 valid_Precision: 0.60722 valid_Reacll: 0.74286 
+EarlyStopping counter: 1 out of 20
+[  6/200] train_loss: 0.41861 valid_loss: 0.40007 valid_AUC: 0.89830 valid_PRC: 0.80035 valid_Accuracy: 0.82125 valid_Precision: 0.64802 valid_Reacll: 0.79221 
+Validation loss decreased (0.426118 --> 0.400067).  Saving model ...
+[  7/200] train_loss: 0.39412 valid_loss: 0.44954 valid_AUC: 0.87983 valid_PRC: 0.77241 valid_Accuracy: 0.79141 valid_Precision: 0.59634 valid_Reacll: 0.79048 
+EarlyStopping counter: 1 out of 20
+[  8/200] train_loss: 0.39274 valid_loss: 0.39207 valid_AUC: 0.90319 valid_PRC: 0.80944 valid_Accuracy: 0.81421 valid_Precision: 0.63313 valid_Reacll: 0.80087 
+Validation loss decreased (0.400067 --> 0.392072).  Saving model ...
+[  9/200] train_loss: 0.37309 valid_loss: 0.43205 valid_AUC: 0.88914 valid_PRC: 0.78949 valid_Accuracy: 0.83313 valid_Precision: 0.69250 valid_Reacll: 0.72727 
+EarlyStopping counter: 1 out of 20
+[ 10/200] train_loss: 0.37438 valid_loss: 0.38396 valid_AUC: 0.90834 valid_PRC: 0.81862 valid_Accuracy: 0.81373 valid_Precision: 0.62705 valid_Reacll: 0.82684 
+Validation loss decreased (0.392072 --> 0.383964).  Saving model ...
+[ 11/200] train_loss: 0.35291 valid_loss: 0.44170 valid_AUC: 0.89219 valid_PRC: 0.79331 valid_Accuracy: 0.83434 valid_Precision: 0.69063 valid_Reacll: 0.74026 
+EarlyStopping counter: 1 out of 20
+[ 12/200] train_loss: 0.36439 valid_loss: 0.38039 valid_AUC: 0.91227 valid_PRC: 0.82483 valid_Accuracy: 0.81955 valid_Precision: 0.63783 valid_Reacll: 0.82338 
+Validation loss decreased (0.383964 --> 0.380391).  Saving model ...
+[ 13/200] train_loss: 0.33764 valid_loss: 0.39449 valid_AUC: 0.90437 valid_PRC: 0.80437 valid_Accuracy: 0.79942 valid_Precision: 0.60037 valid_Reacll: 0.84935 
+EarlyStopping counter: 1 out of 20
+[ 14/200] train_loss: 0.34815 valid_loss: 0.37976 valid_AUC: 0.91474 valid_PRC: 0.83109 valid_Accuracy: 0.83337 valid_Precision: 0.66786 valid_Reacll: 0.80606 
+Validation loss decreased (0.380391 --> 0.379764).  Saving model ...
+[ 15/200] train_loss: 0.32311 valid_loss: 0.39264 valid_AUC: 0.90481 valid_PRC: 0.80517 valid_Accuracy: 0.81227 valid_Precision: 0.62427 valid_Reacll: 0.82857 
+EarlyStopping counter: 1 out of 20
+[ 16/200] train_loss: 0.32541 valid_loss: 0.37473 valid_AUC: 0.91788 valid_PRC: 0.84174 valid_Accuracy: 0.83071 valid_Precision: 0.65576 valid_Reacll: 0.83290 
+Validation loss decreased (0.379764 --> 0.374730).  Saving model ...
+[ 17/200] train_loss: 0.30373 valid_loss: 0.42573 valid_AUC: 0.90628 valid_PRC: 0.82390 valid_Accuracy: 0.83798 valid_Precision: 0.68659 valid_Reacll: 0.77576 
+EarlyStopping counter: 1 out of 20
+[ 18/200] train_loss: 0.30522 valid_loss: 0.38519 valid_AUC: 0.92160 valid_PRC: 0.84372 valid_Accuracy: 0.84089 valid_Precision: 0.67363 valid_Reacll: 0.83810 
+EarlyStopping counter: 2 out of 20
+[ 19/200] train_loss: 0.28291 valid_loss: 0.39836 valid_AUC: 0.91109 valid_PRC: 0.82283 valid_Accuracy: 0.83410 valid_Precision: 0.66809 valid_Reacll: 0.81039 
+EarlyStopping counter: 3 out of 20
+[ 20/200] train_loss: 0.29016 valid_loss: 0.37615 valid_AUC: 0.92043 valid_PRC: 0.84187 valid_Accuracy: 0.84526 valid_Precision: 0.69363 valid_Reacll: 0.80173 
+EarlyStopping counter: 4 out of 20
+[ 21/200] train_loss: 0.26452 valid_loss: 0.38462 valid_AUC: 0.91445 valid_PRC: 0.82010 valid_Accuracy: 0.83459 valid_Precision: 0.66737 valid_Reacll: 0.81645 
+EarlyStopping counter: 5 out of 20
+[ 22/200] train_loss: 0.27052 valid_loss: 0.38767 valid_AUC: 0.92258 valid_PRC: 0.84599 valid_Accuracy: 0.84186 valid_Precision: 0.67724 valid_Reacll: 0.83203 
+EarlyStopping counter: 6 out of 20
+[ 23/200] train_loss: 0.24555 valid_loss: 0.41150 valid_AUC: 0.90895 valid_PRC: 0.81724 valid_Accuracy: 0.80184 valid_Precision: 0.60156 valid_Reacll: 0.86667 
+EarlyStopping counter: 7 out of 20
+[ 24/200] train_loss: 0.25085 valid_loss: 0.38655 valid_AUC: 0.92509 valid_PRC: 0.84756 valid_Accuracy: 0.83992 valid_Precision: 0.66894 valid_Reacll: 0.84848 
+EarlyStopping counter: 8 out of 20
+[ 25/200] train_loss: 0.22396 valid_loss: 0.39875 valid_AUC: 0.91624 valid_PRC: 0.83401 valid_Accuracy: 0.83289 valid_Precision: 0.66714 valid_Reacll: 0.80519 
+EarlyStopping counter: 9 out of 20
+[ 26/200] train_loss: 0.23071 valid_loss: 0.40870 valid_AUC: 0.92396 valid_PRC: 0.84619 valid_Accuracy: 0.85714 valid_Precision: 0.71736 valid_Reacll: 0.80866 
+EarlyStopping counter: 10 out of 20
+[ 27/200] train_loss: 0.20740 valid_loss: 0.38413 valid_AUC: 0.91291 valid_PRC: 0.82555 valid_Accuracy: 0.82270 valid_Precision: 0.64096 valid_Reacll: 0.83463 
+EarlyStopping counter: 11 out of 20
+[ 28/200] train_loss: 0.21607 valid_loss: 0.41756 valid_AUC: 0.92512 valid_PRC: 0.84625 valid_Accuracy: 0.86005 valid_Precision: 0.71632 valid_Reacll: 0.82857 
+EarlyStopping counter: 12 out of 20
+[ 29/200] train_loss: 0.18757 valid_loss: 0.39991 valid_AUC: 0.91587 valid_PRC: 0.82412 valid_Accuracy: 0.83774 valid_Precision: 0.67065 valid_Reacll: 0.82684 
+EarlyStopping counter: 13 out of 20
+[ 30/200] train_loss: 0.19394 valid_loss: 0.44646 valid_AUC: 0.92197 valid_PRC: 0.84010 valid_Accuracy: 0.85642 valid_Precision: 0.71407 valid_Reacll: 0.81299 
+EarlyStopping counter: 14 out of 20
+[ 31/200] train_loss: 0.17999 valid_loss: 0.41433 valid_AUC: 0.91084 valid_PRC: 0.81409 valid_Accuracy: 0.82634 valid_Precision: 0.65065 valid_Reacll: 0.82078 
+EarlyStopping counter: 15 out of 20
+[ 32/200] train_loss: 0.18499 valid_loss: 0.44460 valid_AUC: 0.92512 valid_PRC: 0.84534 valid_Accuracy: 0.85375 valid_Precision: 0.70566 valid_Reacll: 0.81991 
+EarlyStopping counter: 16 out of 20
+[ 33/200] train_loss: 0.16027 valid_loss: 0.43736 valid_AUC: 0.91762 valid_PRC: 0.82724 valid_Accuracy: 0.84647 valid_Precision: 0.69219 valid_Reacll: 0.81385 
+EarlyStopping counter: 17 out of 20
+[ 34/200] train_loss: 0.16978 valid_loss: 0.44872 valid_AUC: 0.92452 valid_PRC: 0.84091 valid_Accuracy: 0.85763 valid_Precision: 0.71037 valid_Reacll: 0.83030 
+EarlyStopping counter: 18 out of 20
+[ 35/200] train_loss: 0.16324 valid_loss: 0.42786 valid_AUC: 0.90688 valid_PRC: 0.81189 valid_Accuracy: 0.84356 valid_Precision: 0.70303 valid_Reacll: 0.76450 
+EarlyStopping counter: 19 out of 20
+[ 36/200] train_loss: 0.17155 valid_loss: 0.48043 valid_AUC: 0.92551 valid_PRC: 0.84220 valid_Accuracy: 0.86660 valid_Precision: 0.73800 valid_Reacll: 0.81212 
+EarlyStopping counter: 20 out of 20
+Early stopping
+save last_checkpoint.pth
+load valid_best_checkpoint.pth
+best_set--Loss:0.26033;Accuracy:0.87881;Precision:0.73145;Recall:0.90636;AUC:0.96229;PRC:0.91645.
+best_set--Loss:0.37473;Accuracy:0.83071;Precision:0.65576;Recall:0.83290;AUC:0.91788;PRC:0.84174.
+best_set--Loss:0.39089;Accuracy:0.83314;Precision:0.66849;Recall:0.82871;AUC:0.91288;PRC:0.83255.
+load last_checkpoint.pth
+last_set--Loss:0.06873;Accuracy:0.97405;Precision:0.92346;Recall:0.99083;AUC:0.99821;PRC:0.99553.
+last_set--Loss:0.48043;Accuracy:0.86660;Precision:0.73800;Recall:0.81212;AUC:0.92551;PRC:0.84220.
+last_set--Loss:0.50714;Accuracy:0.86282;Precision:0.73678;Recall:0.81110;AUC:0.92186;PRC:0.84643.
+************************* No. 5 -fold *************************
+Training...
+[  1/200] train_loss: 0.58618 valid_loss: 0.52186 valid_AUC: 0.82659 valid_PRC: 0.68012 valid_Accuracy: 0.76643 valid_Precision: 0.57345 valid_Reacll: 0.69342 
+Validation loss decreased (inf --> 0.521862).  Saving model ...
+[  2/200] train_loss: 0.50255 valid_loss: 0.46769 valid_AUC: 0.85909 valid_PRC: 0.74428 valid_Accuracy: 0.78293 valid_Precision: 0.59237 valid_Reacll: 0.75576 
+Validation loss decreased (0.521862 --> 0.467692).  Saving model ...
+[  3/200] train_loss: 0.47573 valid_loss: 0.47227 valid_AUC: 0.86096 valid_PRC: 0.73925 valid_Accuracy: 0.75431 valid_Precision: 0.54443 valid_Reacll: 0.82664 
+EarlyStopping counter: 1 out of 20
+[  4/200] train_loss: 0.46367 valid_loss: 0.42820 valid_AUC: 0.88531 valid_PRC: 0.78868 valid_Accuracy: 0.79845 valid_Precision: 0.61111 valid_Reacll: 0.79846 
+Validation loss decreased (0.467692 --> 0.428200).  Saving model ...
+[  5/200] train_loss: 0.43647 valid_loss: 0.45429 valid_AUC: 0.87148 valid_PRC: 0.76412 valid_Accuracy: 0.77104 valid_Precision: 0.56728 valid_Reacll: 0.81725 
+EarlyStopping counter: 1 out of 20
+[  6/200] train_loss: 0.42687 valid_loss: 0.40978 valid_AUC: 0.89437 valid_PRC: 0.80476 valid_Accuracy: 0.81737 valid_Precision: 0.64656 valid_Reacll: 0.78736 
+Validation loss decreased (0.428200 --> 0.409778).  Saving model ...
+[  7/200] train_loss: 0.39990 valid_loss: 0.44864 valid_AUC: 0.88133 valid_PRC: 0.78169 valid_Accuracy: 0.79408 valid_Precision: 0.60414 valid_Reacll: 0.79761 
+EarlyStopping counter: 1 out of 20
+[  8/200] train_loss: 0.40220 valid_loss: 0.40733 valid_AUC: 0.89793 valid_PRC: 0.81161 valid_Accuracy: 0.82125 valid_Precision: 0.65069 valid_Reacll: 0.80017 
+Validation loss decreased (0.409778 --> 0.407334).  Saving model ...
+[  9/200] train_loss: 0.37784 valid_loss: 0.44104 valid_AUC: 0.88134 valid_PRC: 0.78290 valid_Accuracy: 0.79796 valid_Precision: 0.61591 valid_Reacll: 0.76687 
+EarlyStopping counter: 1 out of 20
+[ 10/200] train_loss: 0.38301 valid_loss: 0.39592 valid_AUC: 0.90310 valid_PRC: 0.81833 valid_Accuracy: 0.82270 valid_Precision: 0.65131 valid_Reacll: 0.80871 
+Validation loss decreased (0.407334 --> 0.395917).  Saving model ...
+[ 11/200] train_loss: 0.36149 valid_loss: 0.42671 valid_AUC: 0.89280 valid_PRC: 0.79686 valid_Accuracy: 0.77807 valid_Precision: 0.57256 valid_Reacll: 0.86251 
+EarlyStopping counter: 1 out of 20
+[ 12/200] train_loss: 0.36162 valid_loss: 0.40276 valid_AUC: 0.90602 valid_PRC: 0.82501 valid_Accuracy: 0.83265 valid_Precision: 0.67093 valid_Reacll: 0.80615 
+EarlyStopping counter: 2 out of 20
+[ 13/200] train_loss: 0.34389 valid_loss: 0.42537 valid_AUC: 0.89380 valid_PRC: 0.79773 valid_Accuracy: 0.82658 valid_Precision: 0.67066 valid_Reacll: 0.76516 
+EarlyStopping counter: 3 out of 20
+[ 14/200] train_loss: 0.34405 valid_loss: 0.39978 valid_AUC: 0.90738 valid_PRC: 0.82556 valid_Accuracy: 0.82464 valid_Precision: 0.64993 valid_Reacll: 0.82921 
+EarlyStopping counter: 4 out of 20
+[ 15/200] train_loss: 0.32223 valid_loss: 0.43540 valid_AUC: 0.89545 valid_PRC: 0.80132 valid_Accuracy: 0.82949 valid_Precision: 0.67727 valid_Reacll: 0.76345 
+EarlyStopping counter: 5 out of 20
+[ 16/200] train_loss: 0.32472 valid_loss: 0.40326 valid_AUC: 0.91408 valid_PRC: 0.84033 valid_Accuracy: 0.84186 valid_Precision: 0.68791 valid_Reacll: 0.81127 
+EarlyStopping counter: 6 out of 20
+[ 17/200] train_loss: 0.30752 valid_loss: 0.43956 valid_AUC: 0.90235 valid_PRC: 0.81625 valid_Accuracy: 0.81373 valid_Precision: 0.62729 valid_Reacll: 0.84799 
+EarlyStopping counter: 7 out of 20
+[ 18/200] train_loss: 0.30619 valid_loss: 0.38943 valid_AUC: 0.91692 valid_PRC: 0.84220 valid_Accuracy: 0.84526 valid_Precision: 0.68781 valid_Reacll: 0.83348 
+Validation loss decreased (0.395917 --> 0.389425).  Saving model ...
+[ 19/200] train_loss: 0.28686 valid_loss: 0.40807 valid_AUC: 0.90489 valid_PRC: 0.81880 valid_Accuracy: 0.81494 valid_Precision: 0.62928 valid_Reacll: 0.84799 
+EarlyStopping counter: 1 out of 20
+[ 20/200] train_loss: 0.28693 valid_loss: 0.40062 valid_AUC: 0.91772 valid_PRC: 0.84084 valid_Accuracy: 0.84429 valid_Precision: 0.68961 valid_Reacll: 0.82152 
+EarlyStopping counter: 2 out of 20
+[ 21/200] train_loss: 0.26158 valid_loss: 0.42932 valid_AUC: 0.90587 valid_PRC: 0.82024 valid_Accuracy: 0.82658 valid_Precision: 0.65489 valid_Reacll: 0.82323 
+EarlyStopping counter: 3 out of 20
+[ 22/200] train_loss: 0.27360 valid_loss: 0.41771 valid_AUC: 0.91787 valid_PRC: 0.84488 valid_Accuracy: 0.84114 valid_Precision: 0.68017 valid_Reacll: 0.83177 
+EarlyStopping counter: 4 out of 20
+[ 23/200] train_loss: 0.24638 valid_loss: 0.42145 valid_AUC: 0.91432 valid_PRC: 0.83698 valid_Accuracy: 0.84235 valid_Precision: 0.68647 valid_Reacll: 0.81896 
+EarlyStopping counter: 5 out of 20
+[ 24/200] train_loss: 0.25669 valid_loss: 0.41082 valid_AUC: 0.91984 valid_PRC: 0.84538 valid_Accuracy: 0.84914 valid_Precision: 0.69510 valid_Reacll: 0.83518 
+EarlyStopping counter: 6 out of 20
+[ 25/200] train_loss: 0.22912 valid_loss: 0.42029 valid_AUC: 0.91559 valid_PRC: 0.83898 valid_Accuracy: 0.79869 valid_Precision: 0.59771 valid_Reacll: 0.89069 
+EarlyStopping counter: 7 out of 20
+[ 26/200] train_loss: 0.23414 valid_loss: 0.40934 valid_AUC: 0.92239 valid_PRC: 0.84707 valid_Accuracy: 0.85253 valid_Precision: 0.69979 valid_Reacll: 0.84202 
+EarlyStopping counter: 8 out of 20
+[ 27/200] train_loss: 0.21085 valid_loss: 0.42697 valid_AUC: 0.91217 valid_PRC: 0.82160 valid_Accuracy: 0.83216 valid_Precision: 0.66215 valid_Reacll: 0.83518 
+EarlyStopping counter: 9 out of 20
+[ 28/200] train_loss: 0.22135 valid_loss: 0.44673 valid_AUC: 0.92096 valid_PRC: 0.84210 valid_Accuracy: 0.85447 valid_Precision: 0.70703 valid_Reacll: 0.83262 
+EarlyStopping counter: 10 out of 20
+[ 29/200] train_loss: 0.19625 valid_loss: 0.42376 valid_AUC: 0.91441 valid_PRC: 0.82879 valid_Accuracy: 0.85132 valid_Precision: 0.71363 valid_Reacll: 0.79590 
+EarlyStopping counter: 11 out of 20
+[ 30/200] train_loss: 0.20729 valid_loss: 0.45309 valid_AUC: 0.92451 valid_PRC: 0.85009 valid_Accuracy: 0.86005 valid_Precision: 0.72131 valid_Reacll: 0.82664 
+EarlyStopping counter: 12 out of 20
+[ 31/200] train_loss: 0.18699 valid_loss: 0.42823 valid_AUC: 0.90891 valid_PRC: 0.81513 valid_Accuracy: 0.82634 valid_Precision: 0.64840 valid_Reacll: 0.84885 
+EarlyStopping counter: 13 out of 20
+[ 32/200] train_loss: 0.19241 valid_loss: 0.46830 valid_AUC: 0.92206 valid_PRC: 0.84236 valid_Accuracy: 0.86272 valid_Precision: 0.72969 valid_Reacll: 0.82067 
+EarlyStopping counter: 14 out of 20
+[ 33/200] train_loss: 0.17304 valid_loss: 0.51028 valid_AUC: 0.91448 valid_PRC: 0.83075 valid_Accuracy: 0.85011 valid_Precision: 0.71123 valid_Reacll: 0.79505 
+EarlyStopping counter: 15 out of 20
+[ 34/200] train_loss: 0.17907 valid_loss: 0.49773 valid_AUC: 0.91833 valid_PRC: 0.83261 valid_Accuracy: 0.85278 valid_Precision: 0.70524 valid_Reacll: 0.82750 
+EarlyStopping counter: 16 out of 20
+[ 35/200] train_loss: 0.16007 valid_loss: 0.48220 valid_AUC: 0.91616 valid_PRC: 0.83795 valid_Accuracy: 0.85059 valid_Precision: 0.70943 valid_Reacll: 0.80273 
+EarlyStopping counter: 17 out of 20
+[ 36/200] train_loss: 0.16840 valid_loss: 0.53718 valid_AUC: 0.91989 valid_PRC: 0.84025 valid_Accuracy: 0.86248 valid_Precision: 0.73668 valid_Reacll: 0.80273 
+EarlyStopping counter: 18 out of 20
+[ 37/200] train_loss: 0.14692 valid_loss: 0.46287 valid_AUC: 0.91704 valid_PRC: 0.83772 valid_Accuracy: 0.85229 valid_Precision: 0.71549 valid_Reacll: 0.79675 
+EarlyStopping counter: 19 out of 20
+[ 38/200] train_loss: 0.15053 valid_loss: 0.57493 valid_AUC: 0.91952 valid_PRC: 0.83885 valid_Accuracy: 0.86442 valid_Precision: 0.74402 valid_Reacll: 0.79675 
+EarlyStopping counter: 20 out of 20
+Early stopping
+save last_checkpoint.pth
+load valid_best_checkpoint.pth
+best_set--Loss:0.22986;Accuracy:0.89953;Precision:0.77031;Recall:0.91952;AUC:0.97155;PRC:0.93421.
+best_set--Loss:0.38943;Accuracy:0.84526;Precision:0.68781;Recall:0.83348;AUC:0.91692;PRC:0.84220.
+best_set--Loss:0.39831;Accuracy:0.84368;Precision:0.69517;Recall:0.80907;AUC:0.91211;PRC:0.83800.
+load last_checkpoint.pth
+last_set--Loss:0.06481;Accuracy:0.97466;Precision:0.92387;Recall:0.99229;AUC:0.99830;PRC:0.99564.
+last_set--Loss:0.57493;Accuracy:0.86442;Precision:0.74402;Recall:0.79675;AUC:0.91952;PRC:0.83885.
+last_set--Loss:0.62980;Accuracy:0.85551;Precision:0.73223;Recall:0.78131;AUC:0.91281;PRC:0.83178.
+The best model's results:
+Accuracy(std):0.8381(0.0042)
+Precision(std):0.6769(0.0128)
+Recall(std):0.8230(0.0102)
+AUC(std):0.9153(0.0064)
+PRC(std):0.8303(0.0124)
+The last model's results:
+Accuracy(std):0.8546(0.0084)
+Precision(std):0.7173(0.0201)
+Recall(std):0.8057(0.0196)
+AUC(std):0.9201(0.0067)
+PRC(std):0.8392(0.0128)
+==================================================
+Finished Dataset: Davis
+==================================================
+==================================================
 Start Dataset: KIBA
 ==================================================
 Train in KIBA
@@ -7,3 +817,448 @@ load finished
 data shuffle
 ************************* No. 1 -fold *************************
 Training...
+[  1/200] train_loss: 0.59032 valid_loss: 0.55325 valid_AUC: 0.80287 valid_PRC: 0.51610 valid_Accuracy: 0.78524 valid_Precision: 0.45366 valid_Reacll: 0.59910 
+Validation loss decreased (inf --> 0.553252).  Saving model ...
+[  2/200] train_loss: 0.50608 valid_loss: 0.43892 valid_AUC: 0.87675 valid_PRC: 0.67332 valid_Accuracy: 0.81940 valid_Precision: 0.51957 valid_Reacll: 0.74537 
+Validation loss decreased (0.553252 --> 0.438921).  Saving model ...
+[  3/200] train_loss: 0.45907 valid_loss: 0.47968 valid_AUC: 0.85819 valid_PRC: 0.64203 valid_Accuracy: 0.79351 valid_Precision: 0.47443 valid_Reacll: 0.73442 
+EarlyStopping counter: 1 out of 20
+[  4/200] train_loss: 0.43148 valid_loss: 0.38868 valid_AUC: 0.90588 valid_PRC: 0.73969 valid_Accuracy: 0.82633 valid_Precision: 0.52997 valid_Reacll: 0.81668 
+Validation loss decreased (0.438921 --> 0.388676).  Saving model ...
+[  5/200] train_loss: 0.40330 valid_loss: 0.42695 valid_AUC: 0.88527 valid_PRC: 0.69217 valid_Accuracy: 0.83332 valid_Precision: 0.54723 valid_Reacll: 0.74649 
+EarlyStopping counter: 1 out of 20
+[  6/200] train_loss: 0.39725 valid_loss: 0.36972 valid_AUC: 0.91617 valid_PRC: 0.77093 valid_Accuracy: 0.84395 valid_Precision: 0.56460 valid_Reacll: 0.80601 
+Validation loss decreased (0.388676 --> 0.369715).  Saving model ...
+[  7/200] train_loss: 0.36968 valid_loss: 0.40369 valid_AUC: 0.90045 valid_PRC: 0.73042 valid_Accuracy: 0.84293 valid_Precision: 0.56674 valid_Reacll: 0.76053 
+EarlyStopping counter: 1 out of 20
+[  8/200] train_loss: 0.37361 valid_loss: 0.35938 valid_AUC: 0.92043 valid_PRC: 0.78176 valid_Accuracy: 0.83063 valid_Precision: 0.53645 valid_Reacll: 0.84503 
+Validation loss decreased (0.369715 --> 0.359384).  Saving model ...
+[  9/200] train_loss: 0.34874 valid_loss: 0.40994 valid_AUC: 0.90006 valid_PRC: 0.72266 valid_Accuracy: 0.78970 valid_Precision: 0.47251 valid_Reacll: 0.85177 
+EarlyStopping counter: 1 out of 20
+[ 10/200] train_loss: 0.35340 valid_loss: 0.35615 valid_AUC: 0.92343 valid_PRC: 0.79048 valid_Accuracy: 0.83686 valid_Precision: 0.54753 valid_Reacll: 0.84896 
+Validation loss decreased (0.359384 --> 0.356147).  Saving model ...
+[ 11/200] train_loss: 0.33202 valid_loss: 0.40349 valid_AUC: 0.91001 valid_PRC: 0.75572 valid_Accuracy: 0.81543 valid_Precision: 0.51073 valid_Reacll: 0.84194 
+EarlyStopping counter: 1 out of 20
+[ 12/200] train_loss: 0.34105 valid_loss: 0.35141 valid_AUC: 0.92482 valid_PRC: 0.79531 valid_Accuracy: 0.85615 valid_Precision: 0.59020 valid_Reacll: 0.81190 
+Validation loss decreased (0.356147 --> 0.351410).  Saving model ...
+[ 13/200] train_loss: 0.31300 valid_loss: 0.37972 valid_AUC: 0.91184 valid_PRC: 0.75839 valid_Accuracy: 0.81387 valid_Precision: 0.50815 valid_Reacll: 0.84924 
+EarlyStopping counter: 1 out of 20
+[ 14/200] train_loss: 0.32647 valid_loss: 0.34520 valid_AUC: 0.92858 valid_PRC: 0.80380 valid_Accuracy: 0.84674 valid_Precision: 0.56600 valid_Reacll: 0.85345 
+Validation loss decreased (0.351410 --> 0.345195).  Saving model ...
+[ 15/200] train_loss: 0.30033 valid_loss: 0.38526 valid_AUC: 0.91448 valid_PRC: 0.76586 valid_Accuracy: 0.79990 valid_Precision: 0.48726 valid_Reacll: 0.87535 
+EarlyStopping counter: 1 out of 20
+[ 16/200] train_loss: 0.31033 valid_loss: 0.34895 valid_AUC: 0.92833 valid_PRC: 0.80572 valid_Accuracy: 0.85991 valid_Precision: 0.59695 valid_Reacll: 0.82454 
+EarlyStopping counter: 2 out of 20
+[ 17/200] train_loss: 0.29364 valid_loss: 0.38915 valid_AUC: 0.91249 valid_PRC: 0.76847 valid_Accuracy: 0.83761 valid_Precision: 0.55113 valid_Reacll: 0.81555 
+EarlyStopping counter: 3 out of 20
+[ 18/200] train_loss: 0.30002 valid_loss: 0.34889 valid_AUC: 0.93033 valid_PRC: 0.81018 valid_Accuracy: 0.84873 valid_Precision: 0.57009 valid_Reacll: 0.85177 
+EarlyStopping counter: 4 out of 20
+[ 19/200] train_loss: 0.27629 valid_loss: 0.37186 valid_AUC: 0.91617 valid_PRC: 0.77302 valid_Accuracy: 0.83761 valid_Precision: 0.55031 valid_Reacll: 0.82762 
+EarlyStopping counter: 5 out of 20
+[ 20/200] train_loss: 0.29031 valid_loss: 0.34873 valid_AUC: 0.93139 valid_PRC: 0.81141 valid_Accuracy: 0.85212 valid_Precision: 0.57680 valid_Reacll: 0.85289 
+EarlyStopping counter: 6 out of 20
+[ 21/200] train_loss: 0.26692 valid_loss: 0.38882 valid_AUC: 0.91840 valid_PRC: 0.78145 valid_Accuracy: 0.83396 valid_Precision: 0.54261 valid_Reacll: 0.84194 
+EarlyStopping counter: 7 out of 20
+[ 22/200] train_loss: 0.28481 valid_loss: 0.36630 valid_AUC: 0.93074 valid_PRC: 0.81275 valid_Accuracy: 0.86377 valid_Precision: 0.60414 valid_Reacll: 0.83549 
+EarlyStopping counter: 8 out of 20
+[ 23/200] train_loss: 0.25838 valid_loss: 0.37188 valid_AUC: 0.92247 valid_PRC: 0.78356 valid_Accuracy: 0.84159 valid_Precision: 0.55681 valid_Reacll: 0.84335 
+EarlyStopping counter: 9 out of 20
+[ 24/200] train_loss: 0.27662 valid_loss: 0.35724 valid_AUC: 0.93135 valid_PRC: 0.81086 valid_Accuracy: 0.85572 valid_Precision: 0.58479 valid_Reacll: 0.84812 
+EarlyStopping counter: 10 out of 20
+[ 25/200] train_loss: 0.25346 valid_loss: 0.37708 valid_AUC: 0.92118 valid_PRC: 0.78341 valid_Accuracy: 0.81564 valid_Precision: 0.51063 valid_Reacll: 0.87675 
+EarlyStopping counter: 11 out of 20
+[ 26/200] train_loss: 0.28555 valid_loss: 0.35661 valid_AUC: 0.93166 valid_PRC: 0.81302 valid_Accuracy: 0.85770 valid_Precision: 0.58831 valid_Reacll: 0.85373 
+EarlyStopping counter: 12 out of 20
+[ 27/200] train_loss: 0.25010 valid_loss: 0.36385 valid_AUC: 0.92453 valid_PRC: 0.79153 valid_Accuracy: 0.85077 valid_Precision: 0.57609 valid_Reacll: 0.83324 
+EarlyStopping counter: 13 out of 20
+[ 28/200] train_loss: 0.26387 valid_loss: 0.37183 valid_AUC: 0.93299 valid_PRC: 0.81384 valid_Accuracy: 0.85308 valid_Precision: 0.57754 valid_Reacll: 0.86468 
+EarlyStopping counter: 14 out of 20
+[ 29/200] train_loss: 0.23807 valid_loss: 0.38107 valid_AUC: 0.92260 valid_PRC: 0.78554 valid_Accuracy: 0.86168 valid_Precision: 0.60335 valid_Reacll: 0.80882 
+EarlyStopping counter: 15 out of 20
+[ 30/200] train_loss: 0.25552 valid_loss: 0.36590 valid_AUC: 0.93279 valid_PRC: 0.81609 valid_Accuracy: 0.86162 valid_Precision: 0.59766 valid_Reacll: 0.84700 
+EarlyStopping counter: 16 out of 20
+[ 31/200] train_loss: 0.23218 valid_loss: 0.45532 valid_AUC: 0.90738 valid_PRC: 0.74507 valid_Accuracy: 0.83906 valid_Precision: 0.55457 valid_Reacll: 0.80741 
+EarlyStopping counter: 17 out of 20
+[ 32/200] train_loss: 0.25309 valid_loss: 0.37024 valid_AUC: 0.93326 valid_PRC: 0.81382 valid_Accuracy: 0.86383 valid_Precision: 0.60301 valid_Reacll: 0.84391 
+EarlyStopping counter: 18 out of 20
+[ 33/200] train_loss: 0.22940 valid_loss: 0.38836 valid_AUC: 0.91184 valid_PRC: 0.76053 valid_Accuracy: 0.85550 valid_Precision: 0.59156 valid_Reacll: 0.79085 
+EarlyStopping counter: 19 out of 20
+[ 34/200] train_loss: 0.24704 valid_loss: 0.37008 valid_AUC: 0.93417 valid_PRC: 0.81564 valid_Accuracy: 0.85674 valid_Precision: 0.58578 valid_Reacll: 0.85794 
+EarlyStopping counter: 20 out of 20
+Early stopping
+save last_checkpoint.pth
+load valid_best_checkpoint.pth
+best_set--Loss:0.24747;Accuracy:0.87927;Precision:0.62281;Recall:0.93057;AUC:0.96513;PRC:0.88149.
+best_set--Loss:0.34520;Accuracy:0.84674;Precision:0.56600;Recall:0.85345;AUC:0.92858;PRC:0.80380.
+best_set--Loss:0.35458;Accuracy:0.84491;Precision:0.55887;Recall:0.84442;AUC:0.92339;PRC:0.78136.
+load last_checkpoint.pth
+last_set--Loss:0.16478;Accuracy:0.91122;Precision:0.68727;Recall:0.98078;AUC:0.98678;PRC:0.94811.
+last_set--Loss:0.37008;Accuracy:0.85674;Precision:0.58578;Recall:0.85794;AUC:0.93417;PRC:0.81564.
+last_set--Loss:0.36970;Accuracy:0.85793;Precision:0.58421;Recall:0.85649;AUC:0.93105;PRC:0.80590.
+************************* No. 2 -fold *************************
+Training...
+[  1/200] train_loss: 0.58942 valid_loss: 0.55307 valid_AUC: 0.81160 valid_PRC: 0.53017 valid_Accuracy: 0.81135 valid_Precision: 0.51672 valid_Reacll: 0.53121 
+Validation loss decreased (inf --> 0.553072).  Saving model ...
+[  2/200] train_loss: 0.51312 valid_loss: 0.45789 valid_AUC: 0.86526 valid_PRC: 0.65344 valid_Accuracy: 0.79792 valid_Precision: 0.48872 valid_Reacll: 0.74429 
+Validation loss decreased (0.553072 --> 0.457888).  Saving model ...
+[  3/200] train_loss: 0.46891 valid_loss: 0.50588 valid_AUC: 0.85829 valid_PRC: 0.63886 valid_Accuracy: 0.69763 valid_Precision: 0.38003 valid_Reacll: 0.86747 
+EarlyStopping counter: 1 out of 20
+[  4/200] train_loss: 0.44150 valid_loss: 0.40578 valid_AUC: 0.89704 valid_PRC: 0.73150 valid_Accuracy: 0.81838 valid_Precision: 0.52266 valid_Reacll: 0.81166 
+Validation loss decreased (0.457888 --> 0.405775).  Saving model ...
+[  5/200] train_loss: 0.41363 valid_loss: 0.43918 valid_AUC: 0.88262 valid_PRC: 0.67563 valid_Accuracy: 0.82477 valid_Precision: 0.53633 valid_Reacll: 0.76107 
+EarlyStopping counter: 1 out of 20
+[  6/200] train_loss: 0.40560 valid_loss: 0.38303 valid_AUC: 0.90868 valid_PRC: 0.75703 valid_Accuracy: 0.83020 valid_Precision: 0.54373 valid_Reacll: 0.81358 
+Validation loss decreased (0.405775 --> 0.383031).  Saving model ...
+[  7/200] train_loss: 0.38110 valid_loss: 0.43710 valid_AUC: 0.89184 valid_PRC: 0.71805 valid_Accuracy: 0.84137 valid_Precision: 0.57122 valid_Reacll: 0.75419 
+EarlyStopping counter: 1 out of 20
+[  8/200] train_loss: 0.37912 valid_loss: 0.37510 valid_AUC: 0.91608 valid_PRC: 0.77386 valid_Accuracy: 0.83584 valid_Precision: 0.55389 valid_Reacll: 0.82101 
+Validation loss decreased (0.383031 --> 0.375096).  Saving model ...
+[  9/200] train_loss: 0.35816 valid_loss: 0.41647 valid_AUC: 0.89520 valid_PRC: 0.72302 valid_Accuracy: 0.78706 valid_Precision: 0.47489 valid_Reacll: 0.85015 
+EarlyStopping counter: 1 out of 20
+[ 10/200] train_loss: 0.36118 valid_loss: 0.36438 valid_AUC: 0.92080 valid_PRC: 0.78793 valid_Accuracy: 0.85147 valid_Precision: 0.58630 valid_Reacll: 0.81441 
+Validation loss decreased (0.375096 --> 0.364380).  Saving model ...
+[ 11/200] train_loss: 0.33772 valid_loss: 0.39905 valid_AUC: 0.90326 valid_PRC: 0.74552 valid_Accuracy: 0.84282 valid_Precision: 0.57195 valid_Reacll: 0.77701 
+EarlyStopping counter: 1 out of 20
+[ 12/200] train_loss: 0.34663 valid_loss: 0.36055 valid_AUC: 0.92401 valid_PRC: 0.79067 valid_Accuracy: 0.85389 valid_Precision: 0.59110 valid_Reacll: 0.81798 
+Validation loss decreased (0.364380 --> 0.360554).  Saving model ...
+[ 13/200] train_loss: 0.32134 valid_loss: 0.39042 valid_AUC: 0.90617 valid_PRC: 0.74265 valid_Accuracy: 0.82805 valid_Precision: 0.53965 valid_Reacll: 0.81578 
+EarlyStopping counter: 1 out of 20
+[ 14/200] train_loss: 0.33159 valid_loss: 0.35570 valid_AUC: 0.92583 valid_PRC: 0.79366 valid_Accuracy: 0.84803 valid_Precision: 0.57608 valid_Reacll: 0.84108 
+Validation loss decreased (0.360554 --> 0.355700).  Saving model ...
+[ 15/200] train_loss: 0.31261 valid_loss: 0.39217 valid_AUC: 0.91338 valid_PRC: 0.76781 valid_Accuracy: 0.79528 valid_Precision: 0.48681 valid_Reacll: 0.88260 
+EarlyStopping counter: 1 out of 20
+[ 16/200] train_loss: 0.31543 valid_loss: 0.35705 valid_AUC: 0.92720 valid_PRC: 0.80159 valid_Accuracy: 0.85727 valid_Precision: 0.59672 valid_Reacll: 0.83118 
+EarlyStopping counter: 2 out of 20
+[ 17/200] train_loss: 0.29739 valid_loss: 0.38784 valid_AUC: 0.91484 valid_PRC: 0.77082 valid_Accuracy: 0.84433 valid_Precision: 0.57168 valid_Reacll: 0.81028 
+EarlyStopping counter: 3 out of 20
+[ 18/200] train_loss: 0.31398 valid_loss: 0.35103 valid_AUC: 0.92858 valid_PRC: 0.80553 valid_Accuracy: 0.85534 valid_Precision: 0.59126 valid_Reacll: 0.84080 
+Validation loss decreased (0.355700 --> 0.351026).  Saving model ...
+[ 19/200] train_loss: 0.28594 valid_loss: 0.40413 valid_AUC: 0.91129 valid_PRC: 0.76221 valid_Accuracy: 0.82488 valid_Precision: 0.53285 valid_Reacll: 0.84080 
+EarlyStopping counter: 1 out of 20
+[ 20/200] train_loss: 0.31531 valid_loss: 0.35559 valid_AUC: 0.92936 valid_PRC: 0.80768 valid_Accuracy: 0.86168 valid_Precision: 0.60586 valid_Reacll: 0.83558 
+EarlyStopping counter: 2 out of 20
+[ 21/200] train_loss: 0.28375 valid_loss: 0.38003 valid_AUC: 0.91517 valid_PRC: 0.76855 valid_Accuracy: 0.84358 valid_Precision: 0.56825 valid_Reacll: 0.82980 
+EarlyStopping counter: 3 out of 20
+[ 22/200] train_loss: 0.29363 valid_loss: 0.34955 valid_AUC: 0.92932 valid_PRC: 0.80723 valid_Accuracy: 0.85142 valid_Precision: 0.58127 valid_Reacll: 0.85648 
+Validation loss decreased (0.351026 --> 0.349545).  Saving model ...
+[ 23/200] train_loss: 0.27118 valid_loss: 0.38553 valid_AUC: 0.91485 valid_PRC: 0.77453 valid_Accuracy: 0.84959 valid_Precision: 0.58368 valid_Reacll: 0.80258 
+EarlyStopping counter: 1 out of 20
+[ 24/200] train_loss: 0.27864 valid_loss: 0.36620 valid_AUC: 0.93000 valid_PRC: 0.80902 valid_Accuracy: 0.87575 valid_Precision: 0.64398 valid_Reacll: 0.81413 
+EarlyStopping counter: 2 out of 20
+[ 25/200] train_loss: 0.25785 valid_loss: 0.38313 valid_AUC: 0.91822 valid_PRC: 0.78055 valid_Accuracy: 0.83901 valid_Precision: 0.55827 valid_Reacll: 0.84300 
+EarlyStopping counter: 3 out of 20
+[ 26/200] train_loss: 0.27883 valid_loss: 0.35699 valid_AUC: 0.93018 valid_PRC: 0.80990 valid_Accuracy: 0.86039 valid_Precision: 0.60137 valid_Reacll: 0.84658 
+EarlyStopping counter: 4 out of 20
+[ 27/200] train_loss: 0.25351 valid_loss: 0.38508 valid_AUC: 0.91968 valid_PRC: 0.78388 valid_Accuracy: 0.84363 valid_Precision: 0.56785 valid_Reacll: 0.83530 
+EarlyStopping counter: 5 out of 20
+[ 28/200] train_loss: 0.26141 valid_loss: 0.35510 valid_AUC: 0.93257 valid_PRC: 0.81483 valid_Accuracy: 0.85974 valid_Precision: 0.59934 valid_Reacll: 0.85098 
+EarlyStopping counter: 6 out of 20
+[ 29/200] train_loss: 0.24280 valid_loss: 0.38745 valid_AUC: 0.92065 valid_PRC: 0.78324 valid_Accuracy: 0.83826 valid_Precision: 0.55646 valid_Reacll: 0.84823 
+EarlyStopping counter: 7 out of 20
+[ 30/200] train_loss: 0.26595 valid_loss: 0.37125 valid_AUC: 0.93088 valid_PRC: 0.81212 valid_Accuracy: 0.86356 valid_Precision: 0.60864 valid_Reacll: 0.84493 
+EarlyStopping counter: 8 out of 20
+[ 31/200] train_loss: 0.24064 valid_loss: 0.38457 valid_AUC: 0.91152 valid_PRC: 0.75683 valid_Accuracy: 0.83138 valid_Precision: 0.54470 valid_Reacll: 0.83420 
+EarlyStopping counter: 9 out of 20
+[ 32/200] train_loss: 0.26991 valid_loss: 0.36239 valid_AUC: 0.93131 valid_PRC: 0.81460 valid_Accuracy: 0.85776 valid_Precision: 0.59439 valid_Reacll: 0.85620 
+EarlyStopping counter: 10 out of 20
+[ 33/200] train_loss: 0.23944 valid_loss: 0.42546 valid_AUC: 0.91156 valid_PRC: 0.76348 valid_Accuracy: 0.86162 valid_Precision: 0.61530 valid_Reacll: 0.77839 
+EarlyStopping counter: 11 out of 20
+[ 34/200] train_loss: 0.26692 valid_loss: 0.36869 valid_AUC: 0.93131 valid_PRC: 0.81488 valid_Accuracy: 0.86823 valid_Precision: 0.62186 valid_Reacll: 0.83063 
+EarlyStopping counter: 12 out of 20
+[ 35/200] train_loss: 0.23034 valid_loss: 0.41516 valid_AUC: 0.92131 valid_PRC: 0.78868 valid_Accuracy: 0.88010 valid_Precision: 0.67523 valid_Reacll: 0.74429 
+EarlyStopping counter: 13 out of 20
+[ 36/200] train_loss: 0.24290 valid_loss: 0.37841 valid_AUC: 0.93226 valid_PRC: 0.81640 valid_Accuracy: 0.87446 valid_Precision: 0.63777 valid_Reacll: 0.82733 
+EarlyStopping counter: 14 out of 20
+[ 37/200] train_loss: 0.21745 valid_loss: 0.39716 valid_AUC: 0.92399 valid_PRC: 0.79287 valid_Accuracy: 0.85915 valid_Precision: 0.60152 valid_Reacll: 0.82678 
+EarlyStopping counter: 15 out of 20
+[ 38/200] train_loss: 0.23483 valid_loss: 0.36952 valid_AUC: 0.93350 valid_PRC: 0.81631 valid_Accuracy: 0.86700 valid_Precision: 0.61650 valid_Reacll: 0.84465 
+EarlyStopping counter: 16 out of 20
+[ 39/200] train_loss: 0.22169 valid_loss: 0.38542 valid_AUC: 0.92187 valid_PRC: 0.78765 valid_Accuracy: 0.82107 valid_Precision: 0.52524 valid_Reacll: 0.87545 
+EarlyStopping counter: 17 out of 20
+[ 40/200] train_loss: 0.24303 valid_loss: 0.37523 valid_AUC: 0.93279 valid_PRC: 0.81605 valid_Accuracy: 0.86490 valid_Precision: 0.61198 valid_Reacll: 0.84300 
+EarlyStopping counter: 18 out of 20
+[ 41/200] train_loss: 0.21560 valid_loss: 0.37731 valid_AUC: 0.92189 valid_PRC: 0.78873 valid_Accuracy: 0.87806 valid_Precision: 0.66071 valid_Reacll: 0.77261 
+EarlyStopping counter: 19 out of 20
+[ 42/200] train_loss: 0.24055 valid_loss: 0.37090 valid_AUC: 0.93103 valid_PRC: 0.81202 valid_Accuracy: 0.86066 valid_Precision: 0.60196 valid_Reacll: 0.84658 
+EarlyStopping counter: 20 out of 20
+Early stopping
+save last_checkpoint.pth
+load valid_best_checkpoint.pth
+best_set--Loss:0.21775;Accuracy:0.88725;Precision:0.63614;Recall:0.95311;AUC:0.97481;PRC:0.91143.
+best_set--Loss:0.34955;Accuracy:0.85142;Precision:0.58127;Recall:0.85648;AUC:0.92932;PRC:0.80723.
+best_set--Loss:0.33612;Accuracy:0.84813;Precision:0.55950;Recall:0.86970;AUC:0.93379;PRC:0.81169.
+load last_checkpoint.pth
+last_set--Loss:0.15244;Accuracy:0.91517;Precision:0.69638;Recall:0.98322;AUC:0.98895;PRC:0.95691.
+last_set--Loss:0.37090;Accuracy:0.86066;Precision:0.60196;Recall:0.84658;AUC:0.93103;PRC:0.81202.
+last_set--Loss:0.37363;Accuracy:0.85862;Precision:0.58223;Recall:0.85401;AUC:0.93283;PRC:0.81129.
+************************* No. 3 -fold *************************
+Training...
+[  1/200] train_loss: 0.59210 valid_loss: 0.56832 valid_AUC: 0.80799 valid_PRC: 0.52346 valid_Accuracy: 0.82660 valid_Precision: 0.53621 valid_Reacll: 0.50245 
+Validation loss decreased (inf --> 0.568324).  Saving model ...
+[  2/200] train_loss: 0.51022 valid_loss: 0.44463 valid_AUC: 0.87209 valid_PRC: 0.66161 valid_Accuracy: 0.79668 valid_Precision: 0.47143 valid_Reacll: 0.76725 
+Validation loss decreased (0.568324 --> 0.444630).  Saving model ...
+[  3/200] train_loss: 0.46727 valid_loss: 0.51706 valid_AUC: 0.84933 valid_PRC: 0.62628 valid_Accuracy: 0.67813 valid_Precision: 0.35069 valid_Reacll: 0.85764 
+EarlyStopping counter: 1 out of 20
+[  4/200] train_loss: 0.44166 valid_loss: 0.39883 valid_AUC: 0.90061 valid_PRC: 0.72357 valid_Accuracy: 0.81543 valid_Precision: 0.50240 valid_Reacll: 0.81750 
+Validation loss decreased (0.444630 --> 0.398829).  Saving model ...
+[  5/200] train_loss: 0.41258 valid_loss: 0.42720 valid_AUC: 0.88641 valid_PRC: 0.68766 valid_Accuracy: 0.81699 valid_Precision: 0.50522 valid_Reacll: 0.78314 
+EarlyStopping counter: 1 out of 20
+[  6/200] train_loss: 0.40461 valid_loss: 0.37291 valid_AUC: 0.91321 valid_PRC: 0.75208 valid_Accuracy: 0.83106 valid_Precision: 0.52913 valid_Reacll: 0.83396 
+Validation loss decreased (0.398829 --> 0.372908).  Saving model ...
+[  7/200] train_loss: 0.37954 valid_loss: 0.41175 valid_AUC: 0.89474 valid_PRC: 0.70719 valid_Accuracy: 0.81844 valid_Precision: 0.50762 valid_Reacll: 0.79815 
+EarlyStopping counter: 1 out of 20
+[  8/200] train_loss: 0.38178 valid_loss: 0.36219 valid_AUC: 0.91905 valid_PRC: 0.76951 valid_Accuracy: 0.84261 valid_Precision: 0.55050 valid_Reacll: 0.83887 
+Validation loss decreased (0.372908 --> 0.362194).  Saving model ...
+[  9/200] train_loss: 0.35682 valid_loss: 0.41102 valid_AUC: 0.89997 valid_PRC: 0.72032 valid_Accuracy: 0.85341 valid_Precision: 0.58368 valid_Reacll: 0.73924 
+EarlyStopping counter: 1 out of 20
+[ 10/200] train_loss: 0.36118 valid_loss: 0.34935 valid_AUC: 0.92454 valid_PRC: 0.78495 valid_Accuracy: 0.84422 valid_Precision: 0.55334 valid_Reacll: 0.84320 
+Validation loss decreased (0.362194 --> 0.349347).  Saving model ...
+[ 11/200] train_loss: 0.33733 valid_loss: 0.37676 valid_AUC: 0.91287 valid_PRC: 0.75124 valid_Accuracy: 0.84347 valid_Precision: 0.55405 valid_Reacll: 0.81259 
+EarlyStopping counter: 1 out of 20
+[ 12/200] train_loss: 0.34328 valid_loss: 0.34596 valid_AUC: 0.92687 valid_PRC: 0.79220 valid_Accuracy: 0.85008 valid_Precision: 0.56476 valid_Reacll: 0.84609 
+Validation loss decreased (0.349347 --> 0.345962).  Saving model ...
+[ 13/200] train_loss: 0.32042 valid_loss: 0.38387 valid_AUC: 0.91083 valid_PRC: 0.74968 valid_Accuracy: 0.84631 valid_Precision: 0.56120 valid_Reacll: 0.79700 
+EarlyStopping counter: 1 out of 20
+[ 14/200] train_loss: 0.33202 valid_loss: 0.34432 valid_AUC: 0.92898 valid_PRC: 0.79577 valid_Accuracy: 0.85013 valid_Precision: 0.56470 valid_Reacll: 0.84811 
+Validation loss decreased (0.345962 --> 0.344317).  Saving model ...
+[ 15/200] train_loss: 0.30554 valid_loss: 0.37980 valid_AUC: 0.91458 valid_PRC: 0.76372 valid_Accuracy: 0.82445 valid_Precision: 0.51710 valid_Reacll: 0.85129 
+EarlyStopping counter: 1 out of 20
+[ 16/200] train_loss: 0.31613 valid_loss: 0.34334 valid_AUC: 0.92997 valid_PRC: 0.80245 valid_Accuracy: 0.85437 valid_Precision: 0.57276 valid_Reacll: 0.85475 
+Validation loss decreased (0.344317 --> 0.343335).  Saving model ...
+[ 17/200] train_loss: 0.29823 valid_loss: 0.37438 valid_AUC: 0.91629 valid_PRC: 0.76640 valid_Accuracy: 0.84889 valid_Precision: 0.56451 valid_Reacll: 0.82125 
+EarlyStopping counter: 1 out of 20
+[ 18/200] train_loss: 0.31088 valid_loss: 0.34159 valid_AUC: 0.93155 valid_PRC: 0.80811 valid_Accuracy: 0.85539 valid_Precision: 0.57435 valid_Reacll: 0.85995 
+Validation loss decreased (0.343335 --> 0.341589).  Saving model ...
+[ 19/200] train_loss: 0.30065 valid_loss: 0.43935 valid_AUC: 0.88208 valid_PRC: 0.67736 valid_Accuracy: 0.79647 valid_Precision: 0.47254 valid_Reacll: 0.80999 
+EarlyStopping counter: 1 out of 20
+[ 20/200] train_loss: 0.31762 valid_loss: 0.34517 valid_AUC: 0.93017 valid_PRC: 0.80169 valid_Accuracy: 0.85615 valid_Precision: 0.57686 valid_Reacll: 0.85071 
+EarlyStopping counter: 2 out of 20
+[ 21/200] train_loss: 0.27978 valid_loss: 0.38147 valid_AUC: 0.91280 valid_PRC: 0.76009 valid_Accuracy: 0.85265 valid_Precision: 0.57344 valid_Reacll: 0.81172 
+EarlyStopping counter: 3 out of 20
+[ 22/200] train_loss: 0.28935 valid_loss: 0.35731 valid_AUC: 0.93157 valid_PRC: 0.81055 valid_Accuracy: 0.86431 valid_Precision: 0.59513 valid_Reacll: 0.84638 
+EarlyStopping counter: 4 out of 20
+[ 23/200] train_loss: 0.26683 valid_loss: 0.37249 valid_AUC: 0.91605 valid_PRC: 0.77338 valid_Accuracy: 0.86060 valid_Precision: 0.59357 valid_Reacll: 0.79498 
+EarlyStopping counter: 5 out of 20
+[ 24/200] train_loss: 0.28029 valid_loss: 0.34691 valid_AUC: 0.93397 valid_PRC: 0.81730 valid_Accuracy: 0.86501 valid_Precision: 0.59600 valid_Reacll: 0.85157 
+EarlyStopping counter: 6 out of 20
+[ 25/200] train_loss: 0.25785 valid_loss: 0.37078 valid_AUC: 0.92439 valid_PRC: 0.78956 valid_Accuracy: 0.84207 valid_Precision: 0.54831 valid_Reacll: 0.85706 
+EarlyStopping counter: 7 out of 20
+[ 26/200] train_loss: 0.27341 valid_loss: 0.34650 valid_AUC: 0.93348 valid_PRC: 0.81662 valid_Accuracy: 0.86576 valid_Precision: 0.59821 valid_Reacll: 0.84782 
+EarlyStopping counter: 8 out of 20
+[ 27/200] train_loss: 0.25266 valid_loss: 0.37448 valid_AUC: 0.91728 valid_PRC: 0.77276 valid_Accuracy: 0.84975 valid_Precision: 0.56660 valid_Reacll: 0.81808 
+EarlyStopping counter: 9 out of 20
+[ 28/200] train_loss: 0.26641 valid_loss: 0.35094 valid_AUC: 0.93357 valid_PRC: 0.81877 valid_Accuracy: 0.86635 valid_Precision: 0.59927 valid_Reacll: 0.84984 
+EarlyStopping counter: 10 out of 20
+[ 29/200] train_loss: 0.23962 valid_loss: 0.37127 valid_AUC: 0.92463 valid_PRC: 0.79244 valid_Accuracy: 0.85529 valid_Precision: 0.57615 valid_Reacll: 0.84002 
+EarlyStopping counter: 11 out of 20
+[ 30/200] train_loss: 0.26462 valid_loss: 0.34827 valid_AUC: 0.93516 valid_PRC: 0.81756 valid_Accuracy: 0.86581 valid_Precision: 0.59753 valid_Reacll: 0.85360 
+EarlyStopping counter: 12 out of 20
+[ 31/200] train_loss: 0.23362 valid_loss: 0.36282 valid_AUC: 0.92324 valid_PRC: 0.76946 valid_Accuracy: 0.83879 valid_Precision: 0.54189 valid_Reacll: 0.86284 
+EarlyStopping counter: 13 out of 20
+[ 32/200] train_loss: 0.25086 valid_loss: 0.35208 valid_AUC: 0.93571 valid_PRC: 0.81978 valid_Accuracy: 0.86179 valid_Precision: 0.58865 valid_Reacll: 0.85331 
+EarlyStopping counter: 14 out of 20
+[ 33/200] train_loss: 0.22802 valid_loss: 0.35796 valid_AUC: 0.92786 valid_PRC: 0.80181 valid_Accuracy: 0.83906 valid_Precision: 0.54217 valid_Reacll: 0.86688 
+EarlyStopping counter: 15 out of 20
+[ 34/200] train_loss: 0.25722 valid_loss: 0.35905 valid_AUC: 0.93339 valid_PRC: 0.81953 valid_Accuracy: 0.86479 valid_Precision: 0.59587 valid_Reacll: 0.84897 
+EarlyStopping counter: 16 out of 20
+[ 35/200] train_loss: 0.22435 valid_loss: 0.37898 valid_AUC: 0.92358 valid_PRC: 0.79150 valid_Accuracy: 0.81167 valid_Precision: 0.49653 valid_Reacll: 0.88767 
+EarlyStopping counter: 17 out of 20
+[ 36/200] train_loss: 0.24338 valid_loss: 0.37635 valid_AUC: 0.93441 valid_PRC: 0.81987 valid_Accuracy: 0.87135 valid_Precision: 0.61070 valid_Reacll: 0.85071 
+EarlyStopping counter: 18 out of 20
+[ 37/200] train_loss: 0.21902 valid_loss: 0.37828 valid_AUC: 0.92501 valid_PRC: 0.78951 valid_Accuracy: 0.85974 valid_Precision: 0.58835 valid_Reacll: 0.81923 
+EarlyStopping counter: 19 out of 20
+[ 38/200] train_loss: 0.23783 valid_loss: 0.36993 valid_AUC: 0.93509 valid_PRC: 0.81950 valid_Accuracy: 0.86914 valid_Precision: 0.60516 valid_Reacll: 0.85331 
+EarlyStopping counter: 20 out of 20
+Early stopping
+save last_checkpoint.pth
+load valid_best_checkpoint.pth
+best_set--Loss:0.22782;Accuracy:0.88801;Precision:0.64132;Recall:0.94119;AUC:0.97066;PRC:0.89634.
+best_set--Loss:0.34159;Accuracy:0.85539;Precision:0.57435;Recall:0.85995;AUC:0.93155;PRC:0.80811.
+best_set--Loss:0.34481;Accuracy:0.84933;Precision:0.56979;Recall:0.85949;AUC:0.93025;PRC:0.80607.
+load last_checkpoint.pth
+last_set--Loss:0.14706;Accuracy:0.92398;Precision:0.72188;Recall:0.98049;AUC:0.98885;PRC:0.95557.
+last_set--Loss:0.36993;Accuracy:0.86914;Precision:0.60516;Recall:0.85331;AUC:0.93509;PRC:0.81950.
+last_set--Loss:0.37507;Accuracy:0.86867;Precision:0.61168;Recall:0.85409;AUC:0.93507;PRC:0.81859.
+************************* No. 4 -fold *************************
+Training...
+[  1/200] train_loss: 0.59077 valid_loss: 0.57211 valid_AUC: 0.80704 valid_PRC: 0.52393 valid_Accuracy: 0.63526 valid_Precision: 0.32606 valid_Reacll: 0.84538 
+Validation loss decreased (inf --> 0.572114).  Saving model ...
+[  2/200] train_loss: 0.49525 valid_loss: 0.43134 valid_AUC: 0.88148 valid_PRC: 0.68645 valid_Accuracy: 0.82370 valid_Precision: 0.52869 valid_Reacll: 0.74342 
+Validation loss decreased (0.572114 --> 0.431345).  Saving model ...
+[  3/200] train_loss: 0.44756 valid_loss: 0.46691 valid_AUC: 0.86491 valid_PRC: 0.64363 valid_Accuracy: 0.82939 valid_Precision: 0.54307 valid_Reacll: 0.69580 
+EarlyStopping counter: 1 out of 20
+[  4/200] train_loss: 0.43021 valid_loss: 0.38708 valid_AUC: 0.90661 valid_PRC: 0.73957 valid_Accuracy: 0.81629 valid_Precision: 0.51299 valid_Reacll: 0.82969 
+Validation loss decreased (0.431345 --> 0.387080).  Saving model ...
+[  5/200] train_loss: 0.40153 valid_loss: 0.45286 valid_AUC: 0.88718 valid_PRC: 0.68524 valid_Accuracy: 0.84696 valid_Precision: 0.58232 valid_Reacll: 0.71429 
+EarlyStopping counter: 1 out of 20
+[  6/200] train_loss: 0.39708 valid_loss: 0.37169 valid_AUC: 0.91429 valid_PRC: 0.76221 valid_Accuracy: 0.83278 valid_Precision: 0.54190 valid_Reacll: 0.82773 
+Validation loss decreased (0.387080 --> 0.371688).  Saving model ...
+[  7/200] train_loss: 0.37273 valid_loss: 0.41432 valid_AUC: 0.89624 valid_PRC: 0.71967 valid_Accuracy: 0.79808 valid_Precision: 0.48473 valid_Reacll: 0.84034 
+EarlyStopping counter: 1 out of 20
+[  8/200] train_loss: 0.37681 valid_loss: 0.36142 valid_AUC: 0.91977 valid_PRC: 0.77858 valid_Accuracy: 0.85029 valid_Precision: 0.57766 valid_Reacll: 0.81569 
+Validation loss decreased (0.371688 --> 0.361422).  Saving model ...
+[  9/200] train_loss: 0.35385 valid_loss: 0.40373 valid_AUC: 0.89881 valid_PRC: 0.73119 valid_Accuracy: 0.83272 valid_Precision: 0.54441 valid_Reacll: 0.78291 
+EarlyStopping counter: 1 out of 20
+[ 10/200] train_loss: 0.35631 valid_loss: 0.35581 valid_AUC: 0.92304 valid_PRC: 0.78656 valid_Accuracy: 0.85749 valid_Precision: 0.59313 valid_Reacll: 0.81793 
+Validation loss decreased (0.361422 --> 0.355812).  Saving model ...
+[ 11/200] train_loss: 0.33284 valid_loss: 0.38740 valid_AUC: 0.91073 valid_PRC: 0.75599 valid_Accuracy: 0.80436 valid_Precision: 0.49425 valid_Reacll: 0.86639 
+EarlyStopping counter: 1 out of 20
+[ 12/200] train_loss: 0.34164 valid_loss: 0.35100 valid_AUC: 0.92591 valid_PRC: 0.79153 valid_Accuracy: 0.83761 valid_Precision: 0.54869 valid_Reacll: 0.86331 
+Validation loss decreased (0.355812 --> 0.350997).  Saving model ...
+[ 13/200] train_loss: 0.31765 valid_loss: 0.41603 valid_AUC: 0.90456 valid_PRC: 0.73503 valid_Accuracy: 0.84556 valid_Precision: 0.57096 valid_Reacll: 0.78319 
+EarlyStopping counter: 1 out of 20
+[ 14/200] train_loss: 0.32748 valid_loss: 0.34556 valid_AUC: 0.92782 valid_PRC: 0.80016 valid_Accuracy: 0.85341 valid_Precision: 0.58135 valid_Reacll: 0.84174 
+Validation loss decreased (0.350997 --> 0.345558).  Saving model ...
+[ 15/200] train_loss: 0.30285 valid_loss: 0.38206 valid_AUC: 0.91290 valid_PRC: 0.75222 valid_Accuracy: 0.82058 valid_Precision: 0.51966 valid_Reacll: 0.85126 
+EarlyStopping counter: 1 out of 20
+[ 16/200] train_loss: 0.31557 valid_loss: 0.34355 valid_AUC: 0.92855 valid_PRC: 0.79778 valid_Accuracy: 0.85824 valid_Precision: 0.59194 valid_Reacll: 0.83950 
+Validation loss decreased (0.345558 --> 0.343548).  Saving model ...
+[ 17/200] train_loss: 0.29540 valid_loss: 0.39263 valid_AUC: 0.91131 valid_PRC: 0.75644 valid_Accuracy: 0.78744 valid_Precision: 0.47108 valid_Reacll: 0.88291 
+EarlyStopping counter: 1 out of 20
+[ 18/200] train_loss: 0.30932 valid_loss: 0.35011 valid_AUC: 0.92928 valid_PRC: 0.80405 valid_Accuracy: 0.86297 valid_Precision: 0.60221 valid_Reacll: 0.84090 
+EarlyStopping counter: 2 out of 20
+[ 19/200] train_loss: 0.28457 valid_loss: 0.37834 valid_AUC: 0.91472 valid_PRC: 0.76484 valid_Accuracy: 0.85346 valid_Precision: 0.58578 valid_Reacll: 0.80532 
+EarlyStopping counter: 3 out of 20
+[ 20/200] train_loss: 0.29363 valid_loss: 0.34493 valid_AUC: 0.93110 valid_PRC: 0.80905 valid_Accuracy: 0.84755 valid_Precision: 0.56711 valid_Reacll: 0.86639 
+EarlyStopping counter: 4 out of 20
+[ 21/200] train_loss: 0.27195 valid_loss: 0.38179 valid_AUC: 0.91579 valid_PRC: 0.76289 valid_Accuracy: 0.82837 valid_Precision: 0.53256 valid_Reacll: 0.85910 
+EarlyStopping counter: 5 out of 20
+[ 22/200] train_loss: 0.28690 valid_loss: 0.34977 valid_AUC: 0.93162 valid_PRC: 0.80942 valid_Accuracy: 0.85690 valid_Precision: 0.58645 valid_Reacll: 0.86078 
+EarlyStopping counter: 6 out of 20
+[ 23/200] train_loss: 0.26071 valid_loss: 0.39430 valid_AUC: 0.91841 valid_PRC: 0.77117 valid_Accuracy: 0.86060 valid_Precision: 0.60326 valid_Reacll: 0.79776 
+EarlyStopping counter: 7 out of 20
+[ 24/200] train_loss: 0.27973 valid_loss: 0.35067 valid_AUC: 0.93255 valid_PRC: 0.81255 valid_Accuracy: 0.85378 valid_Precision: 0.57881 valid_Reacll: 0.87227 
+EarlyStopping counter: 8 out of 20
+[ 25/200] train_loss: 0.25518 valid_loss: 0.37266 valid_AUC: 0.91946 valid_PRC: 0.77498 valid_Accuracy: 0.85335 valid_Precision: 0.58337 valid_Reacll: 0.82325 
+EarlyStopping counter: 9 out of 20
+[ 26/200] train_loss: 0.27428 valid_loss: 0.35633 valid_AUC: 0.93210 valid_PRC: 0.81148 valid_Accuracy: 0.86340 valid_Precision: 0.60260 valid_Reacll: 0.84482 
+EarlyStopping counter: 10 out of 20
+[ 27/200] train_loss: 0.25119 valid_loss: 0.36629 valid_AUC: 0.91938 valid_PRC: 0.76822 valid_Accuracy: 0.82456 valid_Precision: 0.52591 valid_Reacll: 0.86415 
+EarlyStopping counter: 11 out of 20
+[ 28/200] train_loss: 0.26628 valid_loss: 0.36462 valid_AUC: 0.93265 valid_PRC: 0.81511 valid_Accuracy: 0.86125 valid_Precision: 0.59570 valid_Reacll: 0.86050 
+EarlyStopping counter: 12 out of 20
+[ 29/200] train_loss: 0.24631 valid_loss: 0.35269 valid_AUC: 0.92441 valid_PRC: 0.79555 valid_Accuracy: 0.85410 valid_Precision: 0.58466 valid_Reacll: 0.82605 
+EarlyStopping counter: 13 out of 20
+[ 30/200] train_loss: 0.25466 valid_loss: 0.36745 valid_AUC: 0.93202 valid_PRC: 0.81499 valid_Accuracy: 0.86399 valid_Precision: 0.60322 valid_Reacll: 0.84958 
+EarlyStopping counter: 14 out of 20
+[ 31/200] train_loss: 0.23395 valid_loss: 0.39323 valid_AUC: 0.91391 valid_PRC: 0.76752 valid_Accuracy: 0.79980 valid_Precision: 0.48784 valid_Reacll: 0.88235 
+EarlyStopping counter: 15 out of 20
+[ 32/200] train_loss: 0.25989 valid_loss: 0.36817 valid_AUC: 0.93076 valid_PRC: 0.81156 valid_Accuracy: 0.85803 valid_Precision: 0.59023 valid_Reacll: 0.84930 
+EarlyStopping counter: 16 out of 20
+[ 33/200] train_loss: 0.23219 valid_loss: 0.37986 valid_AUC: 0.91929 valid_PRC: 0.78044 valid_Accuracy: 0.87769 valid_Precision: 0.65620 valid_Reacll: 0.76078 
+EarlyStopping counter: 17 out of 20
+[ 34/200] train_loss: 0.25045 valid_loss: 0.37924 valid_AUC: 0.93287 valid_PRC: 0.81425 valid_Accuracy: 0.86533 valid_Precision: 0.60628 valid_Reacll: 0.84930 
+EarlyStopping counter: 18 out of 20
+[ 35/200] train_loss: 0.22648 valid_loss: 0.39383 valid_AUC: 0.91748 valid_PRC: 0.77135 valid_Accuracy: 0.86227 valid_Precision: 0.61045 valid_Reacll: 0.77871 
+EarlyStopping counter: 19 out of 20
+[ 36/200] train_loss: 0.26843 valid_loss: 0.36357 valid_AUC: 0.93237 valid_PRC: 0.81180 valid_Accuracy: 0.87430 valid_Precision: 0.63158 valid_Reacll: 0.82689 
+EarlyStopping counter: 20 out of 20
+Early stopping
+save last_checkpoint.pth
+load valid_best_checkpoint.pth
+best_set--Loss:0.24122;Accuracy:0.89107;Precision:0.65065;Recall:0.92155;AUC:0.96750;PRC:0.88714.
+best_set--Loss:0.34355;Accuracy:0.85824;Precision:0.59194;Recall:0.83950;AUC:0.92855;PRC:0.79778.
+best_set--Loss:0.34653;Accuracy:0.85827;Precision:0.59118;Recall:0.83112;AUC:0.92740;PRC:0.79760.
+load last_checkpoint.pth
+last_set--Loss:0.15950;Accuracy:0.92678;Precision:0.73565;Recall:0.95943;AUC:0.98568;PRC:0.94440.
+last_set--Loss:0.36357;Accuracy:0.87430;Precision:0.63158;Recall:0.82689;AUC:0.93237;PRC:0.81180.
+last_set--Loss:0.36278;Accuracy:0.87538;Precision:0.63369;Recall:0.82029;AUC:0.93261;PRC:0.81364.
+************************* No. 5 -fold *************************
+Training...
+[  1/200] train_loss: 0.58803 valid_loss: 0.60578 valid_AUC: 0.80276 valid_PRC: 0.52741 valid_Accuracy: 0.58836 valid_Precision: 0.30105 valid_Reacll: 0.87426 
+Validation loss decreased (inf --> 0.605776).  Saving model ...
+[  2/200] train_loss: 0.50231 valid_loss: 0.44629 valid_AUC: 0.87301 valid_PRC: 0.67439 valid_Accuracy: 0.79072 valid_Precision: 0.47137 valid_Reacll: 0.78959 
+Validation loss decreased (0.605776 --> 0.446286).  Saving model ...
+[  3/200] train_loss: 0.45754 valid_loss: 0.46431 valid_AUC: 0.86214 valid_PRC: 0.64188 valid_Accuracy: 0.80554 valid_Precision: 0.49384 valid_Reacll: 0.73277 
+EarlyStopping counter: 1 out of 20
+[  4/200] train_loss: 0.43182 valid_loss: 0.39597 valid_AUC: 0.90188 valid_PRC: 0.73363 valid_Accuracy: 0.82751 valid_Precision: 0.53177 valid_Reacll: 0.80985 
+Validation loss decreased (0.446286 --> 0.395972).  Saving model ...
+[  5/200] train_loss: 0.40193 valid_loss: 0.43891 valid_AUC: 0.88383 valid_PRC: 0.69021 valid_Accuracy: 0.74162 valid_Precision: 0.41605 valid_Reacll: 0.87482 
+EarlyStopping counter: 1 out of 20
+[  6/200] train_loss: 0.40034 valid_loss: 0.37782 valid_AUC: 0.91168 valid_PRC: 0.75782 valid_Accuracy: 0.84685 valid_Precision: 0.57060 valid_Reacll: 0.80028 
+Validation loss decreased (0.395972 --> 0.377825).  Saving model ...
+[  7/200] train_loss: 0.37653 valid_loss: 0.45455 valid_AUC: 0.88094 valid_PRC: 0.69263 valid_Accuracy: 0.85512 valid_Precision: 0.61477 valid_Reacll: 0.64641 
+EarlyStopping counter: 1 out of 20
+[  8/200] train_loss: 0.37975 valid_loss: 0.37087 valid_AUC: 0.91443 valid_PRC: 0.76652 valid_Accuracy: 0.83708 valid_Precision: 0.54869 valid_Reacll: 0.82729 
+Validation loss decreased (0.377825 --> 0.370871).  Saving model ...
+[  9/200] train_loss: 0.35308 valid_loss: 0.41135 valid_AUC: 0.89573 valid_PRC: 0.72319 valid_Accuracy: 0.79684 valid_Precision: 0.48170 valid_Reacll: 0.84023 
+EarlyStopping counter: 1 out of 20
+[ 10/200] train_loss: 0.35872 valid_loss: 0.35985 valid_AUC: 0.92035 valid_PRC: 0.78253 valid_Accuracy: 0.83965 valid_Precision: 0.55264 valid_Reacll: 0.84163 
+Validation loss decreased (0.370871 --> 0.359852).  Saving model ...
+[ 11/200] train_loss: 0.33768 valid_loss: 0.40897 valid_AUC: 0.90258 valid_PRC: 0.73802 valid_Accuracy: 0.85684 valid_Precision: 0.60220 valid_Reacll: 0.73755 
+EarlyStopping counter: 1 out of 20
+[ 12/200] train_loss: 0.34299 valid_loss: 0.35828 valid_AUC: 0.92223 valid_PRC: 0.78491 valid_Accuracy: 0.84250 valid_Precision: 0.55800 valid_Reacll: 0.84304 
+Validation loss decreased (0.359852 --> 0.358279).  Saving model ...
+[ 13/200] train_loss: 0.32032 valid_loss: 0.38051 valid_AUC: 0.91060 valid_PRC: 0.75763 valid_Accuracy: 0.81511 valid_Precision: 0.50958 valid_Reacll: 0.84501 
+EarlyStopping counter: 1 out of 20
+[ 14/200] train_loss: 0.33007 valid_loss: 0.35553 valid_AUC: 0.92514 valid_PRC: 0.79541 valid_Accuracy: 0.83820 valid_Precision: 0.54880 valid_Reacll: 0.85879 
+Validation loss decreased (0.358279 --> 0.355535).  Saving model ...
+[ 15/200] train_loss: 0.30821 valid_loss: 0.39361 valid_AUC: 0.90507 valid_PRC: 0.74270 valid_Accuracy: 0.83922 valid_Precision: 0.55569 valid_Reacll: 0.78875 
+EarlyStopping counter: 1 out of 20
+[ 16/200] train_loss: 0.31930 valid_loss: 0.34825 valid_AUC: 0.92745 valid_PRC: 0.79929 valid_Accuracy: 0.84739 valid_Precision: 0.56683 valid_Reacll: 0.85176 
+Validation loss decreased (0.355535 --> 0.348249).  Saving model ...
+[ 17/200] train_loss: 0.30252 valid_loss: 0.41176 valid_AUC: 0.89380 valid_PRC: 0.70883 valid_Accuracy: 0.80973 valid_Precision: 0.50113 valid_Reacll: 0.81181 
+EarlyStopping counter: 1 out of 20
+[ 18/200] train_loss: 0.31214 valid_loss: 0.35522 valid_AUC: 0.92849 valid_PRC: 0.80190 valid_Accuracy: 0.85341 valid_Precision: 0.58007 valid_Reacll: 0.84163 
+EarlyStopping counter: 2 out of 20
+[ 19/200] train_loss: 0.28473 valid_loss: 0.37701 valid_AUC: 0.91386 valid_PRC: 0.76910 valid_Accuracy: 0.81570 valid_Precision: 0.51040 valid_Reacll: 0.85570 
+EarlyStopping counter: 3 out of 20
+[ 20/200] train_loss: 0.29952 valid_loss: 0.35107 valid_AUC: 0.92850 valid_PRC: 0.80423 valid_Accuracy: 0.84750 valid_Precision: 0.56677 valid_Reacll: 0.85485 
+EarlyStopping counter: 4 out of 20
+[ 21/200] train_loss: 0.27744 valid_loss: 0.38146 valid_AUC: 0.91003 valid_PRC: 0.75980 valid_Accuracy: 0.82537 valid_Precision: 0.52715 valid_Reacll: 0.83010 
+EarlyStopping counter: 5 out of 20
+[ 22/200] train_loss: 0.29548 valid_loss: 0.34938 valid_AUC: 0.93068 valid_PRC: 0.80880 valid_Accuracy: 0.85572 valid_Precision: 0.58478 valid_Reacll: 0.84304 
+EarlyStopping counter: 6 out of 20
+[ 23/200] train_loss: 0.26598 valid_loss: 0.39449 valid_AUC: 0.91256 valid_PRC: 0.76045 valid_Accuracy: 0.84701 valid_Precision: 0.56957 valid_Reacll: 0.81406 
+EarlyStopping counter: 7 out of 20
+[ 24/200] train_loss: 0.28480 valid_loss: 0.35542 valid_AUC: 0.93100 valid_PRC: 0.81172 valid_Accuracy: 0.85539 valid_Precision: 0.58377 valid_Reacll: 0.84585 
+EarlyStopping counter: 8 out of 20
+[ 25/200] train_loss: 0.25687 valid_loss: 0.38764 valid_AUC: 0.91086 valid_PRC: 0.76124 valid_Accuracy: 0.84626 valid_Precision: 0.56982 valid_Reacll: 0.79550 
+EarlyStopping counter: 9 out of 20
+[ 26/200] train_loss: 0.27149 valid_loss: 0.35765 valid_AUC: 0.93122 valid_PRC: 0.81281 valid_Accuracy: 0.85604 valid_Precision: 0.58435 valid_Reacll: 0.85260 
+EarlyStopping counter: 10 out of 20
+[ 27/200] train_loss: 0.25583 valid_loss: 0.39998 valid_AUC: 0.91731 valid_PRC: 0.77421 valid_Accuracy: 0.79313 valid_Precision: 0.47762 valid_Reacll: 0.88861 
+EarlyStopping counter: 11 out of 20
+[ 28/200] train_loss: 0.26456 valid_loss: 0.36541 valid_AUC: 0.93205 valid_PRC: 0.81048 valid_Accuracy: 0.85615 valid_Precision: 0.58454 valid_Reacll: 0.85288 
+EarlyStopping counter: 12 out of 20
+[ 29/200] train_loss: 0.24218 valid_loss: 0.40059 valid_AUC: 0.92363 valid_PRC: 0.79134 valid_Accuracy: 0.82639 valid_Precision: 0.52756 valid_Reacll: 0.86976 
+EarlyStopping counter: 13 out of 20
+[ 30/200] train_loss: 0.26933 valid_loss: 0.35610 valid_AUC: 0.93145 valid_PRC: 0.81026 valid_Accuracy: 0.85292 valid_Precision: 0.57712 valid_Reacll: 0.85992 
+EarlyStopping counter: 14 out of 20
+[ 31/200] train_loss: 0.23748 valid_loss: 0.37698 valid_AUC: 0.91894 valid_PRC: 0.77860 valid_Accuracy: 0.82316 valid_Precision: 0.52241 valid_Reacll: 0.86217 
+EarlyStopping counter: 15 out of 20
+[ 32/200] train_loss: 0.25635 valid_loss: 0.36310 valid_AUC: 0.93162 valid_PRC: 0.81426 valid_Accuracy: 0.85738 valid_Precision: 0.58803 valid_Reacll: 0.84557 
+EarlyStopping counter: 16 out of 20
+[ 33/200] train_loss: 0.23589 valid_loss: 0.39255 valid_AUC: 0.91106 valid_PRC: 0.76769 valid_Accuracy: 0.81548 valid_Precision: 0.51018 valid_Reacll: 0.84585 
+EarlyStopping counter: 17 out of 20
+[ 34/200] train_loss: 0.25157 valid_loss: 0.36363 valid_AUC: 0.93266 valid_PRC: 0.81264 valid_Accuracy: 0.86313 valid_Precision: 0.60108 valid_Reacll: 0.84219 
+EarlyStopping counter: 18 out of 20
+[ 35/200] train_loss: 0.22847 valid_loss: 0.38118 valid_AUC: 0.92301 valid_PRC: 0.78917 valid_Accuracy: 0.85378 valid_Precision: 0.58217 valid_Reacll: 0.83010 
+EarlyStopping counter: 19 out of 20
+[ 36/200] train_loss: 0.25646 valid_loss: 0.35991 valid_AUC: 0.93345 valid_PRC: 0.81770 valid_Accuracy: 0.87328 valid_Precision: 0.62734 valid_Reacll: 0.82869 
+EarlyStopping counter: 20 out of 20
+Early stopping
+save last_checkpoint.pth
+load valid_best_checkpoint.pth
+best_set--Loss:0.24227;Accuracy:0.87989;Precision:0.62094;Recall:0.93258;AUC:0.96712;PRC:0.88614.
+best_set--Loss:0.34825;Accuracy:0.84739;Precision:0.56683;Recall:0.85176;AUC:0.92745;PRC:0.79929.
+best_set--Loss:0.34767;Accuracy:0.84757;Precision:0.57380;Recall:0.85830;AUC:0.92825;PRC:0.80531.
+load last_checkpoint.pth
+last_set--Loss:0.16146;Accuracy:0.92622;Precision:0.73045;Recall:0.96497;AUC:0.98582;PRC:0.94398.
+last_set--Loss:0.35991;Accuracy:0.87328;Precision:0.62734;Recall:0.82869;AUC:0.93345;PRC:0.81770.
+last_set--Loss:0.35871;Accuracy:0.87486;Precision:0.63671;Recall:0.83897;AUC:0.93408;PRC:0.81980.
+The best model's results:
+Accuracy(std):0.8496(0.0046)
+Precision(std):0.5706(0.0118)
+Recall(std):0.8526(0.0134)
+AUC(std):0.9286(0.0034)
+PRC(std):0.8004(0.0105)
+The last model's results:
+Accuracy(std):0.8671(0.0076)
+Precision(std):0.6097(0.0233)
+Recall(std):0.8448(0.0137)
+AUC(std):0.9331(0.0014)
+PRC(std):0.8138(0.0051)
+==================================================
+Finished Dataset: KIBA
+==================================================
