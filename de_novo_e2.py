@@ -16,7 +16,7 @@ de_novo_e2.py —— 论文第 3.4 节「Performance evaluation under de novo se
     最终执行单次实验（不做 5 折、不做多次重复）。
 
 用法：
-    python de_novo_e2.py --dataset DrugBank --seed 42 --data_ratio 0.2
+    python de_novo_e2.py --dataset DrugBank --seed 1234 --data_ratio 0.2
 """
 
 import argparse
@@ -286,7 +286,7 @@ def parse_args():
         description="HyperAttentionDTI de novo E2 (novel drug) experiment")
     parser.add_argument("--dataset", type=str, default="DrugBank",
                         choices=["DrugBank", "Davis", "KIBA"])
-    parser.add_argument("--seed", type=int, default=42, help="随机种子")
+    parser.add_argument("--seed", type=int, default=1234, help="随机种子")
     parser.add_argument("--data_ratio", type=float, default=0.2, help="unseen 实体比例")
     parser.add_argument("--batch_size", type=int, default=None, help="覆盖 hp.Batch_size")
     parser.add_argument("--epoch", type=int, default=None, help="覆盖 hp.Epoch")
