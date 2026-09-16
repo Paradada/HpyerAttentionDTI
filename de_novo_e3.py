@@ -100,10 +100,11 @@ def train_valid_split(remain_lines, seed):
 # 二、结果输出（单次实验，直接打印指标，不再做 mean±std）
 # ======================================================================================
 
-def print_and_save_results(dataset, setting, metrics, save_path):
-    """把单次实验的指标打印到控制台，并写入 results.txt。"""
+def print_and_save_results(dataset, setting, checkpoint_name, metrics, save_path):
+    """把某个 checkpoint 的单次实验指标打印到控制台，并追加写入 results.txt。"""
     lines = [
         "The {} de novo {} model's results (single run):".format(dataset, setting),
+        "Checkpoint:{}".format(checkpoint_name),
         "Loss:{:.5f}".format(metrics["Loss"]),
         "Accuracy:{:.4f}".format(metrics["Accuracy"]),
         "Precision:{:.4f}".format(metrics["Precision"]),
@@ -111,8 +112,8 @@ def print_and_save_results(dataset, setting, metrics, save_path):
         "AUC:{:.4f}".format(metrics["AUC"]),
         "AUPR:{:.4f}".format(metrics["AUPR"]),
     ]
-    with open(os.path.join(save_path, "results.txt"), "w") as f:
-        f.write("\n".join(lines) + "\n")
+    with open(os.path.join(save_path, "results.txt"), "a") as f:
+        f.write("\n".join(lines) + "\n\n")
     for line in lines:
         print(line)
 
@@ -252,31 +253,38 @@ def run_experiment(args):
             break
     print("Training finished in {:.1f}s".format(timeit.default_timer() - start))
 
-    # 10) 加载验证集 loss 最低的 checkpoint 再做最终测试
+    # 10) 先保存最后一轮模型，再加载验证集 loss 最低的 checkpoint 和最后一轮 checkpoint
+    last_ckpt = os.path.join(save_path, "last_checkpoint.pth")
+    torch.save(model.state_dict(), last_ckpt)
+
     best_ckpt = os.path.join(save_path, "valid_best_checkpoint.pth")
-    model.load_state_dict(torch.load(best_ckpt, map_location="cuda"))
-    model.eval()
 
-    # 11) 测试集评估（100% 复用 test_precess 计算指标）
-    test_pbar = tqdm(enumerate(BackgroundGenerator(test_loader)), total=len(test_loader))
-    Y_test, P_test, test_loss, Acc_test, Prec_test, Rec_test, AUC_test, PRC_test = \
-        test_precess(model, test_pbar, Loss)
+    # 11) 评估 best checkpoint 与 last checkpoint，并在结果文件中写明对应来源
+    with open(os.path.join(save_path, "results.txt"), "w") as f:
+        f.write("{} de novo {} results (best checkpoint vs last checkpoint)\n\n".format(DATASET, SETTING))
 
-    metrics = {
-        "Loss": test_loss,
-        "Accuracy": Acc_test,
-        "Precision": Prec_test,
-        "Recall": Rec_test,
-        "AUC": AUC_test,
-        "AUPR": PRC_test,
-    }
-    print_and_save_results(DATASET, SETTING, metrics, save_path)
+    for checkpoint_name, checkpoint_path in [("best", best_ckpt), ("last", last_ckpt)]:
+        model.load_state_dict(torch.load(checkpoint_path, map_location="cuda"))
+        model.eval()
 
-    # 12) 保存测试集预测（真实标签 预测标签）
-    pred_path = os.path.join(save_path, "{}_de_novo_{}_prediction.txt".format(DATASET, SETTING))
-    with open(pred_path, "w") as f:
-        for t, p in zip(Y_test, P_test):
-            f.write("{} {}\n".format(t, p))
+        test_pbar = tqdm(enumerate(BackgroundGenerator(test_loader)), total=len(test_loader))
+        Y_test, P_test, test_loss, Acc_test, Prec_test, Rec_test, AUC_test, PRC_test = \
+            test_precess(model, test_pbar, Loss)
+
+        metrics = {
+            "Loss": test_loss,
+            "Accuracy": Acc_test,
+            "Precision": Prec_test,
+            "Recall": Rec_test,
+            "AUC": AUC_test,
+            "AUPR": PRC_test,
+        }
+        print_and_save_results(DATASET, SETTING, checkpoint_name, metrics, save_path)
+
+        pred_path = os.path.join(save_path, "{}_de_novo_{}_{}_prediction.txt".format(DATASET, SETTING, checkpoint_name))
+        with open(pred_path, "w") as f:
+            for t, p in zip(Y_test, P_test):
+                f.write("{} {}\n".format(t, p))
 
     return metrics
 
